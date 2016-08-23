@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 /**
- * Created by acer on 11.08.2016.
+ * Created by acer on 20.08.2016.
  */
 @Entity
 @Table(name = "theory", schema = "programming_tutorial")
@@ -34,7 +34,7 @@ public class TheoryEntity extends AbstractEntity implements Serializable {
     }
 
     @Basic
-    @Column(name = "content", nullable = true, length = 45)
+    @Column(name = "content", nullable = true, length = -1)
     public String getContent() {
         return content;
     }

@@ -18,9 +18,10 @@
 
    <br><br><br>
 
+
    <c:forEach items = "${themes}" var="item">
       <div align="center">
-         <a href="#">${item.title}</a><br>
+         <a href="/servlet?id=${item.id}">${item.title}</a><br>
       </div>
    </c:forEach>
 </body>

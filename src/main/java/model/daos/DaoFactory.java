@@ -12,6 +12,8 @@ public class DaoFactory {
         switch (entity) {
             case THEMES:
                 return new ThemesDao(SESSION, entity);
+            case THEORY:
+                return new TheoryDao(SESSION, entity);
             default:
                 return null;
         }
