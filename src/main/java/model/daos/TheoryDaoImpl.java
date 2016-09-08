@@ -9,13 +9,13 @@ import java.util.List;
 /**
  * Created by acer on 20.08.2016.
  */
-public class TheoryDao extends Dao {
+public class TheoryDaoImpl extends DaoImpl {
 
-    public TheoryDao(Session session, Entity entity) {
+    public TheoryDaoImpl(Session session, Entity entity) {
         super(session, entity);
     }
 
-    public String getContentForTheme(int themeId) {
+    public String getContentByTheme(int themeId) {
         String tableName = getEntity().getTableName();
         Query query = getSession().createQuery("SELECT t.content " +
                                           "FROM " + tableName + " AS t " +

@@ -10,7 +10,6 @@
 
         <property name="connection.username">root</property>
         <property name="connection.password">admin</property>
-
         <!--<property name="hibernate.connection.provider_class">org.hibernate.c3p0.internal.C3P0ConnectionProvider</property>-->
 
         <!-- DB schema will be updated if needed -->
@@ -20,5 +19,15 @@
         <mapping class="model.entities.TheoryEntity"/>
         <!--<mapping resource="model/entities/TheoryEntity.hbm.xml"/>-->
         <mapping class="model.entities.TasksEntity"/>
+
+        <mapping class="model.entities.ActionsEntity"/>
+        <mapping class="model.entities.ParentsEntity"/>
+
+        <mapping class="model.entities.PupilsEntity"/>
+
+        <mapping class="model.entities.SchoolsEntity"/>
+        <mapping class="model.entities.UsersEntity"/>
+
+
     </session-factory>
 </hibernate-configuration>

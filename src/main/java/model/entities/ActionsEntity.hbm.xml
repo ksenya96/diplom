@@ -4,18 +4,18 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="model.entities.TheoryEntity" table="theory" schema="programming_tutorial">
+    <class name="model.entities.ActionsEntity" table="actions" schema="programming_tutorial">
         <id name="id">
             <column name="id" sql-type="int(11)"/>
         </id>
-        <property name="themeId">
-            <column name="theme_id" sql-type="int(11)"/>
-        </property>
-        <property name="content">
-            <column name="content" sql-type="text"/>
+        <property name="action">
+            <column name="action" sql-type="int(11)"/>
         </property>
         <property name="userId">
-            <column name="user_id" sql-type="int(11)" not-null="true"/>
+            <column name="user_id" sql-type="int(11)"/>
+        </property>
+        <property name="date">
+            <column name="date" sql-type="datetime"/>
         </property>
     </class>
 </hibernate-mapping>

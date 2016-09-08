@@ -1,30 +1,35 @@
-import model.daos.Dao;
-import model.daos.DaoFactory;
 import model.daos.Entity;
-import model.daos.TheoryDao;
-import model.entities.AbstractEntity;
+import model.daos.ThemesDaoImpl;
+import model.daos.UsersDaoImpl;
 import model.entities.ThemesEntity;
+import model.entities.UsersEntity;
 import model.utils.HibernateSessionFactory;
-
-import java.util.List;
+import org.hibernate.Session;
 
 
 public class AppMain {
 
     public static void main(String[] args) {
 
-        TheoryDao theoryDao = (TheoryDao) DaoFactory.getDao(Entity.THEORY);
-        /*ThemesEntity themesEntity = new ThemesEntity();
-        themesEntity.setId(6);
-        themesEntity.setTitle("pascal");
-        themesEntity.setClazz(6);
-        themesDao.update(themesEntity);*/
-        //List<? extends AbstractEntity> list = themesDao.getAllEntities();
+        Session SESSION  = HibernateSessionFactory.getSessionFactory().openSession();
+        UsersDaoImpl usersDao = new UsersDaoImpl(SESSION, Entity.USERS);
+        UsersEntity usersEntity = new UsersEntity();
+        usersEntity.setLogin("kanaplya");
+        usersEntity.setPassword("123");
+        usersEntity.setAccess(1);
+        usersEntity.setFirstName("Иван");
+        usersEntity.setLastName("Канапляник");
+        usersEntity.setPatronymic("Викторович");
 
-        //System.out.println(list);
-        /*for (AbstractEntity entity: list)
-            System.out.println(entity);*/
-        System.out.println(theoryDao.getContentForTheme(1));
+        usersDao.create(usersEntity);
+
+        /*ThemesEntity themesEntity = new ThemesEntity();
+        themesEntity.setTitle("c++");
+        themesEntity.setClazz(6);
+
+        ThemesDaoImpl themesDao = new ThemesDaoImpl(SESSION, Entity.THEMES);
+        themesDao.delete(themesEntity);*/
+
 
         HibernateSessionFactory.shutdown();
     }

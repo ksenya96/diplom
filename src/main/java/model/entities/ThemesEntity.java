@@ -4,14 +4,14 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 /**
- * Created by acer on 11.08.2016.
+ * Created by acer on 07.09.2016.
  */
 @Entity
-@Table(name = "themes", schema = "programming_tutorial")
+@Table(name = "themes", schema = "programming_tutorial", catalog = "")
 public class ThemesEntity extends AbstractEntity implements Serializable {
     private int id;
     private String title;
-    private Integer clazz;
+    private int clazz;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -24,7 +24,7 @@ public class ThemesEntity extends AbstractEntity implements Serializable {
     }
 
     @Basic
-    @Column(name = "title", nullable = true, length = 255)
+    @Column(name = "title", nullable = false, length = 255)
     public String getTitle() {
         return title;
     }
@@ -34,12 +34,12 @@ public class ThemesEntity extends AbstractEntity implements Serializable {
     }
 
     @Basic
-    @Column(name = "class", nullable = true)
-    public Integer getClazz() {
+    @Column(name = "class", nullable = false)
+    public int getClazz() {
         return clazz;
     }
 
-    public void setClazz(Integer clazz) {
+    public void setClazz(int clazz) {
         this.clazz = clazz;
     }
 
@@ -51,8 +51,8 @@ public class ThemesEntity extends AbstractEntity implements Serializable {
         ThemesEntity that = (ThemesEntity) o;
 
         if (id != that.id) return false;
+        if (clazz != that.clazz) return false;
         if (title != null ? !title.equals(that.title) : that.title != null) return false;
-        if (clazz != null ? !clazz.equals(that.clazz) : that.clazz != null) return false;
 
         return true;
     }
@@ -61,16 +61,7 @@ public class ThemesEntity extends AbstractEntity implements Serializable {
     public int hashCode() {
         int result = id;
         result = 31 * result + (title != null ? title.hashCode() : 0);
-        result = 31 * result + (clazz != null ? clazz.hashCode() : 0);
+        result = 31 * result + clazz;
         return result;
-    }
-
-    @Override
-    public String toString() {
-        return "ThemesEntity{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", clazz=" + clazz +
-                '}';
     }
 }

@@ -1,7 +1,6 @@
 package model.daos;
 
 import model.entities.AbstractEntity;
-import model.entities.ThemesEntity;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -12,16 +11,17 @@ import java.util.List;
 /**
  * Created by acer on 11.08.2016.
  */
-public abstract class Dao {
+public abstract class DaoImpl {
     private Session session;
     private Entity entity;
 
-    public Dao(Session session, Entity entity) {
+    public DaoImpl(Session session, Entity entity) {
         this.session = session;
         this.entity = entity;
     }
 
-    public void add(AbstractEntity entity) {
+
+    public void create(AbstractEntity entity) {
         Transaction transaction = null;
         try {
             transaction = session.beginTransaction();
@@ -67,6 +67,15 @@ public abstract class Dao {
     public List<? extends AbstractEntity> getAllEntities() {
         Query query = session.createQuery("FROM " + entity.getTableName());
         return query.list();
+    }
+
+    public String getEntityById(int id) {
+        String tableName = getEntity().getTableName();
+        Query query = getSession().createQuery
+                ("SELECT t.title " +
+                        "FROM " + tableName + " AS t " +
+                        "WHERE t.id = " + id);
+        return ((List<String>)query.list()).get(0);
     }
 
     public Session getSession() {

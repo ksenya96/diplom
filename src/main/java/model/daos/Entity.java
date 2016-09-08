@@ -5,7 +5,13 @@ package model.daos;
  */
 public enum Entity {
     THEMES("ThemesEntity"),
-    THEORY("TheoryEntity");
+    THEORY("TheoryEntity"),
+    TASKS("TasksEntity"),
+    ACTIONS("ActionsEntity"),
+    PARENTS("ParentsEntity"),
+    PUPILS("PupilsEntity"),
+    SCHOOLS("SchoolsEntity"),
+    USERS("UsersEntity");
 
     private String tableName;
 

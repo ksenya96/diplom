@@ -13,5 +13,10 @@
 </head>
 <body>
 ${content}
+<c:forEach items="${tasks}" var="item">
+    <div>
+        <a href="/servlet?task=${item.id}">${item.title}</a><br>
+    </div>
+</c:forEach>
 </body>
 </html>
