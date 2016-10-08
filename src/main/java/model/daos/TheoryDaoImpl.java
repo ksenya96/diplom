@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by acer on 20.08.2016.
  */
-public class TheoryDaoImpl extends DaoImpl {
+public class TheoryDaoImpl extends DaoImp {
 
     public TheoryDaoImpl(Session session, Entity entity) {
         super(session, entity);

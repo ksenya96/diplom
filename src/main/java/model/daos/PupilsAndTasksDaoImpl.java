@@ -5,8 +5,8 @@ import org.hibernate.Session;
 /**
  * Created by acer on 07.09.2016.
  */
-public class ParentsDaoImpl extends DaoImp {
-    public ParentsDaoImpl (Session session, Entity entity) {
+public class PupilsAndTasksDaoImpl extends DaoImp {
+    public PupilsAndTasksDaoImpl(Session session, Entity entity) {
         super(session, entity);
     }
 }

@@ -4,14 +4,19 @@ package model.daos;
  * Created by acer on 11.08.2016.
  */
 public enum Entity {
-    THEMES("ThemesEntity"),
-    THEORY("TheoryEntity"),
-    TASKS("TasksEntity"),
-    ACTIONS("ActionsEntity"),
-    PARENTS("ParentsEntity"),
-    PUPILS("PupilsEntity"),
-    SCHOOLS("SchoolsEntity"),
-    USERS("UsersEntity");
+    THEMES("Theme"),
+    THEORY("Theory"),
+    TASKS("Task"),
+    ACTIONS("Action"),
+    PARENTS("Parent"),
+    PUPILS("Pupil"),
+    SCHOOLS("School"),
+    USERS("User"),
+    TEACHERS("Teacher"),
+    PUPILS_AND_PARENTS("PupilsAndParentsEntity"),
+    PUPILS_AND_TEACHERS("PupilsAndTeachersEntity"),
+    PUPILS_AND_THEMES("PupilsAndThemesEntity"),
+    PUPILS_AND_TASKS("PupilsAndTasksEntity");
 
     private String tableName;
 

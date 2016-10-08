@@ -1,6 +1,5 @@
 package model.utils;
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -22,7 +21,8 @@ public class HibernateSessionFactory {
             // so destroy it manually.
             //StandardServiceRegistryBuilder.destroy( registry );
 
-            throw new ExceptionInInitializerError("Initial SessionFactory failed" + e);
+            //throw new ExceptionInInitializerError("Initial SessionFactory failed" + e);
+            e.printStackTrace();
         }
         return sessionFactory;
     }

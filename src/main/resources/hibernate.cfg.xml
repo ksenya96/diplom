@@ -10,24 +10,25 @@
 
         <property name="connection.username">root</property>
         <property name="connection.password">admin</property>
-        <!--<property name="hibernate.connection.provider_class">org.hibernate.c3p0.internal.C3P0ConnectionProvider</property>-->
+
+        <!--<property value="hibernate.connection.provider_class">org.hibernate.c3p0.internal.C3P0ConnectionProvider</property>-->
 
         <!-- DB schema will be updated if needed -->
-        <!-- <property name="hbm2ddl.auto">update</property> -->
-        <mapping class="model.entities.ThemesEntity"/>
-        <!--<mapping resource="model/entities/ThemesEntity.hbm.xml"/>-->
-        <mapping class="model.entities.TheoryEntity"/>
-        <!--<mapping resource="model/entities/TheoryEntity.hbm.xml"/>-->
-        <mapping class="model.entities.TasksEntity"/>
+        <!-- <property value="hbm2ddl.auto">update</property> -->
+        <mapping class="model.entities.Theme"/>
+        <!--<mapping resource="model/entities/Theme.hbm.xml"/>-->
+        <mapping class="model.entities.Theory"/>
+        <!--<mapping resource="model/entities/Theory.hbm.xml"/>-->
+        <mapping class="model.entities.Task"/>
+        <mapping class="model.entities.Teacher"/>
 
-        <mapping class="model.entities.ActionsEntity"/>
-        <mapping class="model.entities.ParentsEntity"/>
+        <mapping class="model.entities.Action"/>
+        <mapping class="model.entities.Parent"/>
 
-        <mapping class="model.entities.PupilsEntity"/>
+        <mapping class="model.entities.Pupil"/>
 
-        <mapping class="model.entities.SchoolsEntity"/>
-        <mapping class="model.entities.UsersEntity"/>
-
+        <mapping class="model.entities.School"/>
+        <mapping class="model.entities.User"/>
 
     </session-factory>
 </hibernate-configuration>
