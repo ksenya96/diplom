@@ -9,7 +9,7 @@ import java.util.Set;
  * Created by acer on 07.09.2016.
  */
 @Entity
-@Table(name = "themes", schema = "programming_tutorial", catalog = "")
+@Table(name = "theme", schema = "programming_tutorial", catalog = "")
 public class Theme extends AbstractEntity implements Serializable {
     private int id;
     private String title;
@@ -68,7 +68,7 @@ public class Theme extends AbstractEntity implements Serializable {
     }
 
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany
     @JoinTable(name = "pupils_and_themes",
             joinColumns = {@JoinColumn(name = "theme_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "pupil_id", referencedColumnName = "id")})

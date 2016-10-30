@@ -6,9 +6,12 @@
   Time: 18:09
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=utf-8" language="java" %>
+<%@page pageEncoding="UTF-8" %>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="css/index/star.css">
+    <meta charset="utf-8">
     <title>Учимся играя</title>
 </head>
 <body>
@@ -27,143 +30,153 @@
 
 <dialog id="enter">
     <h2>Вход в систему</h2>
-    <form action="/servlet" method="post">
+    <form action="/servlet" method="post" id="formForEnter" onsubmit="return false;">
         <table>
             <tr>
                 <td>Логин:</td>
-                <td><input type="text" name="login"></td>
+                <td>
+                    <input type="text" name="login" onkeypress="checkInput(this)" onfocus="checkInput(this)"
+                           onkeyup="checkInput(this)" onchange="checkInput(this)">
+                    <span class="symbol">&#10007;</span>
+                </td>
             </tr>
             <tr>
                 <td>Пароль:</td>
-                <td><input type="password" name="password"></td>
+                <td>
+                    <input type="password" name="password" onkeypress="checkInput(this)" onfocus="checkInput(this)"
+                           onkeyup="checkInput(this)" onchange="checkInput(this)">
+                    <span class="symbol">&#10007;</span>
+                </td>
             </tr>
         </table>
         <input type="hidden" name="type" value="login">
-        <input type="submit" value="Войти">
+        <input type="submit" value="Войти" onclick="checkEnter()">
     </form>
     <button id="exit_enter">Exit</button>
 </dialog>
 <button id="show_enter">Войти</button>
 
+
+<jsp:useBean id="fieldsForCheckNull" class="java.util.ArrayList" scope="session"/>
 <dialog id="register">
-    <form action="/servlet" method="post" id="reg">
+    <form action="/servlet" method="post" id="formForReg" onsubmit="return false;">
         <table class="additional">
             <tr>
-                <td>Фамилия:</td>
-                <td><input type="text" name="lastName"></td>
+                <td>Фамилия: <span class="star">*</span></td>
+                <td><input type="text" name="lastName" onkeypress="checkInput(this)" onfocus="checkInput(this)"
+                           onkeyup="checkInput(this)" onchange="checkInput(this)">
+                    <span class="symbol">&#10007;</span>
+                    <input type="hidden" value="${fieldsForCheckNull.add("lastName")}">
+                </td>
             </tr>
             <tr>
-                <td>Имя:</td>
-                <td><input type="text" name="firstName"></td>
+                <td>Имя: <span class="star">*</span></td>
+                <td><input type="text" name="firstName" onkeypress="checkInput(this)" onfocus="checkInput(this)"
+                           onchange="checkInput(this)" onkeyup="checkInput(this)">
+                    <span class="symbol">&#10007;</span>
+                    <input type="hidden" value="${fieldsForCheckNull.add("firstName")}">
+                </td>
             </tr>
             <tr>
                 <td>Отчество:</td>
                 <td><input type="text" name="patronymic"></td>
             </tr>
             <tr>
-                <td>Логин:</td>
-                <td><input type="text" name="login"></td>
+                <td>Логин: <span class="star">*</span></td>
+                <td><input type="text" name="login" onkeypress="checkInput(this)" onfocus="checkInput(this)"
+                           onchange="checkInput(this)" onkeyup="checkInput(this)">
+                    <span class="symbol">&#10007;</span>
+                    <input type="hidden" value="${fieldsForCheckNull.add("login")}">
+                </td>
             </tr>
             <tr>
-                <td>Пароль:</td>
-                <td><input type="password" name="password"></td>
+                <td>Пароль: <span class="star">*</span></td>
+                <td><input type="password" name="password" onkeypress="checkInput(this)" onfocus="checkInput(this)"
+                           onchange="checkInput(this)" onkeyup="checkInput(this)">
+                    <span class="symbol">&#10007;</span>
+                    <input type="hidden" value="${fieldsForCheckNull.add("password")}">
+                </td>
             </tr>
             <tr>
-                <td>Повторите пароль:</td>
-                <td><input type="password" name="confirmPassword"></td>
+                <td>Повторите пароль: <span class="star">*</span></td>
+                <td><input type="password" name="confirmPassword" onkeypress="checkPasswords(this)" onfocus="checkPasswords(this)"
+                           onchange="checkPasswords(this)" onkeyup="checkPasswords(this)">
+                    <span class="symbol">&#10007;</span>
+                    <input type="hidden" value="${fieldsForCheckNull.add("confirmPassword")}">
+                </td>
             </tr>
             <tr>
-                <td>Кто вы?</td>
+                <td>Кто вы? <span class="star">*</span></td>
                 <td>
-                    <select name="access" class="select">
+                    <select name="access" class="select" onkeypress="checkInput(this)" onfocus="checkInput(this)"
+                            onchange="checkInput(this)" onkeyup="checkInput(this)">
                         <jsp:useBean id="users" class="controller.UserTypeValues"/>
-                        <option value="null">Не выбрано</option>
+                        <option value="">Не выбрано</option>
                         <c:forEach items="${users.values}" var="item">
                             <option value="${item}">${item.value}</option>
                         </c:forEach>
-                    </select>
+                    </select><span class="symbol">&#10007;</span>
+                    <input type="hidden" value="${fieldsForCheckNull.add("access")}">
                 </td>
             </tr>
         </table>
-        <input type="hidden" name="type" value="register" id="hiddenField">
-        <input type="submit" value="Зарегистрировать">
+        <input type="hidden" id="hiddenField" name="type" value="register">
+        <input type="hidden" id="teacher-hidden" name="teacher-hidden">
+        <input type="hidden" id="school-hidden" name="school-hidden">
+        <input type="hidden" id="child-hidden" name="child-hidden">
+        <input type="submit" value="Зарегистрировать" onclick="checkFieldsForNull()">
     </form>
+    <span class="star">Поля, помеченные *, являются обязательными для заполнения</span><br><br>
     <button id="exit_register">Exit</button>
 </dialog>
 <button id="show_register">Регистрация</button>
 
 
-<script type="text/javascript">
-    (function () {
-        var enter = document.getElementById('enter');
-        var register = document.getElementById('register');
-        document.getElementById('show_enter').onclick = function () {
-            enter.show();
-        };
-        document.getElementById('show_register').onclick = function () {
-            register.show();
-        };
-        document.getElementById('exit_enter').onclick = function () {
-            enter.close();
-        };
-        document.getElementById('exit_register').onclick = function () {
-            register.close();
-        };
-    })();
+<script type="text/javascript" src="js/index/dialogs.js"></script>
+<jsp:include page="includes/index/userListForRegistration.jsp"/>
+<script>
+    function checkFieldsForNull() {
+        var allFieldsAreFilledIn = 1;
+        <c:forEach items="${fieldsForCheckNull}" var="item">
+            var arr = document.getElementsByName('${item}');
+            var val = $(arr[arr.length - 1]).val();
+            var str = val + ' ' + '${item}';
+        alert(str);
+            if (val === null || val === '') {
+                allFieldsAreFilledIn = 0;
+            }
+        </c:forEach>
 
-    $('.select').change(function () {
-        var val = $('.select option:selected').attr('value');
-        switch (val) {
-            case 'PUPIL':
-                var clazzes = '';
-                for (var i = 1; i < 12; i++)
-                    clazzes += '<option value="' + i + '">' + i + '</option>';
-
-                var dom = $('<tr>' +
-                              '<td>Класс: </td>' +
-                              '<td>' +
-                                 '<select name="clazz">' +
-                                      clazzes +
-                                 '</select>' +
-                              '</td>' +
-                            '</tr>');
-                $('.additional').append(dom);
-
-                var dom = $('<tr>' +
-                        '<td>Школа: </td>' +
-                        '<td>' +
-                        '<select name="school">' +
-                            '<option value="0">Не выбрано</option>'+
-                            '<c:forEach items="${schools}" var="item">' +
-                                 '<option value="${item.id}">${item.name}</option>' +
-                            '</c:forEach>' +
-                        '</select>' +
-                        '</td>' +
-                        '</tr>');
-                $('.additional').append(dom);
-
-                var dom = $('<tr>' +
-                        '<td>Учитель: </td>' +
-                        '<td>' +
-                        '<select name="teacher">' +
-                            '<option value="0">Не выбрано</option>'+
-                            '<c:forEach items="${teachers}" var="item">' +
-                                '<option value="${item.id}">${item.user.lastName} ' + '${item.user.firstName} ' + '${item.user.patronymic} ' + '</option>' +
-                            '</c:forEach>' +
-                        '</select>' +
-                        '</td>' +
-                        '</tr>');
-                $('.additional').append(dom);
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
+        var password = document.getElementsByName('password')[1].value.trim();
+        var confirmPassword = document.getElementsByName('confirmPassword')[0].value.trim();
+        if (password != null && password !== '' && password === confirmPassword)
+            allFieldsAreFilledIn *= 1;
+        else
+            allFieldsAreFilledIn = 0;
+        if (allFieldsAreFilledIn === 0) {
+            document.getElementById('formForReg').setAttribute('onsubmit', 'return false;');
         }
-    });
+        else {
+            document.getElementById('formForReg').setAttribute('onsubmit', 'return true;');
+        }
+    }
+
+    function checkEnter() {
+        var login = $(document.getElementsByName('login')[0]).val().trim();
+        var password = $(document.getElementsByName('password')[0]).val().trim();
+        alert(login);
+        alert(password);
+        if (login === null || login === '' || password === null || password === '') {
+            document.getElementById('formForEnter').setAttribute('onsubmit', 'return false;');
+        }
+        else {
+            document.getElementById('formForEnter').setAttribute('onsubmit', 'return true;');
+        }
+    }
 </script>
-
-
+<script type="text/javascript" src="js/index/dataLists.js"></script>
+<script type="text/javascript" src="js/index/checkPasswords.js"></script>
+<script type="text/javascript" src="js/index/checkInput.js"></script>
 ${result}
 </body>
 </html>

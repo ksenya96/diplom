@@ -20,13 +20,11 @@
         <mapping class="model.entities.Theory"/>
         <!--<mapping resource="model/entities/Theory.hbm.xml"/>-->
         <mapping class="model.entities.Task"/>
-        <mapping class="model.entities.Teacher"/>
 
         <mapping class="model.entities.Action"/>
-        <mapping class="model.entities.Parent"/>
-
         <mapping class="model.entities.Pupil"/>
-
+        <mapping class="model.entities.Parent"/>
+        <mapping class="model.entities.Teacher"/>
         <mapping class="model.entities.School"/>
         <mapping class="model.entities.User"/>
 

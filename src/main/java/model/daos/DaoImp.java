@@ -69,14 +69,13 @@ public class DaoImp {
         return session.createQuery("FROM " + entity.getTableName()).list();
     }
 
-    public String getEntityById(int id) {
+    public AbstractEntity getEntityById(int id) {
         String tableName = getEntity().getTableName();
 
         Query query = getSession().createQuery
-                ("SELECT t.title " +
-                        "FROM " + tableName + " AS t " +
+                ("FROM " + tableName + " AS t " +
                         "WHERE t.id = " + id);
-        return ((List<String>)query.list()).get(0);
+        return (AbstractEntity) query.uniqueResult();
     }
 
     public Session getSession() {

@@ -9,14 +9,14 @@ import java.util.Set;
  * Created by acer on 17.09.2016.
  */
 @Entity
-@Table(name = "tasks", schema = "programming_tutorial", catalog = "")
+@Table(name = "task", schema = "programming_tutorial", catalog = "")
 public class Task extends AbstractEntity implements Serializable{
     private int id;
     private String title;
-    private String type;
+    private int type;
     private String content;
     private Theme theme;
-    private User user;
+    private User author;
     private Set<Pupil> pupils = new HashSet<>();
 
     @Id
@@ -31,7 +31,7 @@ public class Task extends AbstractEntity implements Serializable{
     }
 
     @Basic
-    @Column(name = "title", nullable = false, length = 255)
+    @Column(name = "title", nullable = false, length = 45)
     public String getTitle() {
         return title;
     }
@@ -42,11 +42,11 @@ public class Task extends AbstractEntity implements Serializable{
 
     @Basic
     @Column(name = "type", nullable = false, length = 255)
-    public String getType() {
+    public int getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(int type) {
         this.type = type;
     }
 
@@ -72,12 +72,12 @@ public class Task extends AbstractEntity implements Serializable{
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
-    public User getUser() {
-        return user;
+    public User getAuthor() {
+        return author;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setAuthor(User user) {
+        this.author = user;
     }
 
     @ManyToMany(fetch = FetchType.LAZY)
@@ -97,15 +97,15 @@ public class Task extends AbstractEntity implements Serializable{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Task that = (Task) o;
+        Task task = (Task) o;
 
-        if (id != that.id) return false;
-        if (title != null ? !title.equals(that.title) : that.title != null) return false;
-        if (type != null ? !type.equals(that.type) : that.type != null) return false;
-        if (content != null ? !content.equals(that.content) : that.content != null) return false;
-        if (theme != null ? !theme.equals(that.theme) : that.theme != null) return false;
-        if (user != null ? !user.equals(that.user) : that.user != null) return false;
-        return pupils != null ? pupils.equals(that.pupils) : that.pupils == null;
+        if (id != task.id) return false;
+        if (type != task.type) return false;
+        if (title != null ? !title.equals(task.title) : task.title != null) return false;
+        if (content != null ? !content.equals(task.content) : task.content != null) return false;
+        if (theme != null ? !theme.equals(task.theme) : task.theme != null) return false;
+        if (author != null ? !author.equals(task.author) : task.author != null) return false;
+        return pupils != null ? pupils.equals(task.pupils) : task.pupils == null;
 
     }
 
@@ -113,10 +113,10 @@ public class Task extends AbstractEntity implements Serializable{
     public int hashCode() {
         int result = id;
         result = 31 * result + (title != null ? title.hashCode() : 0);
-        result = 31 * result + (type != null ? type.hashCode() : 0);
+        result = 31 * result + type;
         result = 31 * result + (content != null ? content.hashCode() : 0);
         result = 31 * result + (theme != null ? theme.hashCode() : 0);
-        result = 31 * result + (user != null ? user.hashCode() : 0);
+        result = 31 * result + (author != null ? author.hashCode() : 0);
         result = 31 * result + (pupils != null ? pupils.hashCode() : 0);
         return result;
     }

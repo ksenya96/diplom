@@ -1,9 +1,10 @@
 package model.daos;
 
-import model.entities.Teacher;
 import model.entities.User;
 import org.hibernate.Query;
 import org.hibernate.Session;
+
+import java.util.List;
 
 
 /**
@@ -21,9 +22,10 @@ public class UsersDaoImpl extends DaoImp {
         return (User) query.uniqueResult();
     }
 
-    public Teacher findTeacherById(int id) {
-        Query query = getSession().createQuery("from Teacher t where t.id = :id");
-        query.setParameter("id", id);
-        return (Teacher) query.uniqueResult();
+    public User getUserByLogin(String login) {
+        String tableName = getEntity().getTableName();
+        Query query = getSession().createQuery("FROM "+ tableName + " AS t" +
+                " WHERE t.login = '" + login + "'");
+        return (User)query.uniqueResult();
     }
 }

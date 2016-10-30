@@ -12,7 +12,7 @@ public class Theory extends AbstractEntity implements Serializable {
     private int id;
     private String content;
     private Theme theme;
-    private User user;
+    private User author;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -49,12 +49,12 @@ public class Theory extends AbstractEntity implements Serializable {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
-    public User getUser() {
-        return user;
+    public User getAuthor() {
+        return author;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setAuthor(User user) {
+        this.author = user;
     }
 
     @Override
@@ -67,7 +67,7 @@ public class Theory extends AbstractEntity implements Serializable {
         if (id != that.id) return false;
         if (content != null ? !content.equals(that.content) : that.content != null) return false;
         if (theme != null ? !theme.equals(that.theme) : that.theme != null) return false;
-        return user != null ? user.equals(that.user) : that.user == null;
+        return author != null ? author.equals(that.author) : that.author == null;
 
     }
 
@@ -76,7 +76,7 @@ public class Theory extends AbstractEntity implements Serializable {
         int result = id;
         result = 31 * result + (content != null ? content.hashCode() : 0);
         result = 31 * result + (theme != null ? theme.hashCode() : 0);
-        result = 31 * result + (user != null ? user.hashCode() : 0);
+        result = 31 * result + (author != null ? author.hashCode() : 0);
         return result;
     }
 }

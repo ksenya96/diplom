@@ -1,22 +1,20 @@
 package model.entities;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.sql.Timestamp;
 
 /**
- * Created by acer on 07.09.2016.
+ * Created by acer on 08.10.2016.
  */
 @Entity
-@Table(name = "actions", schema = "programming_tutorial", catalog = "")
-public class Action extends AbstractEntity implements Serializable{
+@Table(name = "action", schema = "programming_tutorial", catalog = "")
+public class Action {
     private int id;
     private int action;
     private Timestamp date;
     private User user;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     public int getId() {
         return id;
@@ -56,18 +54,19 @@ public class Action extends AbstractEntity implements Serializable{
         this.user = user;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Action that = (Action) o;
+        Action action1 = (Action) o;
 
-        if (id != that.id) return false;
-        if (action != that.action) return false;
-        if (date != null ? !date.equals(that.date) : that.date != null) return false;
-        return user != null ? user.equals(that.user) : that.user == null;
+        if (id != action1.id) return false;
+        if (action != action1.action) return false;
+        if (date != null ? !date.equals(action1.date) : action1.date != null) return false;
 
+        return true;
     }
 
     @Override
@@ -75,7 +74,6 @@ public class Action extends AbstractEntity implements Serializable{
         int result = id;
         result = 31 * result + action;
         result = 31 * result + (date != null ? date.hashCode() : 0);
-        result = 31 * result + (user != null ? user.hashCode() : 0);
         return result;
     }
 }

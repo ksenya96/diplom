@@ -9,11 +9,18 @@ import java.util.Set;
  * Created by acer on 07.09.2016.
  */
 @Entity
-@Table(name = "schools", schema = "programming_tutorial", catalog = "")
+@Table(name = "school", schema = "programming_tutorial", catalog = "")
 public class School extends AbstractEntity implements Serializable {
     private int id;
     private String name;
     private Set<Pupil> pupils = new HashSet<>();
+
+    public School() {
+    }
+
+    public School(String name) {
+        this.name = name;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
