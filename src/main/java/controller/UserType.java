@@ -1,7 +1,5 @@
 package controller;
 
-import model.entities.AbstractEntity;
-import model.entities.Pupil;
 
 /**
  * Created by acer on 26.09.2016.

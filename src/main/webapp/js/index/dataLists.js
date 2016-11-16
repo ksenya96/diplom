@@ -11,7 +11,9 @@ $(document).on('change', 'input', function () {
             var id = options[i].getAttribute('id');
             switch (list) {
                 case 'school_list': {
-                    document.getElementById('school-hidden').setAttribute('value', id);
+                    var schools = document.getElementsByClassName('school-hidden');
+                    for (var j = 0; j < schools.length; j++)
+                        schools.item(j).setAttribute('value', id);
                     break;
                 }
                 case 'teacher_list': {
@@ -19,7 +21,9 @@ $(document).on('change', 'input', function () {
                     break;
                 }
                 case 'child_list': {
-                    document.getElementById('child-hidden').setAttribute('value', id);
+                    var children = document.getElementsByClassName('child-hidden');
+                    for (var j = 0; j < children.length; j++)
+                        children.item(j).setAttribute('value', id);
                     break;
                 }
             }
