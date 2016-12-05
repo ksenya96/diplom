@@ -43,15 +43,14 @@
                 var dom = $('<tr id="school">' +
                         '<td>Школа: <span class="star">*</span></td>' +
                         '<td>' +
-                        '<input name = "school" list = "school_list" placeholder = "Начните вводить название школы" onkeypress="checkInput(this)"'+
-                'onchange="checkInput(this)" onkeyup="checkInput(this)">' +
+                        '<input name = "school" list = "school_list" placeholder = "Начните вводить название школы">' +
                         '<datalist id="school_list">' +
                         '<c:forEach items="${schools}" var="item">' +
                         '<option id="${item.id}">${item.name}</option>' +
                         '</c:forEach>' +
                         '</datalist>' +
                         '<span class="symbol">&#10007;</span>' +
-                        '<input type="hidden" value="${fieldsForCheckNull.add("school")}">' +
+                        '<input type="hidden" value="${fieldsForCheckNull.add("school-hidden")}">' +
                         '</td>' +
                         '</tr>');
                 $('.additional').append(dom);
@@ -59,15 +58,14 @@
                 var dom = $('<tr id = "teacher">' +
                         '<td>Учитель: <span class="star">*</span></td>' +
                         '<td>' +
-                        '<input name = "teacher" list="teacher_list" placeholder = "Начните вводить фамилию" onkeypress="checkInput(this)"'+
-                'onchange="checkInput(this)" onkeyup="checkInput(this)">' +
+                        '<input name = "teacher" list="teacher_list" placeholder = "Начните вводить фамилию">' +
                         '<datalist id = "teacher_list">' +
                         '<c:forEach items="${teachers}" var="item">' +
                         '<option id = "${item.id }">${item.lastName} ' + '${item.firstName} ' + '${item.patronymic}' + '</option>' +
                         '</c:forEach>' +
                         '</datalist>' +
                         '<span class="symbol">&#10007;</span>' +
-                        '<input type="hidden" value="${fieldsForCheckNull.add("teacher")}">' +
+                        '<input type="hidden" value="${fieldsForCheckNull.add("teacher-hidden")}">' +
                         '</td>' +
                         '</tr>');
                 $('.additional').append(dom);
@@ -78,15 +76,14 @@
                 var dom = $('<tr id = "child">' +
                         '<td>Ребенок: <span class="star">*</span></td>' +
                         '<td>' +
-                        '<input name="child" list="child_list" placeholder = "Начните вводить фамилию" onkeypress="checkInput(this)"'+
-                'onchange="checkInput(this)" onkeyup="checkInput(this)">' +
+                        '<input name="child" list="child_list" placeholder = "Начните вводить фамилию">' +
                         '<datalist id="child_list">' +
                         '<c:forEach items="${pupils}" var="item">' +
                         '<option id="${item.id}">${item.lastName} ' + '${item.firstName} ' + '</option>' +
                         '</c:forEach>' +
                         '</datalist>' +
                         '<span class="symbol">&#10007;</span>' +
-                        '<input type="hidden" value="${fieldsForCheckNull.add("child")}">' +
+                        '<input type="hidden" value="${fieldsForCheckNull.add("child-hidden")}">' +
                         '</td>' +
                         '</tr>');
                 $('.additional').append(dom);

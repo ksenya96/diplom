@@ -2,36 +2,35 @@
 <%--
   Created by IntelliJ IDEA.
   User: acer
-  Date: 14.11.2016
-  Time: 20:45
+  Date: 19.11.2016
+  Time: 20:33
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" session="true" %>
-
-    var i = 0;
-    var pupils = '<table>';
+    i = 0;
+    var children = '<table>';
     var menu = $('#additional_in_menu');
     menu.empty();
     <c:forEach items="${user.pupils}" var="item">
-        pupils = pupils + '<tr><td>' + (++i) + '. ${item.lastName} ${item.firstName} ${item.patronymic} ' +
-            '<a href="/servlet?action=delete_pupil&pupil_id=${item.id}">&#10005;</a></td></tr>';
+    children = children + '<tr><td>' + (++i) + '. ${item.lastName} ${item.firstName} ${item.patronymic} ' +
+            '<a href="/servlet?action=delete_child&child_id=${item.id}">&#10005;</a></td></tr>';
     </c:forEach>
-    pupils += '</table>';
+    children += '</table>';
 
-    var addPupils = '';
+    var addChild = '';
     <c:forEach items="${pupils}" var="item">
-        <c:if test="${! user.pupils.contains(item)}">
-            addPupils = addPupils + '<option id=${item.id}>${item.lastName} ${item.firstName} ${item.patronymic}</option>';
-        </c:if>
+    <c:if test="${! user.pupils.contains(item)}">
+    addChild = addChild + '<option id=${item.id}>${item.lastName} ${item.firstName} ${item.patronymic}</option>';
+    </c:if>
     </c:forEach>
     var dom = '<div>' +
-            pupils +
-            '<form class="formForEdit" action="/servlet?action=add_pupil" method="post">' +
+            children +
+            '<form class="forForEdit" action="/servlet?action=add_child" method="post">' +
             '<table><tr>' +
-            '<td>Добавить ученика </td>' +
-            '<td><input name = "pupil" list="child_list" placeholder = "Начните вводить фамилию">' +
+            '<td>Добавить ребенка </td>' +
+            '<td><input name = "child" list="child_list" placeholder = "Начните вводить фамилию">' +
             '<datalist id="child_list">' +
-            addPupils +
+            addChild +
             '</datalist>' +
             '<span class="symbol">&#10007;</span><br></td>' +
             '<input type="hidden" value="${fieldsForCheckNull.add("child-hidden")}">' +
@@ -41,4 +40,5 @@
             '</form>' +
             '</div>';
     menu.append(dom);
-    document.getElementsByClassName('add_tab')[0].innerHTML = 'Ученики';
+    document.getElementsByClassName('add_tab')[0].innerHTML = 'Дети';
+

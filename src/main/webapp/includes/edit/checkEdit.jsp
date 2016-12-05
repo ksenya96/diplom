@@ -6,9 +6,9 @@
   Time: 19:16
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" session="true" %>
 <script>
-    $('#edit_submit').on('click', function () {
+    $('.edit_submit').on('click', function () {
         //проверка на пустые значения обязательных для запонения полей в форме регистрации
         var allFieldsAreFilledIn = 1;
         <c:forEach items="${fieldsForCheckNull}" var="item">
@@ -21,11 +21,12 @@
         </c:forEach>
 
         //если все нужные поля запонены, разрешить отправку формы в сервлет
-        if (allFieldsAreFilledIn === 0) {
-            document.getElementById('formForEdit').setAttribute('onsubmit', 'return false;');
-        }
-        else {
-            document.getElementById('formForEdit').setAttribute('onsubmit', 'return true;');
-        }
+        var submits = document.getElementsByClassName('formForEdit');
+        for (var i = 0; i < submits.length; i++)
+            if (allFieldsAreFilledIn === 0)
+                submits[i].setAttribute('onsubmit', 'return false;');
+            else
+                submits[i].setAttribute('onsubmit', 'return true;');
+
     });
 </script>

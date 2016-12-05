@@ -65,7 +65,7 @@ public class Servlet extends HttpServlet {
         Parent parent = (Parent) request.getSession(false).getAttribute("user");
         parent.getPupils().add((Pupil) pupilsDao.getEntityById(childId));
         parentsDao.update(parent);
-        request.getRequestDispatcher("/index.jsp").forward(request, response);
+        request.getRequestDispatcher("/user.jsp").forward(request, response);
     }
 
     private void addPupil(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -73,7 +73,7 @@ public class Servlet extends HttpServlet {
         Teacher teacher = (Teacher) request.getSession(false).getAttribute("user");
         teacher.getPupils().add((Pupil) pupilsDao.getEntityById(pupilId));
         teachersDao.update(teacher);
-        request.getRequestDispatcher("/index.jsp").forward(request, response);
+        request.getRequestDispatcher("/user.jsp").forward(request, response);
     }
 
     private void addTeacher(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -81,7 +81,7 @@ public class Servlet extends HttpServlet {
         Pupil pupil = (Pupil) request.getSession(false).getAttribute("user");
         pupil.getTeachers().add((Teacher)teachersDao.getEntityById(teacherId));
         pupilsDao.update(pupil);
-        request.getRequestDispatcher("/index.jsp").forward(request, response);
+        request.getRequestDispatcher("/user.jsp").forward(request, response);
     }
     private void edit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String lastName = request.getParameter("lastName").trim();
@@ -107,7 +107,7 @@ public class Servlet extends HttpServlet {
                 parentsDao.update(user);
                 break;
         }
-        request.getRequestDispatcher("/index.jsp").forward(request, response);
+        request.getRequestDispatcher("/user.jsp").forward(request, response);
     }
 
     private void register(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -197,10 +197,12 @@ public class Servlet extends HttpServlet {
             request.setAttribute("schools", schoolsDao.getAllEntities());
             request.setAttribute("teachers", teachersDao.getAllEntities());
             request.setAttribute("pupils", pupilsDao.getAllEntities());
+            request.getRequestDispatcher("/user.jsp").forward(request, response);
         }
-        else
+        else {
             request.setAttribute("result", "Данные некорректны");
-        request.getRequestDispatcher("/index.jsp").forward(request, response);
+            request.getRequestDispatcher("/index.jsp").forward(request, response);
+        }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -214,31 +216,39 @@ public class Servlet extends HttpServlet {
                     Pupil pupil = (Pupil) request.getSession(false).getAttribute("user");
                     pupil.getTeachers().remove(teachersDao.getEntityById(teacherId));
                     pupilsDao.update(pupil);
+                    //request.getRequestDispatcher("/index.jsp").forward(request, response);
                     break;
                 case "delete_pupil":
                     int pupilId = Integer.parseInt(request.getParameter("pupil_id"));
                     Teacher teacher = (Teacher) request.getSession(false).getAttribute("user");
                     teacher.getPupils().remove(pupilsDao.getEntityById(pupilId));
                     teachersDao.update(teacher);
+                    //request.getRequestDispatcher("/index.jsp").forward(request, response);
                     break;
                 case "delete_child":
                     int childId = Integer.parseInt(request.getParameter("child_id"));
                     Parent parent = (Parent) request.getSession(false).getAttribute("user");
                     parent.getPupils().remove(pupilsDao.getEntityById(childId));
                     parentsDao.update(parent);
+                    //request.getRequestDispatcher("/index.jsp").forward(request, response);
                     break;
             }
-            request.getRequestDispatcher("/index.jsp").forward(request, response);
+
         }
 
         if (theme == null) {
             //начальная страница
             if (task == null) {
-                //request.setAttribute("themes", themesDao.getAllEntities());
-                request.setAttribute("schools", schoolsDao.getAllEntities());
-                request.setAttribute("teachers", teachersDao.getAllEntities());
-                request.setAttribute("pupils", pupilsDao.getAllEntities());
-                request.getRequestDispatcher("/index.jsp").forward(request, response);
+                if (request.getAttribute("user") == null) {
+                    request.setAttribute("themes", themesDao.getAllEntities());
+                    request.setAttribute("schools", schoolsDao.getAllEntities());
+                    request.setAttribute("teachers", teachersDao.getAllEntities());
+                    request.setAttribute("pupils", pupilsDao.getAllEntities());
+                    request.getRequestDispatcher("/index.jsp").forward(request, response);
+                }
+                else {
+                    request.getRequestDispatcher("/user.jsp").forward(request, response);
+                }
             }
             //задание
             else {
