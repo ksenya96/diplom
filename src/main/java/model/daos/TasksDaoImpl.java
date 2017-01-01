@@ -15,9 +15,8 @@ public class TasksDaoImpl extends DaoImp {
     }
 
     public List<Task> getTasksByTheme(int themeId) {
-        String tableName = getEntity().getTableName();
         Query query = getSession().createQuery("FROM " + tableName + " AS t " +
-                "WHERE t.themeId = " + themeId);
+                "WHERE t.theme.id = " + themeId);
         return (List<Task>)query.list();
     }
 }

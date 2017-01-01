@@ -14,10 +14,12 @@ import java.util.List;
 public class DaoImp {
     private Session session;
     private Entity entity;
+    protected String tableName;
 
     public DaoImp(Session session, Entity entity) {
         this.session = session;
         this.entity = entity;
+        tableName = getEntity().getTableName();
     }
 
 

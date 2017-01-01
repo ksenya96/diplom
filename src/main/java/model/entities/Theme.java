@@ -89,10 +89,7 @@ public class Theme extends AbstractEntity implements Serializable {
 
         if (id != that.id) return false;
         if (clazz != that.clazz) return false;
-        if (title != null ? !title.equals(that.title) : that.title != null) return false;
-        if (theory != null ? !theory.equals(that.theory) : that.theory != null) return false;
-        if (tasks != null ? !tasks.equals(that.tasks) : that.tasks != null) return false;
-        return pupils != null ? pupils.equals(that.pupils) : that.pupils == null;
+        return  (title != null ? !title.equals(that.title) : that.title != null);
 
     }
 
@@ -101,9 +98,6 @@ public class Theme extends AbstractEntity implements Serializable {
         int result = id;
         result = 31 * result + (title != null ? title.hashCode() : 0);
         result = 31 * result + clazz;
-        result = 31 * result + (theory != null ? theory.hashCode() : 0);
-        result = 31 * result + (tasks != null ? tasks.hashCode() : 0);
-        result = 31 * result + (pupils != null ? pupils.hashCode() : 0);
         return result;
     }
 }

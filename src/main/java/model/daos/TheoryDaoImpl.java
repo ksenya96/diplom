@@ -1,5 +1,6 @@
 package model.daos;
 
+import model.entities.Theory;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
@@ -15,11 +16,10 @@ public class TheoryDaoImpl extends DaoImp {
         super(session, entity);
     }
 
-    public String getContentByTheme(int themeId) {
-        String tableName = getEntity().getTableName();
-        Query query = getSession().createQuery("SELECT t.content " +
+    public Theory getTheoryByTheme(int themeId) {
+        Query query = getSession().createQuery(
                                           "FROM " + tableName + " AS t " +
-                                          "WHERE t.themeId = " + themeId);
-        return ((List<String>)query.list()).get(0);
+                                          "WHERE t.theme.id = " + themeId);
+        return (Theory) query.uniqueResult();
     }
 }

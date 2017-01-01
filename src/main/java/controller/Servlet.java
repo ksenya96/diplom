@@ -1,6 +1,5 @@
 package controller;
 
-import model.AppMain;
 import model.daos.*;
 import model.entities.*;
 import model.utils.HibernateSessionFactory;
@@ -12,8 +11,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.List;
 
 
 /**
@@ -21,19 +21,21 @@ import java.io.PrintWriter;
  */
 @WebServlet("/servlet")
 public class Servlet extends HttpServlet {
-    private static final Session SESSION  = HibernateSessionFactory.getSessionFactory().openSession();
-    private ThemesDaoImpl themesDao = new ThemesDaoImpl(SESSION, Entity.THEMES);
+    public static final Session SESSION  = HibernateSessionFactory.getSessionFactory().openSession();
+    private static ThemesDaoImpl themesDao = new ThemesDaoImpl(SESSION, Entity.THEMES);
     private TheoryDaoImpl theoryDao = new TheoryDaoImpl(SESSION, Entity.THEORY);
     private TasksDaoImpl tasksDao = new TasksDaoImpl(SESSION, Entity.TASKS);
     private UsersDaoImpl usersDao = new UsersDaoImpl(SESSION, Entity.USERS);
-    private SchoolsDaoImpl schoolsDao = new SchoolsDaoImpl(SESSION, Entity.SCHOOLS);
-    private TeachersDaoImpl teachersDao = new TeachersDaoImpl(SESSION, Entity.TEACHERS);
-    private PupilsDaoImpl pupilsDao = new PupilsDaoImpl(SESSION, Entity.PUPILS);
+    private static SchoolsDaoImpl schoolsDao = new SchoolsDaoImpl(SESSION, Entity.SCHOOLS);
+    private static TeachersDaoImpl teachersDao = new TeachersDaoImpl(SESSION, Entity.TEACHERS);
+    private static PupilsDaoImpl pupilsDao = new PupilsDaoImpl(SESSION, Entity.PUPILS);
     private ParentsDaoImpl parentsDao = new ParentsDaoImpl(SESSION, Entity.PARENTS);
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         String action = request.getParameter("action");
+        if (action.indexOf('#') > -1)
+            action = action.substring(0, action.indexOf('#'));
         switch (action) {
             case "login":
                 login(request, response);
@@ -54,8 +56,9 @@ public class Servlet extends HttpServlet {
                 addChild(request, response);
                 break;
             case "exit":
-                request.getSession(true).setAttribute("user", null);
-                doGet(request, response);
+                request.getSession(false).invalidate();
+                //request.setAttribute("user", null);
+                redirectToIndexJSP(request, response);
                 break;
         }
     }
@@ -65,7 +68,8 @@ public class Servlet extends HttpServlet {
         Parent parent = (Parent) request.getSession(false).getAttribute("user");
         parent.getPupils().add((Pupil) pupilsDao.getEntityById(childId));
         parentsDao.update(parent);
-        request.getRequestDispatcher("/user.jsp").forward(request, response);
+        //request.setAttribute("pupils", pupilsDao.getAllEntities());
+        redirectToUserJSP(request, response);
     }
 
     private void addPupil(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -73,7 +77,8 @@ public class Servlet extends HttpServlet {
         Teacher teacher = (Teacher) request.getSession(false).getAttribute("user");
         teacher.getPupils().add((Pupil) pupilsDao.getEntityById(pupilId));
         teachersDao.update(teacher);
-        request.getRequestDispatcher("/user.jsp").forward(request, response);
+        //request.setAttribute("pupils", pupilsDao.getAllEntities());
+        redirectToUserJSP(request, response);
     }
 
     private void addTeacher(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -81,7 +86,8 @@ public class Servlet extends HttpServlet {
         Pupil pupil = (Pupil) request.getSession(false).getAttribute("user");
         pupil.getTeachers().add((Teacher)teachersDao.getEntityById(teacherId));
         pupilsDao.update(pupil);
-        request.getRequestDispatcher("/user.jsp").forward(request, response);
+        //request.setAttribute("teachers", teachersDao.getAllEntities());
+        redirectToUserJSP(request, response);
     }
     private void edit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String lastName = request.getParameter("lastName").trim();
@@ -107,7 +113,7 @@ public class Servlet extends HttpServlet {
                 parentsDao.update(user);
                 break;
         }
-        request.getRequestDispatcher("/user.jsp").forward(request, response);
+        redirectToUserJSP(request, response);
     }
 
     private void register(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -179,25 +185,27 @@ public class Servlet extends HttpServlet {
         User user = usersDao.getUserByLoginAndPassword(login, password);
 
         if (user != null) {
-            request.getSession().invalidate();
+            request.getSession(false).invalidate();
+            HttpSession newSession = request.getSession(true);
             switch (user.getAccess()) {
                 case PUPIL:
                     Pupil pupil = (Pupil)pupilsDao.getEntityById(user.getId());
-                    request.getSession(true).setAttribute("user", pupil);
+                    newSession.setAttribute("user", pupil);
                     break;
                 case TEACHER:
                     Teacher teacher = (Teacher) teachersDao.getEntityById(user.getId());
-                    request.getSession(true).setAttribute("user", teacher);
+                    newSession.setAttribute("user", teacher);
                     break;
                 case PARENT:
                     Parent parent = (Parent) parentsDao.getEntityById(user.getId());
-                    request.getSession(true).setAttribute("user", parent);
+                    newSession.setAttribute("user", parent);
                     break;
             }
-            request.setAttribute("schools", schoolsDao.getAllEntities());
-            request.setAttribute("teachers", teachersDao.getAllEntities());
-            request.setAttribute("pupils", pupilsDao.getAllEntities());
-            request.getRequestDispatcher("/user.jsp").forward(request, response);
+            newSession.setAttribute("schools", schoolsDao.getAllEntities());
+            newSession.setAttribute("teachers", teachersDao.getAllEntities());
+            newSession.setAttribute("pupils", pupilsDao.getAllEntities());
+            newSession.setAttribute("content", "main");
+            redirectToUserJSP(request, response);
         }
         else {
             request.setAttribute("result", "Данные некорректны");
@@ -209,34 +217,43 @@ public class Servlet extends HttpServlet {
         String theme = request.getParameter("theme");
         String task = request.getParameter("task");
         String action = request.getParameter("action");
+
         if (action != null) {
+            if (action.indexOf('#') > -1)
+                action = action.substring(0, action.indexOf('#'));
             switch (action) {
                 case "delete_teacher":
                     int teacherId = Integer.parseInt(request.getParameter("teacher_id"));
                     Pupil pupil = (Pupil) request.getSession(false).getAttribute("user");
                     pupil.getTeachers().remove(teachersDao.getEntityById(teacherId));
                     pupilsDao.update(pupil);
-                    //request.getRequestDispatcher("/index.jsp").forward(request, response);
+                    redirectToUserJSP(request, response);
                     break;
                 case "delete_pupil":
                     int pupilId = Integer.parseInt(request.getParameter("pupil_id"));
+
                     Teacher teacher = (Teacher) request.getSession(false).getAttribute("user");
                     teacher.getPupils().remove(pupilsDao.getEntityById(pupilId));
                     teachersDao.update(teacher);
-                    //request.getRequestDispatcher("/index.jsp").forward(request, response);
+                    redirectToUserJSP(request, response);
                     break;
                 case "delete_child":
                     int childId = Integer.parseInt(request.getParameter("child_id"));
                     Parent parent = (Parent) request.getSession(false).getAttribute("user");
                     parent.getPupils().remove(pupilsDao.getEntityById(childId));
                     parentsDao.update(parent);
-                    //request.getRequestDispatcher("/index.jsp").forward(request, response);
+                    redirectToUserJSP(request, response);
                     break;
+                default:
+                    redirectToIndexJSP(request, response);
             }
-
         }
 
-        if (theme == null) {
+        else {
+            redirectToIndexJSP(request, response);
+        }
+
+        /*if (theme == null) {
             //начальная страница
             if (task == null) {
                 if (request.getAttribute("user") == null) {
@@ -262,11 +279,32 @@ public class Servlet extends HttpServlet {
             int id = Integer.parseInt(theme);
             //String title = themesDao.getEntityById(id);
             //request.setAttribute("title", title);
-            String content = theoryDao.getContentByTheme(id);
+            String content = theoryDao.getTheoryByTheme(id);
             request.setAttribute("content", content);
             request.setAttribute("tasks", tasksDao.getTasksByTheme(id));
             request.getRequestDispatcher("/theory.jsp").forward(request, response);
+        }*/
+    }
+
+    protected static void redirectToIndexJSP(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession(false);
+        if (session == null || session.getAttribute("user") == null) {
+            session = request.getSession(true);
+            session.setAttribute("themes", themesDao.getAllEntities());
+            session.setAttribute("schools", schoolsDao.getAllEntities());
+            session.setAttribute("teachers", teachersDao.getAllEntities());
+            session.setAttribute("pupils", pupilsDao.getAllEntities());
+            request.getRequestDispatcher("/index.jsp").forward(request, response);
         }
+        else {
+            //session.setAttribute("content", "main");
+            redirectToUserJSP(request, response);
+        }
+    }
+
+    protected static void redirectToUserJSP(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        request.getRequestDispatcher("/user.jsp").forward(request, response);
     }
 
     @Override

@@ -103,10 +103,7 @@ public class Task extends AbstractEntity implements Serializable{
         if (type != task.type) return false;
         if (title != null ? !title.equals(task.title) : task.title != null) return false;
         if (content != null ? !content.equals(task.content) : task.content != null) return false;
-        if (theme != null ? !theme.equals(task.theme) : task.theme != null) return false;
-        if (author != null ? !author.equals(task.author) : task.author != null) return false;
-        return pupils != null ? pupils.equals(task.pupils) : task.pupils == null;
-
+        return  (theme != null ? !theme.equals(task.theme) : task.theme != null);
     }
 
     @Override
@@ -116,8 +113,6 @@ public class Task extends AbstractEntity implements Serializable{
         result = 31 * result + type;
         result = 31 * result + (content != null ? content.hashCode() : 0);
         result = 31 * result + (theme != null ? theme.hashCode() : 0);
-        result = 31 * result + (author != null ? author.hashCode() : 0);
-        result = 31 * result + (pupils != null ? pupils.hashCode() : 0);
         return result;
     }
 }

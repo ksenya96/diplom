@@ -11,19 +11,19 @@ import java.util.List;
  * Created by acer on 07.09.2016.
  */
 public class UsersDaoImpl extends DaoImp {
+
+
     public UsersDaoImpl (Session session, Entity entity) {
         super(session, entity);
     }
 
     public User getUserByLoginAndPassword(String login, String password) {
-        String tableName = getEntity().getTableName();
         Query query = getSession().createQuery("FROM "+ tableName + " AS t" +
                 " WHERE t.login = '" + login + "'" + " AND t.password = '" + password + "'");
         return (User) query.uniqueResult();
     }
 
     public User getUserByLogin(String login) {
-        String tableName = getEntity().getTableName();
         Query query = getSession().createQuery("FROM "+ tableName + " AS t" +
                 " WHERE t.login = '" + login + "'");
         return (User)query.uniqueResult();

@@ -51,17 +51,10 @@ public class AppMain {
         ThemesDaoImpl themesDao = new ThemesDaoImpl(SESSION, Entity.THEMES);
         themesDao.delete(themesEntity);*/
 
-        UsersDaoImpl usersDao = new UsersDaoImpl(SESSION, Entity.USERS);
-        Pupil pupil = new Pupil("vlad", DigestUtils.md5Hex("123"), UserType.PUPIL, "Владик", "Сыщенко");
-        pupil.setClazz(2);
-        SchoolsDaoImpl schoolsDao = new SchoolsDaoImpl(SESSION, Entity.SCHOOLS);
-        School school = (School)schoolsDao.getEntityById(1);
-        pupil.setSchool(school);
-        school.getPupils().add(pupil);
-        usersDao.create(pupil);
-        school = (School)schoolsDao.getEntityById(1);
-        for (Pupil p: school.getPupils())
-            System.out.println(p.getLastName());
+        TeachersDaoImpl teachersDao = new TeachersDaoImpl(SESSION, Entity.TEACHERS);
+
+        Teacher teacher = (Teacher) teachersDao.getEntityById(3);
+        System.out.println(teacher.getPupils().size());
         HibernateSessionFactory.shutdown();
     }
 
