@@ -1,29 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>${task.title}</title>
+    <link rel="stylesheet" type="text/css" href="css/index/star.css">
 </head>
 <body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+<div class="canvas"><canvas height="600" width="600" id="canvas1">Обновите браузер</canvas></div>
+<div class="canvas"><canvas height="530" width="220" id="canvas2">Обновите браузер</canvas></div>
+<script type="text/javascript" src="js/task/Field.js"></script>
+<script type="text/javascript" src="js/task/Robot.js"></script>
+<script type="text/javascript" src="js/task/Block.js"></script>
+<script type="text/javascript" src="js/task/ProgramField.js"></script>
+<script type="text/javascript" src="js/task/commands/CommandEnum.js"></script>
+<script type="text/javascript" src="js/task/commands/CommandFactory.js"></script>
+<script type="text/javascript" src="js/task/commands/GoDown.js"></script>
+<script type="text/javascript" src="js/task/commands/GoRight.js"></script>
+<script type="text/javascript" src="js/task/commands/GoUp.js"></script>
+<script type="text/javascript" src="js/task/commands/GoLeft.js"></script>
+<script type="text/javascript" src="js/task/Point.js"></script>
 
-<h2 align="center">Линейные алгоритмы</h2>
-<p align="center">Линейный алгоритм - это алгоритм, в котором действия выполняются строго последовательно</p>
-<table align="center" width="70%"><tr><td align="center"><img src="images/linear_prog.png"></td><td align="center"><img src="images/linear_block.png"></td></tr></table>
+<script>
+    var canvas1 = document.getElementById("canvas1"),
+            ctxt1 = canvas1.getContext('2d');
+    var canvas2 = document.getElementById("canvas2"),
+            ctxt2 = canvas2.getContext('2d');
+    var field = new Filed(15, 15, 6, 6);
 
-<h2 align="center">Алгоритмы с ветвлением</h2>
-<p align="center">Алгоритм с ветвлением - это алгоритм, в котором в зависимости от условия выполняется то, либо иное действие.</p>
-<table align="center" width="70%"><tr><td align="center"><img src="images/if_prog.png"></td><td align="center"><img src="images/if_block.png"></td></tr></table>
-<p align="center">Если условие ветвления истинно, то выполняется Действие 1, в противном случае выполняется Действие 2</p>
+    var robot = new Robot(15, 0, field.SQUARE_SIZE, field.SQUARE_SIZE + 10);
 
-<h2 align="center">Циклические алгоритмы</h2>
-<p align="center">Цикличесий алгоритм - это алгоритм, в котором действия выполняются опеределенное количество раз.</p>
-<table align="center" width="70%"><tr><td align="center"><img src="images/for_prog.png"></td><td align="center"><img src="images/for_block.png"></td></tr></table>
-<p align="center">На рисунке видно, что Действие будет выполняться n раз, т.е. пока условие i <= n истинно.</p>
+    field.draw(ctxt1);
+    robot.draw(ctxt1);
 
-<h2 align="center">Подпрограммы</h2>
-<p align="center">При решении некоторых задач бывает удобно разбить их на подзадачи, каждую из которых можно оформить как самостоятельный алгоритм.</p>
-<table align="center" width="70%"><tr><td align="center"><img src="images/proc_prog.png"></td><td align="center"><img src="images/proc_block.png"></td></tr></table>
-<p align="center">Каждый такой алгоритм называется подпрограммой (процедурой). Процедуру в основной программе можно вызывать неоднократно.</p>
+    var block = new Block(15, 15, 180, 6 * 85);
+    block.draw(ctxt2);
+
+
+    function animation(command) {
+        ctxt1.clearRect(0, 0, canvas1.width, canvas1.height);
+        robot.move(command);
+        field.draw(ctxt1);
+        robot.draw(ctxt1);
+        block.addCommand(command);
+        block.draw(ctxt2);
+        programField.addText(command);
+        ctxt1.restore();
+    }
+
+    //setInterval(animation, 33);
+
+    var programField = new ProgramField(34, 20);
+    programField.addOnCanvas();
+
+
+    $('.canvas').first().after('<div class="buttons"><input type="button" value="GoDown" onclick="animation(CommandEnum.GO_DOWN);"><br>' +
+            '<input type="button" value="GoUp" onclick="animation(CommandEnum.GO_UP);"><br>' +
+            '<input type="button" value="GoLeft" onclick="animation(CommandEnum.GO_LEFT);"><br>' +
+            '<input type="button" value="GoRight" onclick="animation(CommandEnum.GO_RIGHT);">' +
+            '</div>');
+
+
+
+</script>
 
 </body>
 </html>

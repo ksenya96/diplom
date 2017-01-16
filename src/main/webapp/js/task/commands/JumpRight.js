@@ -1,7 +1,7 @@
 /**
  * Created by acer on 16.01.2017.
  */
-function JumpLeft(commandEnum) {
+function JumpRight(commandEnum) {
     this.commandEnum = commandEnum;
 
     this.getTextForProgramField = function () {
@@ -10,11 +10,11 @@ function JumpLeft(commandEnum) {
 
     this.drawWay = function (field) {
         var robotWay = field.getRobotWay();
-        field.getRobotWay().push(new Point(robotWay[robotWay.length - 1].x - field.SQUARE_SIZE * 2, robotWay[robotWay.length - 1].y));
+        field.getRobotWay().push(new Point(robotWay[robotWay.length - 1].x + field.SQUARE_SIZE * 2, robotWay[robotWay.length - 1].y));
     };
 
     this.move = function (point) {
-        point.x -= field.SQUARE_SIZE * 2;
+        point.x += field.SQUARE_SIZE * 2;
         return point;
     };
 

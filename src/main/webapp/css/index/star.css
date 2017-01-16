@@ -49,3 +49,18 @@ nav {
     display:inline-block;
     align-content: right;
 }
+
+#textarea {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.canvas, .buttons {
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+
+
+

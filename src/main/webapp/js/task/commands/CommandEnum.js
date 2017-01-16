@@ -1,7 +1,7 @@
 /**
  * Created by acer on 09.01.2017.
  */
-var CommandsEnum = {
+var CommandEnum = {
     GO_DOWN: 'GoDown',
     GO_RIGHT: 'GoRight',
     GO_UP: 'GoUp',
@@ -23,6 +23,5 @@ var CommandsEnum = {
     IF_ALGORITHMS: 'Алгоритмы с ветвлением',
     FOR_ALGORITHMS: 'Цмклические алгоритмы',
     PROCEDURE_ALGORITHMS: 'Подпрограммы',
-    CONTROL_TASKS: 'Контрольные задания',
-    BACK: 'Назад'
+    CONTROL_TASKS: 'Контрольные задания'
 };

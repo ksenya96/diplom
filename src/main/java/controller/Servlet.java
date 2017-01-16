@@ -245,11 +245,17 @@ public class Servlet extends HttpServlet {
                     redirectToUserJSP(request, response);
                     break;
                 default:
+                    HttpSession session = request.getSession(false);
+                    if (session != null)
+                        session.setAttribute("content", "main");
                     redirectToIndexJSP(request, response);
             }
         }
 
         else {
+            HttpSession session = request.getSession(false);
+            if (session != null)
+                session.setAttribute("content", "main");
             redirectToIndexJSP(request, response);
         }
 
