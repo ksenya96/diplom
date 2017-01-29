@@ -11,15 +11,15 @@ function ProgramField(width, height) {
     this.procedure = 'procedure Proc;' + '\n' + 'begin';
 
 
-    this.addOnCanvas = function () {
-        $('.canvas').last().after('<div id="textarea"><textarea id="program_filed" rows="' + width + '" cols="' + height + '" readonly></textarea></div>');
+    this.addOnDisplay = function () {
+        $('.canvas').last().after('<div id="textarea"><textarea id="program_filed" rows="' + height + '" cols="' + width + '" readonly></textarea></div>');
         $('#program_filed').val(this.begin + '\n' + '02  ' + this.end);
     };
 
     this.addText = function (command) {
         var factory = new CommandFactory(command);
         if (command === CommandEnum.FOR) {
-            //вставить код
+            factory.getCommand().setNFor(this.nFor);
         }
 
         var text = factory.getTextForProgramField();
@@ -40,7 +40,7 @@ function ProgramField(width, height) {
             procedure = this.procedure + '\n' + 'end;' + '\n' + '\n';
         }
         if (this.numberOfCurrentString + 1 > 0 && this.numberOfCurrentString + 1 < 10)
-            $('#program_filed').val(procedure + this.begin + '\n' + '0' + (this.numberOfCurrentString + 1) + ' ' + this.end);
+            $('#program_filed').val(procedure + this.begin + '\n' + '0' + (this.numberOfCurrentString + 1) + '  ' + this.end);
         else
             $('#program_filed').val(procedure + this.begin + '\n' + (this.numberOfCurrentString + 1) + '  ' + this.end);
     };
@@ -101,7 +101,7 @@ function ProgramField(width, height) {
         this.isProcedure = b;
         if (this.isProcedure) {
             $('#program_filed').val('');
-            $('#program_filed').val(this.procedure + '\n' + 'end;' + '\n' + '\n' + this.begin + '\n' + '02' + this.end);
+            $('#program_filed').val(this.procedure + '\n' + 'end;' + '\n' + '\n' + this.begin + '\n' + '02  ' + this.end);
         }
     };
 

@@ -10,11 +10,11 @@ function JumpLeft(commandEnum) {
 
     this.drawWay = function (field) {
         var robotWay = field.getRobotWay();
-        field.getRobotWay().push(new Point(robotWay[robotWay.length - 1].x - field.SQUARE_SIZE * 2, robotWay[robotWay.length - 1].y));
+        field.getRobotWay().push(new Point(robotWay[robotWay.length - 1].x - SQUARE_SIZE * 2, robotWay[robotWay.length - 1].y));
     };
 
     this.move = function (point) {
-        point.x -= field.SQUARE_SIZE * 2;
+        point.x -= SQUARE_SIZE * 2;
         return point;
     };
 
@@ -23,10 +23,21 @@ function JumpLeft(commandEnum) {
         var y = point.y;
 
         ctxt.strokeRect(x - 20 - RECTANGLE_WIDTH / 3, y, RECTANGLE_WIDTH / 1.5, FIGURE_HEIGHT);
-        ctxt.fillText(this.commandEnum, x - 20 - RECTANGLE_WIDTH / 3 + RECTANGLE_WIDTH / 3 - FONT_SIZE * this.commandEnum.length / 2,
+        ctxt.fillText(this.commandEnum, x - 20 - RECTANGLE_WIDTH / 3 + RECTANGLE_WIDTH / 3 - FONT_SIZE * this.commandEnum.length / 2.5,
         y + FIGURE_HEIGHT / 2 + FONT_SIZE / 3);
         drawLine(x - 20, y + FIGURE_HEIGHT, x - 20, y + FIGURE_HEIGHT + 5, ctxt);
         drawLine(x - 20, y + FIGURE_HEIGHT + 5, x + RECTANGLE_WIDTH + 20, y + FIGURE_HEIGHT + 5, ctxt);
-        drawLine(x + RECTANGLE_WIDTH + 20, y + FIGURE_HEIGHT + 5, x + RECTANGLE_WIDTH + 20, y - 10);
-    }
+        drawLine(x + RECTANGLE_WIDTH + 20, y + FIGURE_HEIGHT + 5, x + RECTANGLE_WIDTH + 20, y - 10, ctxt);
+    };
+
+    this.setButtonParameters = function (task) {
+        if (task.getNumberOfCommands() < task.getLinesLimit()) {
+            task.getProgramField().addText(this.commandEnum);
+            task.getBlock().addCommand(this.commandEnum);
+            task.getCommands().push(this.commandEnum);
+
+            task.setNumberOfCommands(task.getNumberOfCommands() + 1);
+            task.draw();
+        }
+    };
 }

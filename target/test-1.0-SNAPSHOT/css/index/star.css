@@ -55,9 +55,14 @@ nav {
     margin-top: 15px;
 }
 
-.canvas {
+.canvas, .buttons {
     display: inline-block;
+    vertical-align: top;
 }
+
+#textarea {
+    border: 3px solid rgb(139, 9, 12);
+ }
 
 
 
