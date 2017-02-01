@@ -64,6 +64,8 @@ function Cancel(commandEnum) {
                 }
             }
         }
+        if (commands.length == 0)
+            task.setNum(-1);
         task.draw();
     };
 

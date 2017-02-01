@@ -23,4 +23,14 @@ function Procedure(commandEnum) {
             y + FIGURE_HEIGHT / 2 + FONT_SIZE / 3);
 
     };
+
+    this.setButtonParameters = function (task) {
+        if (task.getNumberOfCommands() < task.getLinesLimit()) {
+            task.getProgramField().addText(this.commandEnum);
+            task.getBlock().addCommand(this.commandEnum);
+            task.getCommands().push(this.commandEnum);
+            task.setNumberOfCommands(task.getNumberOfCommands() + 1);
+        }
+        task.draw();
+    };
 }

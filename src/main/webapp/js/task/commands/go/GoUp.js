@@ -31,7 +31,12 @@ function GoUp(commandEnum) {
 
     this.setButtonParameters = function (task) {
         if (task.getAlgorithm() === CommandEnum.PROCEDURE_ALGORITHMS) {
-            //insert code
+            if (task.getNumberOfCommandsInProcedure() < task.getLinesLimitInProcedure()) {
+                task.getProgramField().addTextToProcedure(this.commandEnum);
+                for (var i = 0; i < SQUARE_SIZE / 5; i++)
+                    task.getCommandsInProcedure().push(this.commandEnum);
+                task.setNumberOfCommandsInProcedure(task.getNumberOfCommandsInProcedure() + 1);
+            }
         }
         else {
             if (task.getNumberOfCommands() < task.getLinesLimit()) {

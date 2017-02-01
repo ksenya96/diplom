@@ -1,7 +1,7 @@
 /**
  * Created by acer on 14.01.2017.
  */
-function GoDown(commandEnum) {
+function GoLeft(commandEnum) {
     this.commandEnum = commandEnum;
 
     this.getTextForProgramField = function () {
@@ -10,11 +10,11 @@ function GoDown(commandEnum) {
 
     this.drawWay = function (field) {
         var robotWay = field.getRobotWay();
-        robotWay.push(new Point(robotWay[robotWay.length - 1].x, robotWay[robotWay.length - 1].y + 5));
+        field.getRobotWay().push(new Point(robotWay[robotWay.length - 1].x - 5, robotWay[robotWay.length - 1].y));
     };
 
     this.move = function (point) {
-        point.y += 5;
+        point.x -= 5;
         return point;
     };
 
@@ -22,15 +22,21 @@ function GoDown(commandEnum) {
         var x = point.x;
         var y = point.y;
 
+
         ctxt.strokeRect(x, y, RECTANGLE_WIDTH, FIGURE_HEIGHT);
         ctxt.fillText(this.commandEnum, x + RECTANGLE_WIDTH / 2 - FONT_SIZE * commandEnum.length / 2.5,
-        y + FIGURE_HEIGHT / 2 + FONT_SIZE / 3);
+            y + FIGURE_HEIGHT / 2 + FONT_SIZE / 3);
 
     };
 
     this.setButtonParameters = function (task) {
         if (task.getAlgorithm() === CommandEnum.PROCEDURE_ALGORITHMS) {
-            //insert code
+            if (task.getNumberOfCommandsInProcedure() < task.getLinesLimitInProcedure()) {
+                task.getProgramField().addTextToProcedure(this.commandEnum);
+                for (var i = 0; i < SQUARE_SIZE / 5; i++)
+                    task.getCommandsInProcedure().push(this.commandEnum);
+                task.setNumberOfCommandsInProcedure(task.getNumberOfCommandsInProcedure() + 1);
+            }
         }
         else {
             if (task.getNumberOfCommands() < task.getLinesLimit()) {
