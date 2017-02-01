@@ -45,6 +45,7 @@ function Task(algorithm, ctxt1, ctxt2, beginCellOfRobot, cells, linesLimit) {
     this.linesLimit = linesLimit;
     this.linesLimitInProcedure = 0;
     this.numberOfCommands = 0;
+    this.numberOfCommandsInProcedure = 0;
 
     this.commands = [];
     this.commandsInProcedure = [];
@@ -66,19 +67,19 @@ function Task(algorithm, ctxt1, ctxt2, beginCellOfRobot, cells, linesLimit) {
         switch (algorithm) {
             case CommandEnum.LINEAR_ALGORITHMS:
                 $('.canvas').first().after('<div class="buttons">' +
-                    '<input type="button" value="GoDown" onclick="new CommandFactory(CommandEnum.GO_DOWN).setButtonParameters(task);"><br>' +
-                    '<input type="button" value="GoUp" onclick="new CommandFactory(CommandEnum.GO_UP).setButtonParameters(task);"><br>' +
-                    '<input type="button" value="GoLeft" onclick="new CommandFactory(CommandEnum.GO_LEFT).setButtonParameters(task);"><br>' +
-                    '<input type="button" value="GoRight" onclick="new CommandFactory(CommandEnum.GO_RIGHT).setButtonParameters(task);"><br>' +
+                    '<button onclick="new CommandFactory(CommandEnum.GO_DOWN).setButtonParameters(task);"><img src="images/GoDown.png"></button><br>' +
+                    '<button onclick="new CommandFactory(CommandEnum.GO_UP).setButtonParameters(task);"><img src="images/GoUp.png"></button><br>' +
+                    '<button onclick="new CommandFactory(CommandEnum.GO_LEFT).setButtonParameters(task);"><img src="images/GoLeft.png"></button><br>' +
+                    '<button onclick="new CommandFactory(CommandEnum.GO_RIGHT).setButtonParameters(task);"><img src="images/GoRight.png"></button><br>' +
                     '</div>');
                 break;
             case CommandEnum.IF_ALGORITHMS:
                 $('.canvas').first().after('<div class="buttons">' +
-                    '<input type="button" value="JumpDown" onclick="new CommandFactory(CommandEnum.JUMP_DOWN).setButtonParameters(task);"><br>' +
-                    '<input type="button" value="JumpUp" onclick="new CommandFactory(CommandEnum.JUMP_UP).setButtonParameters(task);"><br>' +
-                    '<input type="button" value="JumpLeft" onclick="new CommandFactory(CommandEnum.JUMP_LEFT).setButtonParameters(task);"><br>' +
-                    '<input type="button" value="JumpRight" onclick="new CommandFactory(CommandEnum.JUMP_RIGHT).setButtonParameters(task);"><br>' +
-                    '<input type="button" value="if is_wall" onclick="new CommandFactory(CommandEnum.IF).setButtonParameters(task);">' +
+                    '<button onclick="new CommandFactory(CommandEnum.JUMP_DOWN).setButtonParameters(task);">JumpDown</button><br>' +
+                    '<button onclick="new CommandFactory(CommandEnum.JUMP_UP).setButtonParameters(task);">JumpUp</button><br>' +
+                    '<button onclick="new CommandFactory(CommandEnum.JUMP_LEFT).setButtonParameters(task);">JumpLeft</button><br>' +
+                    '<button onclick="new CommandFactory(CommandEnum.JUMP_RIGHT).setButtonParameters(task);">JumpRight</button><br>' +
+                    '<button onclick="new CommandFactory(CommandEnum.IF).setButtonParameters(task);">if is_wall</button>' +
                     '</div>');
                 break;
             case CommandEnum.FOR_ALGORITHMS:
@@ -86,41 +87,41 @@ function Task(algorithm, ctxt1, ctxt2, beginCellOfRobot, cells, linesLimit) {
                 for (var i = 2; i <= 5; i++)
                     steps += '<option value="' + i + '">n := ' + i + '</option>';
                 $('.canvas').first().after('<div class="buttons">' +
-                    '<input type="button" value="GoDown" onclick="new CommandFactory(CommandEnum.GO_DOWN).setButtonParameters(task);"><br>' +
-                    '<input type="button" value="GoUp" onclick="new CommandFactory(CommandEnum.GO_UP).setButtonParameters(task);"><br>' +
-                    '<input type="button" value="GoLeft" onclick="new CommandFactory(CommandEnum.GO_LEFT).setButtonParameters(task);"><br>' +
-                    '<input type="button" value="GoRight" onclick="new CommandFactory(CommandEnum.GO_RIGHT).setButtonParameters(task);"><br>' +
+                    '<button onclick="new CommandFactory(CommandEnum.GO_DOWN).setButtonParameters(task);"><img src="images/GoDown.png"></button><br>' +
+                    '<button onclick="new CommandFactory(CommandEnum.GO_UP).setButtonParameters(task);"><img src="images/GoUp.png"></button><br>' +
+                    '<button onclick="new CommandFactory(CommandEnum.GO_LEFT).setButtonParameters(task);"><img src="images/GoLeft.png"></button><br>' +
+                    '<button onclick="new CommandFactory(CommandEnum.GO_RIGHT).setButtonParameters(task);"><img src="images/GoRight.png"></button><br>' +
                     '<select class="for" onchange="new CommandFactory(CommandEnum.FOR).setButtonParameters(task);">' +
                     steps +
                     '</select>' +
                     '</div>');
                 break;
             case CommandEnum.PROCEDURE_ALGORITHMS:
-                $('.canvas').first().after('<div class="buttons"><input type="button" value="GoDown" onclick="window.animation(CommandEnum.GO_DOWN);"><br>' +
-                    '<input type="button" value="GoUp" onclick="window.animation(CommandEnum.GO_UP);"><br>' +
-                    '<input type="button" value="GoLeft" onclick="window.animation(CommandEnum.GO_LEFT);"><br>' +
-                    '<input type="button" value="GoRight" onclick="window.animation(CommandEnum.GO_RIGHT);"><br>' +
-                    '<input type="button" value="Proc" onclick="window.animation(CommandEnum.PROCEDURE);"><br>' +
+                $('.canvas').first().after('<div class="buttons">' +
+                    '<button onclick="new CommandFactory(CommandEnum.GO_DOWN).setButtonParameters(task);"><img src="images/GoDown.png"></button><br>' +
+                    '<button onclick="new CommandFactory(CommandEnum.GO_UP).setButtonParameters(task);"><img src="images/GoUp.png"></button><br>' +
+                    '<button onclick="new CommandFactory(CommandEnum.GO_LEFT).setButtonParameters(task);"><img src="images/GoLeft.png"></button><br>' +
+                    '<button onclick="new CommandFactory(CommandEnum.GO_RIGHT).setButtonParameters(task);"><img src="images/GoRight.png"></button><br>' +
+                    '<button onclick="new CommandFactory(CommandEnum.PROCEDURE).setButtonParameters(task);">Proc</button><br>' +
                     '</div>');
                 break;
         }
 
-        var appendButtons = '<div><input type="button" value="Пуск" onclick="new CommandFactory(CommandEnum.START).setButtonParameters(task);">' +
-            '<input type="button" value="Отмена" onclick="new CommandFactory(CommandEnum.CANCEL).setButtonParameters(task);">';
+        var appendButtons = '<div id="functional_buttons"><button onclick="new CommandFactory(CommandEnum.START).setButtonParameters(task);">Пуск</button>' +
+            '<button onclick="new CommandFactory(CommandEnum.CANCEL).setButtonParameters(task);">Отмена</button>';
         if (this.algorithm === CommandEnum.PROCEDURE_ALGORITHMS)
-            appendButtons += '<input type="button" value="Отмена в Proc">';
-        appendButtons += '<input type="button" value="В начало" onclick="new CommandFactory(CommandEnum.RETURN).setButtonParameters(task);">' +
-            '<input type="button" value="Помощь"></div>';
+            appendButtons += '<button onclick="new CommandFactory(CommandEnum.CANCEL_IN_PROCEDURE).setButtonParameters(task);">Отмена в Proc</button>';
+        appendButtons += '<button onclick="new CommandFactory(CommandEnum.RETURN).setButtonParameters(task);">В начало</button>' +
+            '<button>Помощь</button></div>';
         appendButtons += '<div id="message"></div>';
         $('#textarea').after(appendButtons);
 
     };
 
-
     window.animation = function (task) {
         $('#message').empty();
         if (task.num < task.commands.length - 1 && task.robot.getX() + task.ROBOT_WIDTH <= task.fieldX + SQUARE_SIZE * task.FIELD_WIDTH
-        && task.robot.getX() + task.ROBOT_HEIGHT <= task.fieldY + SQUARE_SIZE * task.FIELD_HEIGHT
+        && task.robot.getY() + task.ROBOT_HEIGHT <= task.fieldY + SQUARE_SIZE * task.FIELD_HEIGHT
         && task.robot.getX() >= task.fieldX
         && task.robot.getY() >= task.robotY) {
             if (task.algorithm !== CommandEnum.PROCEDURE_ALGORITHMS) {
@@ -224,6 +225,10 @@ function Task(algorithm, ctxt1, ctxt2, beginCellOfRobot, cells, linesLimit) {
         return this.nFor;
     };
 
+    this.setNFor = function (nFor) {
+        this.nFor = nFor;
+    };
+
     this.getField = function () {
         return this.field;
     };
@@ -248,6 +253,25 @@ function Task(algorithm, ctxt1, ctxt2, beginCellOfRobot, cells, linesLimit) {
         this.numInProcedure = numInProcedure;
     };
 
+    this.getNumberOfCommandsInProcedure = function () {
+        return this.numberOfCommandsInProcedure;
+    };
+
+    this.setNumberOfCommandsInProcedure = function (numberOfCommandsInProcedure) {
+        this.numberOfCommandsInProcedure = numberOfCommandsInProcedure;
+    };
+
+    this.getLinesLimitInProcedure = function () {
+        return this.linesLimitInProcedure;
+    };
+
+    this.setLinesLimitInProcedure = function (linesLimitInProcedure) {
+        this.linesLimitInProcedure = linesLimitInProcedure;
+    };
+
+    this.getCommandsInProcedure = function () {
+        return this.commandsInProcedure;
+    };
 
 
 }

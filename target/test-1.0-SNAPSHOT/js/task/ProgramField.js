@@ -47,7 +47,7 @@ function ProgramField(width, height) {
 
     this.addTextToProcedure = function (command) {
         $('#program_filed').val('');
-        this.procedure = this.procedure + '\n' + '  ' + command + ';';
+        this.procedure = this.procedure + '\n' + '  ';//добавить
         var procedure = this.procedure + '\n' + 'end;' + '\n' + '\n';
         if (this.numberOfCurrentString + 1 > 0 && this.numberOfCurrentString + 1 < 10)
             $('#program_filed').val(procedure + this.begin + "\n" + "0" + (this.numberOfCurrentString + 1) + "  " + this.end);

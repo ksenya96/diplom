@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: acer
@@ -13,124 +14,109 @@
 </head>
 <body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-<div class="canvas"><canvas height="600" width="600" id="canvas1">Обновите браузер</canvas></div>
-<div class="canvas"><canvas height="530" width="250" id="canvas2">Обновите браузер</canvas></div>
-<script type="text/javascript" src="js/task/Field.js"></script>
-<script type="text/javascript" src="js/task/Robot.js"></script>
-<script type="text/javascript" src="js/task/Block.js"></script>
-<script type="text/javascript" src="js/task/ProgramField.js"></script>
-<script type="text/javascript" src="js/task/commands/CommandEnum.js"></script>
-<script type="text/javascript" src="js/task/commands/CommandFactory.js"></script>
-<script type="text/javascript" src="js/task/commands/GoDown.js"></script>
-<script type="text/javascript" src="js/task/commands/GoRight.js"></script>
-<script type="text/javascript" src="js/task/commands/GoUp.js"></script>
-<script type="text/javascript" src="js/task/commands/GoLeft.js"></script>
-<script type="text/javascript" src="js/task/commands/JumpDown.js"></script>
-<script type="text/javascript" src="js/task/commands/JumpRight.js"></script>
-<script type="text/javascript" src="js/task/commands/JumpUp.js"></script>
-<script type="text/javascript" src="js/task/commands/JumpLeft.js"></script>
-<script type="text/javascript" src="js/task/commands/If.js"></script>
-<script type="text/javascript" src="js/task/commands/For.js"></script>
-<script type="text/javascript" src="js/task/Point.js"></script>
-<script type="text/javascript" src="js/task/DrawLibrary.js"></script>
-<script type="text/javascript" src="js/task/Task.js"></script>
+
+<c:if test="${task.type == 'ROBOT'}">
+    <div class="canvas"><canvas height="600" width="600" id="canvas1">Обновите браузер</canvas></div>
+    <div class="canvas"><canvas height="530" width="250" id="canvas2">Обновите браузер</canvas></div>
+    <script type="text/javascript" src="js/task/Field.js"></script>
+    <script type="text/javascript" src="js/task/Robot.js"></script>
+    <script type="text/javascript" src="js/task/Block.js"></script>
+    <script type="text/javascript" src="js/task/ProgramField.js"></script>
+    <script type="text/javascript" src="js/task/commands/CommandEnum.js"></script>
+    <script type="text/javascript" src="js/task/commands/CommandFactory.js"></script>
+    <script type="text/javascript" src="js/task/commands/go/Go.js"></script>
+    <script type="text/javascript" src="js/task/commands/go/GoDown.js"></script>
+    <script type="text/javascript" src="js/task/commands/go/GoRight.js"></script>
+    <script type="text/javascript" src="js/task/commands/go/GoUp.js"></script>
+    <script type="text/javascript" src="js/task/commands/go/GoLeft.js"></script>
+    <script type="text/javascript" src="js/task/commands/jump/Jump.js"></script>
+    <script type="text/javascript" src="js/task/commands/jump/JumpDown.js"></script>
+    <script type="text/javascript" src="js/task/commands/jump/JumpRight.js"></script>
+    <script type="text/javascript" src="js/task/commands/jump/JumpUp.js"></script>
+    <script type="text/javascript" src="js/task/commands/jump/JumpLeft.js"></script>
+    <script type="text/javascript" src="js/task/commands/operators/If.js"></script>
+    <script type="text/javascript" src="js/task/commands/operators/For.js"></script>
+    <script type="text/javascript" src="js/task/Point.js"></script>
+    <script type="text/javascript" src="js/task/DrawLibrary.js"></script>
+    <script type="text/javascript" src="js/task/Task.js"></script>
+    <script type="text/javascript" src="js/task/commands/operators/Procedure.js"></script>
+    <script type="text/javascript" src="js/task/commands/functionalButtons/Start.js"></script>
+    <script type="text/javascript" src="js/task/commands/functionalButtons/Return.js"></script>
+    <script type="text/javascript" src="js/task/commands/functionalButtons/Cancel.js"></script>
+    <script type="text/javascript" src="js/task/commands/functionalButtons/CancelInProcedure.js"></script>
 
 
 
+    <script>
+        var canvas1 = document.getElementById("canvas1"),
+                ctxt1 = canvas1.getContext('2d');
+        var canvas2 = document.getElementById("canvas2"),
+                ctxt2 = canvas2.getContext('2d');
 
-<script>
-    var canvas1 = document.getElementById("canvas1"),
-            ctxt1 = canvas1.getContext('2d');
-    var canvas2 = document.getElementById("canvas2"),
-            ctxt2 = canvas2.getContext('2d');
-    /*var fieldX = 15;
-
-     var field = new Filed(15, 15, 6, 6);
-
-     var robot = new Robot(15, 0, field.SQUARE_SIZE, field.SQUARE_SIZE + 10);
-     field.setRobotCoords(15, 0);
-
-     field.draw(ctxt1);
-     robot.draw(ctxt1);
-
-     var block = new Block(15, 15, 220, 6 * 85);
-     block.draw(ctxt2);
-
-
-     function animation(command) {
-     if (command === CommandEnum.FOR) {
-     var val = $('.for option:selected').attr('value').trim();
-     var re = new RegExp('\\d');
-     if (re.test(val)) {
-     block.setNFor(+val);
-     programField.setNFor(+val);
-     }
-     }
-     ctxt1.clearRect(0, 0, canvas1.width, canvas1.height);
-     robot.move(command);
-     field.draw(ctxt1);
-     robot.draw(ctxt1);
-     block.addCommand(command);
-     block.draw(ctxt2);
-     programField.addText(command);
-     ctxt1.restore();
-     }
-
-
-
-     //setInterval(animation, 33);
-
-     var programField = new ProgramField(25, 34);
-     programField.addOnDisplay();
-
-
-     var steps = '<option value="0">n := </option>';
-     for (var i = 2; i <= 5; i++)
-     steps += '<option value="' + i + '">n := ' + i + '</option>';
-
-     $('.canvas').first().after('<div class="buttons"><input type="button" value="GoDown" onclick="animation(CommandEnum.GO_DOWN);"><br>' +
-     '<input type="button" value="GoUp" onclick="animation(CommandEnum.GO_UP);"><br>' +
-     '<input type="button" value="GoLeft" onclick="animation(CommandEnum.GO_LEFT);"><br>' +
-     '<input type="button" value="GoRight" onclick="animation(CommandEnum.GO_RIGHT);"><br>' +
-     '<select class="for" onchange="animation(CommandEnum.FOR)">' +
-     steps +
-     '</select>' +
-     '</div>');
-     */
-
-    /*$('.canvas').first().after('<div class="buttons"><input type="button" value="JumpDown" onclick="animation(CommandEnum.JUMP_DOWN);"><br>' +
-     '<input type="button" value="JumpUp" onclick="animation(CommandEnum.JUMP_UP);"><br>' +
-     '<input type="button" value="JumpLeft" onclick="animation(CommandEnum.JUMP_LEFT);"><br>' +
-     '<input type="button" value="JumpRight" onclick="animation(CommandEnum.JUMP_RIGHT);"><br>' +
-     '<input type="button" value="if is_wall" onclick="animation(CommandEnum.IF)">' +
-     '</div>');*/
-
-    var task = new Task(CommandEnum.LINEAR_ALGORITHMS, ctxt1, ctxt2);
-    task.draw();
-    task.makeButtons();
-
-
-    window.animation = function (command) {
-        if (command === CommandEnum.FOR) {
-            var val = $('.for option:selected').attr('value').trim();
-            var re = new RegExp('\\d');
-            if (re.test(val)) {
-                task.block.setNFor(+val);
-                task.programField.setNFor(+val);
-            }
+        var theme;
+        switch ('${task.theme.title}') {
+            case CommandEnum.LINEAR_ALGORITHMS:
+                theme = CommandEnum.LINEAR_ALGORITHMS;
+                break;
+            case CommandEnum.IF_ALGORITHMS:
+                theme = CommandEnum.IF_ALGORITHMS;
+                break;
+            case CommandEnum.FOR_ALGORITHMS:
+                theme = CommandEnum.FOR_ALGORITHMS;
+                break;
+            case CommandEnum.PROCEDURE_ALGORITHMS:
+                theme = CommandEnum.PROCEDURE_ALGORITHMS;
+                break;
         }
-        task.ctxt1.clearRect(0, 0, canvas1.width, canvas1.height);
-        task.ctxt2.clearRect(0, 0, canvas2.width, canvas2.height);
-        task.robot.move(command);
-        task.field.draw(this.ctxt1);
-        task.robot.draw(this.ctxt1);
-        task.block.addCommand(command);
-        task.block.draw(this.ctxt2);
-        task.programField.addText(command);
-        task.ctxt1.restore();
-        task.ctxt2.restore();
-    };
-</script>
+
+
+        var cells = [];
+        var beginCell;
+        var numberOfSteps;
+        var string = '${task_content}';
+        var paar = string.split('|');
+        paar[0] = paar[0].trim();
+        var nums = paar[0].split(' ');
+        beginCell = new Point(+nums[0], +nums[1]);
+        var i = 1;
+        paar[i] = paar[i].trim();
+        nums = paar[i].split(' ');
+        while (nums.length > 1) {
+            cells.push(new Point(+nums[0], +nums[1]));
+            i++;
+            paar[i] = paar[i].trim();
+            nums = paar[i].split(' ');
+        }
+        numberOfSteps = +paar[i];
+
+        var task = new Task(theme, ctxt1, ctxt2, beginCell, cells, numberOfSteps);
+        if (theme === CommandEnum.PROCEDURE_ALGORITHMS) {
+            var numberOfStepsInProcedure = +paar[i + 1];
+            task.setLinesLimitInProcedure(numberOfStepsInProcedure);
+        }
+        if (theme === CommandEnum.IF_ALGORITHMS) {
+            var barrier = [];
+            i++;
+            while (i < paar.length) {
+                paar[i] = paar[i].trim();
+                nums = paar[i].split(' ');
+                barrier.push(new Point(+nums[0], +nums[1]));
+                i++;
+            }
+            task.getField().setBarrierCells(barrier);
+        }
+        //var cells = [new Point(1, 0), new Point(2, 0), new Point(3, 0), new Point(4, 0)];
+        //var barrier = [new Point(2, 1), new Point(3, 2), new Point(3, 4), new Point(4, 5)];
+        //var task = new Task(CommandEnum.LINEAR_ALGORITHMS, ctxt1, ctxt2, new Point(1, 1), cells, 4);
+
+        task.draw();
+        task.makeButtons();
+
+
+
+    </script>
+</c:if>
+
 
 </body>
 </html>

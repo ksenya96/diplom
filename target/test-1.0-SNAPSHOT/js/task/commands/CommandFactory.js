@@ -45,9 +45,6 @@ function CommandFactory(commandEnum) {
         case CommandEnum.CANCEL:
             this.command = new Cancel(commandEnum);
             break;
-        case CommandEnum.CANCEL_IN_PROCEDURE:
-            this.command = new CancelInProcedure(commandEnum);
-            break;
     }
 
     this.move = function (point) {

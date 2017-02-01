@@ -1,5 +1,7 @@
 package model.entities;
 
+import controller.TaskType;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
@@ -13,7 +15,7 @@ import java.util.Set;
 public class Task extends AbstractEntity implements Serializable{
     private int id;
     private String title;
-    private int type;
+    private TaskType type;
     private String content;
     private Theme theme;
     private User author;
@@ -42,11 +44,12 @@ public class Task extends AbstractEntity implements Serializable{
 
     @Basic
     @Column(name = "type", nullable = false, length = 255)
-    public int getType() {
+    @Enumerated(EnumType.STRING)
+    public TaskType getType() {
         return type;
     }
 
-    public void setType(int type) {
+    public void setType(TaskType type) {
         this.type = type;
     }
 
@@ -110,7 +113,6 @@ public class Task extends AbstractEntity implements Serializable{
     public int hashCode() {
         int result = id;
         result = 31 * result + (title != null ? title.hashCode() : 0);
-        result = 31 * result + type;
         result = 31 * result + (content != null ? content.hashCode() : 0);
         result = 31 * result + (theme != null ? theme.hashCode() : 0);
         return result;

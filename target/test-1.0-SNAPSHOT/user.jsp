@@ -51,7 +51,7 @@
                                 ${user.access.value}
                             <c:if test="${user.access.ordinal() == 0}">
                                 <br>
-                                ${user.clazz}<br>
+                                ${user.clazz} класс<br>
                                 ${user.school.name}
                             </c:if>
                         </div>

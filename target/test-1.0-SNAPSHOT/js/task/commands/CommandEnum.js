@@ -21,7 +21,7 @@ var CommandEnum = {
     LINEAR_ALGORITHMS: 'Линейные алгоритмы',
     HELP: 'Помощь',
     IF_ALGORITHMS: 'Алгоритмы с ветвлением',
-    FOR_ALGORITHMS: 'Циклические алгоритмы',
+    FOR_ALGORITHMS: 'Цмклические алгоритмы',
     PROCEDURE_ALGORITHMS: 'Подпрограммы',
     CONTROL_TASKS: 'Контрольные задания'
 };
