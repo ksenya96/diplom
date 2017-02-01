@@ -33,6 +33,21 @@ function CommandFactory(commandEnum) {
         case CommandEnum.FOR:
             this.command = new For(commandEnum);
             break;
+        case CommandEnum.PROCEDURE:
+            this.command = new Procedure(commandEnum);
+            break;
+        case CommandEnum.START:
+            this.command = new Start(commandEnum);
+            break;
+        case CommandEnum.RETURN:
+            this.command = new Return(commandEnum);
+            break;
+        case CommandEnum.CANCEL:
+            this.command = new Cancel(commandEnum);
+            break;
+        case CommandEnum.CANCEL_IN_PROCEDURE:
+            this.command = new CancelInProcedure(commandEnum);
+            break;
     }
 
     this.move = function (point) {
@@ -47,7 +62,15 @@ function CommandFactory(commandEnum) {
         this.command.drawBlock(ctxt, point);
     };
 
+    this.setButtonParameters = function (task) {
+        this.command.setButtonParameters(task);
+    };
+
     this.getCommand = function () {
         return this.command;
+    };
+
+    this.drawWay = function (field) {
+        this.command.drawWay(field);
     }
 }

@@ -35,7 +35,7 @@ function Filed(x0, y0, width, height) {
             x = x0;
         }
 
-        /*this.paintCells(ctxt);
+        this.paintCells(ctxt);
         ctxt.fillStyle = "rgb(255, 163, 2)";
         ctxt.fillRect(this.robotCoords.x, this.robotCoords.y, SQUARE_SIZE, SQUARE_SIZE);
         ctxt.strokeStyle = "rgb(139, 9, 12)";
@@ -43,12 +43,13 @@ function Filed(x0, y0, width, height) {
 
         ctxt.strokeStyle = "black";
         for (var i = 1; i < this.robotWay.length; i += 2) {
-            draw(this.robotWay[i - 1].x, this.robotWay[i - 1].y, this.robotWay[i].x, this.robotWay[i].y);
-        }*/
+            drawLine(this.robotWay[i - 1].x, this.robotWay[i - 1].y, this.robotWay[i].x, this.robotWay[i].y, ctxt);
+        }
     };
 
     this.drawWay = function (command) {
-
+        var factory = new CommandFactory(command);
+        factory.drawWay(this);
     };
 
     this.clearWay = function () {

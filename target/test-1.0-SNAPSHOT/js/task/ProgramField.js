@@ -40,14 +40,14 @@ function ProgramField(width, height) {
             procedure = this.procedure + '\n' + 'end;' + '\n' + '\n';
         }
         if (this.numberOfCurrentString + 1 > 0 && this.numberOfCurrentString + 1 < 10)
-            $('#program_filed').val(procedure + this.begin + '\n' + '0' + (this.numberOfCurrentString + 1) + ' ' + this.end);
+            $('#program_filed').val(procedure + this.begin + '\n' + '0' + (this.numberOfCurrentString + 1) + '  ' + this.end);
         else
             $('#program_filed').val(procedure + this.begin + '\n' + (this.numberOfCurrentString + 1) + '  ' + this.end);
     };
 
     this.addTextToProcedure = function (command) {
         $('#program_filed').val('');
-        this.procedure = this.procedure + '\n' + '  ';//добавить
+        this.procedure = this.procedure + '\n' + '  ' + command + ';';
         var procedure = this.procedure + '\n' + 'end;' + '\n' + '\n';
         if (this.numberOfCurrentString + 1 > 0 && this.numberOfCurrentString + 1 < 10)
             $('#program_filed').val(procedure + this.begin + "\n" + "0" + (this.numberOfCurrentString + 1) + "  " + this.end);
@@ -101,7 +101,7 @@ function ProgramField(width, height) {
         this.isProcedure = b;
         if (this.isProcedure) {
             $('#program_filed').val('');
-            $('#program_filed').val(this.procedure + '\n' + 'end;' + '\n' + '\n' + this.begin + '\n' + '02' + this.end);
+            $('#program_filed').val(this.procedure + '\n' + 'end;' + '\n' + '\n' + this.begin + '\n' + '02  ' + this.end);
         }
     };
 

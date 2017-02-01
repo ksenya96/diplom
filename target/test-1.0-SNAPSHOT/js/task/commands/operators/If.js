@@ -12,6 +12,10 @@ function If(commandEnum) {
 
     };
 
+    this.drawWay = function () {
+
+    };
+
     this.drawBlock = function (ctxt, point) {
         var x = point.x;
         var y = point.y;
@@ -32,5 +36,16 @@ function If(commandEnum) {
         drawLine(x + RECTANGLE_WIDTH + 20, y + FIGURE_HEIGHT / 2, x + RECTANGLE_WIDTH + 20, y + FIGURE_HEIGHT / 2 + 25, ctxt);
         ctxt.fillText(this.commandEnum, x + RECTANGLE_WIDTH / 2 - FONT_SIZE * this.commandEnum.length / 2.5,
         y + FIGURE_HEIGHT / 2 + FONT_SIZE / 3);
+    };
+
+    this.setButtonParameters = function (task) {
+        if (task.getNumberOfCommands() < task.getLinesLimit()) {
+            task.getProgramField().addText(this.commandEnum);
+            task.getBlock().addCommand(this.commandEnum);
+            task.getCommands().push(this.commandEnum);
+
+            task.setNumberOfCommands(task.getNumberOfCommands() + 1);
+            task.draw();
+        }
     };
 }

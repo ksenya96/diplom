@@ -49,6 +49,11 @@
                         <div>
                                 ${user.lastName} ${user.firstName} ${user.patronymic} <br>
                                 ${user.access.value}
+                            <c:if test="${user.access.ordinal() == 0}">
+                                <br>
+                                ${user.clazz}<br>
+                                ${user.school.name}
+                            </c:if>
                         </div>
                         <div>
                             <form class="formForEdit" action="/index?action=edit" method="post" onsubmit="return false;">
