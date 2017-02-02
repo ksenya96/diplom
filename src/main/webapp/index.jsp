@@ -21,10 +21,10 @@
 <header>
 
 
-    <div align="right">
+
         <dialog id="enter">
-            <h2 align="left" style="display:inline-block; float: left;">Вход в систему</h2>
-            <button id="exit_enter" style="display:inline-block;">&#10005;</button>
+            <h2 style="display:inline-block;">Вход в систему</h2>
+            <button id="exit_enter" style="display:inline-block; float: right">&#10005;</button>
             <form action="/index?action=login" method="post" id="formForEnter" onsubmit="return false;">
                 <table>
                     <tr>
@@ -51,12 +51,14 @@
             </form>
         </dialog>
 
-        <button id="show_enter">Войти</button>
 
 
         <dialog id="register">
-            <h2 style="display:inline-block; float: left;">Регистрация</h2>
-            <button style="display:inline-block;" id="exit_register">&#10005;</button>
+            <div>
+                <h2 style="display: inline-block;" align="left">Регистрация</h2>
+                <button id="exit_register" style="display: inline-block; float: right">&#10005;</button>
+            </div>
+
             <form action="/index?action=register" method="post" id="formForReg" onsubmit="return false;">
                 <table class="additional">
                     <tr>
@@ -81,18 +83,23 @@
                     </tr>
                     <tr>
                         <td>Логин: <span class="star">*</span></td>
-                        <td><input type="text" name="login" onkeypress="checkInput(this)" onfocus="checkInput(this)"
-                                   onchange="checkInput(this)" onkeyup="checkInput(this)">
+                        <td><input type="text" name="login" title="Логин может содержать только латинские большие и малые буквы,
+цифры, точки, тире и знаки подчеркивания. Логин должен начинаться
+только с буквы и не должен заканчиваться точкой. Длина логина
+должна составлять от 6 до 255 символов"
+                                   onkeypress="checkLoginByRegistration(this)" onfocus="checkLoginByRegistration(this)"
+                                   onchange="checkLoginByRegistration(this)" onkeyup="checkLoginByRegistration(this)">
                             <span class="symbol">&#10007;</span>
                             <input type="hidden" value="${fieldsForCheckNull.add("login")}">
                         </td>
                     </tr>
-                    <tr>
+                    <tr valign="top">
                         <td>Пароль: <span class="star">*</span></td>
-                        <td><input type="password" name="password" onkeypress="checkInput(this)"
-                                   onfocus="checkInput(this)"
-                                   onchange="checkInput(this)" onkeyup="checkInput(this)">
-                            <span class="symbol">&#10007;</span>
+                        <td><input type="password" name="password" title="Длина пароля должна составлять от 4 до 255 символов"
+                                   onkeypress="checkPasswordByRegistration(this)"
+                                   onfocus="checkPasswordByRegistration(this)"
+                                   onchange="checkPasswordByRegistration(this)" onkeyup="checkPasswordByRegistration(this)">
+                            <span class="symbol">&#10007;</span><br>
                             <input type="hidden" value="${fieldsForCheckNull.add("password")}">
                         </td>
                     </tr>
@@ -131,10 +138,13 @@
             </form>
 
         </dialog>
+    <div align="right">
+        <button id="show_enter">Войти</button>
         <button id="show_register">Регистрация</button>
         <br>
         ${result}
     </div>
+
 
 
 
@@ -144,6 +154,8 @@
     <jsp:include page="includes/index/checkEnter.jsp"/>
     <script type="text/javascript" src="js/index/dataLists.js"></script>
     <script type="text/javascript" src="js/index/checkPasswords.js"></script>
+    <script type="text/javascript" src="js/index/checkLoginByRegistration.js"></script>
+    <script type="text/javascript" src="js/index/checkPasswordByRegistration.js"></script>
 
     <script type="text/javascript" src="js/index/checkInput.js"></script>
     <h1 align="center">Учебное пособие по основам алгоритмизации и программирования<br>для средней школы</h1>

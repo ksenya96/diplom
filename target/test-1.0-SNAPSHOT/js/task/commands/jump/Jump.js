@@ -25,7 +25,9 @@ function Jump(commandEnum) {
             task.getProgramField().addText(this.commandEnum);
             task.getBlock().addCommand(this.commandEnum);
             task.getCommands().push(this.commandEnum);
-
+            var jumps = $('.buttons').children();
+            for (var i = 0; i < jumps.length - 1; i++)
+                jumps[i].setAttribute('disabled', '');
             task.setNumberOfCommands(task.getNumberOfCommands() + 1);
             task.draw();
         }

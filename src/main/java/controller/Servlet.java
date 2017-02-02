@@ -120,7 +120,7 @@ public class Servlet extends HttpServlet {
         String lastName = request.getParameter("lastName").trim();
         String firstName = request.getParameter("firstName").trim();
         String patronymic = request.getParameter("patronymic").trim();
-        String login = request.getParameter("login").trim();
+        String login = request.getParameter("login").trim().toLowerCase();
         String password = DigestUtils.md5Hex(request.getParameter("password")).trim();
         String accessStr = request.getParameter("access");
         UserType access = UserType.valueOf(accessStr);
@@ -179,7 +179,7 @@ public class Servlet extends HttpServlet {
 
 
     private void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String login = request.getParameter("login");
+        String login = request.getParameter("login").toLowerCase();
         String password = request.getParameter("password");
         password = DigestUtils.md5Hex(password);
         User user = usersDao.getUserByLoginAndPassword(login, password);
@@ -259,37 +259,7 @@ public class Servlet extends HttpServlet {
             redirectToIndexJSP(request, response);
         }
 
-        /*if (theme == null) {
-            //начальная страница
-            if (task == null) {
-                if (request.getAttribute("user") == null) {
-                    request.setAttribute("themes", themesDao.getAllEntities());
-                    request.setAttribute("schools", schoolsDao.getAllEntities());
-                    request.setAttribute("teachers", teachersDao.getAllEntities());
-                    request.setAttribute("pupils", pupilsDao.getAllEntities());
-                    request.getRequestDispatcher("/index.jsp").forward(request, response);
-                }
-                else {
-                    request.getRequestDispatcher("/user.jsp").forward(request, response);
-                }
-            }
-            //задание
-            else {
-                int taskId = Integer.parseInt(task);
-                request.setAttribute("tasks", taskId);
-                request.getRequestDispatcher("/task.jsp").forward(request, response);
-            }
-        }
-        //страница с теорией
-        else {
-            int id = Integer.parseInt(theme);
-            //String title = themesDao.getEntityById(id);
-            //request.setAttribute("title", title);
-            String content = theoryDao.getTheoryByTheme(id);
-            request.setAttribute("content", content);
-            request.setAttribute("tasks", tasksDao.getTasksByTheme(id));
-            request.getRequestDispatcher("/theory.jsp").forward(request, response);
-        }*/
+
     }
 
     protected static void redirectToIndexJSP(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -64,6 +64,39 @@ nav {
     border: 3px solid rgb(139, 9, 12);
  }
 
+.buttons > button {
+    width: 85px;
+    height: 85px;
+    margin: 5px;
+}
+
+.buttons > button > img {
+    width: 75px;
+    height: 75px;
+}
+
+#message {
+    display: inline-block;
+    height: 20px;
+    width: 300px;
+    border: 2px solid rgb(139, 9, 12);
+    float: right;
+
+}
+
+#functional_buttons {
+    display: inline-block;
+}
+
+dialog::backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 
 
 

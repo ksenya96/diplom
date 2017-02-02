@@ -43,7 +43,9 @@ function If(commandEnum) {
             task.getProgramField().addText(this.commandEnum);
             task.getBlock().addCommand(this.commandEnum);
             task.getCommands().push(this.commandEnum);
-
+            var jumps = $('.buttons').children();
+            for (var i = 0; i < jumps.length; i++)
+                jumps[i].removeAttribute('disabled');
             task.setNumberOfCommands(task.getNumberOfCommands() + 1);
             task.draw();
         }

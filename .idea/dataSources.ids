@@ -274,11 +274,11 @@
       </column>
       <column id="73" parent="15" name="type">
         <mandatory>1</mandatory>
-        <data-type>int(11)|0</data-type>
+        <data-type>varchar(45)|0</data-type>
       </column>
       <column id="74" parent="15" name="content">
         <mandatory>1</mandatory>
-        <data-type>varchar(45)|0</data-type>
+        <data-type>varchar(255)|0</data-type>
       </column>
       <column id="75" parent="15" name="user_id">
         <data-type>int(11)|0</data-type>

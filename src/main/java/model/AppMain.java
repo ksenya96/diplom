@@ -51,10 +51,9 @@ public class AppMain {
         ThemesDaoImpl themesDao = new ThemesDaoImpl(SESSION, Entity.THEMES);
         themesDao.delete(themesEntity);*/
 
-        TeachersDaoImpl teachersDao = new TeachersDaoImpl(SESSION, Entity.TEACHERS);
-
-        Teacher teacher = (Teacher) teachersDao.getEntityById(3);
-        System.out.println(teacher.getPupils().size());
+        PupilsDaoImpl pupilsDao = new PupilsDaoImpl(SESSION, Entity.PUPILS);
+        Pupil pupil = (Pupil)pupilsDao.getEntityById(35);
+        System.out.print(pupil.getThemes().size());
         HibernateSessionFactory.shutdown();
     }
 

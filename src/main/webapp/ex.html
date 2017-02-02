@@ -6,11 +6,18 @@
 </head>
 <body>
 <script>
-$.ajax({
-            url: 'tasks/robot/linear1.txt',
-            success: function (data) {
-            }
-        });
+    /*$.ajax({
+     url: 'tasks/robot/linear1.txt',
+     success: function (data) {
+     }
+     });*/
+    /*var reForLogin = /^[a-zA-Z][.\-_a-zA-Z\d]{4,18}[\-_a-zA-Z\d]$/;
+    var b = reForLogin.test('jjjjjj-');
+    alert(b);*/
+    var reForLogin = /.{4,}/;
+    var b = reForLogin.test('1234');
+    alert(b);
+
 </script>
 </body>
 </html>

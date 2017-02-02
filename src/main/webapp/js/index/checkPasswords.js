@@ -8,9 +8,11 @@ function checkPasswords(confirmPassword) {
     if (password != null && password !== '' && password === confirmPassword.value.trim()) {
         selector.append('&#10003;');
         selector.css('color', 'green');
+        return 1;
     }
     else {
         selector.append('&#10007;');
         selector.css('color', 'red');
+        return 0;
     }
 }

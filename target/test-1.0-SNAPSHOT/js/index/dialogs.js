@@ -5,10 +5,10 @@
     var enter = document.getElementById('enter');
     var register = document.getElementById('register');
     document.getElementById('show_enter').onclick = function () {
-        enter.show();
+        enter.showModal();
     };
     document.getElementById('show_register').onclick = function () {
-        register.show();
+        register.showModal();
     };
     document.getElementById('exit_enter').onclick = function () {
         enter.close();

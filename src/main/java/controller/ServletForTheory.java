@@ -1,11 +1,10 @@
 package controller;
 
 import model.daos.Entity;
+import model.daos.PupilsDaoImpl;
 import model.daos.TasksDaoImpl;
 import model.daos.TheoryDaoImpl;
-import model.entities.Task;
-import model.entities.Theme;
-import model.entities.Theory;
+import model.entities.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,15 +28,29 @@ public class ServletForTheory extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Integer themeId = Integer.parseInt(request.getParameter("theme_id"));
-        Theory theory = theoryDao.getTheoryByTheme(themeId);
+        String action = request.getParameter("action");
         HttpSession session = request.getSession(false);
-        if (session != null) {
-            session.setAttribute("theory", theory);
-            session.setAttribute("content", "theory");
-            if (session.getAttribute("user") != null) {
-                List<Task> tasks = tasksDao.getTasksByTheme(themeId);
-                session.setAttribute("tasks", tasks);
+        if (action == null) {
+            Integer themeId = Integer.parseInt(request.getParameter("theme_id"));
+            Theory theory = theoryDao.getTheoryByTheme(themeId);
+            if (session != null) {
+                session.setAttribute("theory", theory);
+                session.setAttribute("content", "theory");
+                if (session.getAttribute("user") != null) {
+                    List<Task> tasks = tasksDao.getTasksByTheme(themeId);
+                    session.setAttribute("tasks", tasks);
+                }
+            }
+        }
+        else {
+            switch (action) {
+                case "subscribe":
+                    Pupil pupil = (Pupil)session.getAttribute("user");
+                    Theory theory = (Theory)session.getAttribute("theory");
+                    pupil.getThemes().add(theory.getTheme());
+                    PupilsDaoImpl pupilsDao = new PupilsDaoImpl(Servlet.SESSION, Entity.PUPILS);
+                    pupilsDao.update(pupil);
+                    break;
             }
         }
         Servlet.redirectToIndexJSP(request, response);

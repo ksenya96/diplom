@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <script>
     $('#register_submit').on ('click', function() {
-        //проверка на пустые значения обязательных для запонения полей в форме регистрации
+        //проверка на пустые значения обязательных для заполнения полей в форме регистрации
         var allFieldsAreFilledIn = 1;
 
 
@@ -47,13 +47,18 @@
             }
         </c:forEach>
 
-        var password = document.getElementsByName('password')[1].value.trim();
-        var confirmPassword = document.getElementsByName('confirmPassword')[0].value.trim();
+        var login = document.getElementsByName('login')[1];
+        allFieldsAreFilledIn *= checkLoginByRegistration(login);
+
+        var password = document.getElementsByName('password')[1];
+        var confirmPassword = document.getElementsByName('confirmPassword')[0];
         //проверка на совпадение паролей
-        if (password != null && password !== '' && password === confirmPassword)
+        allFieldsAreFilledIn *= checkPasswordByRegistration(password);
+        allFieldsAreFilledIn *= checkPasswords(confirmPassword);
+        /*if (password != null && password !== '' && password === confirmPassword)
             allFieldsAreFilledIn *= 1;
         else
-            allFieldsAreFilledIn = 0;
+            allFieldsAreFilledIn = 0;*/
 
         //если все нужные поля запонены, разрешить отправку формы в сервлет
         if (allFieldsAreFilledIn === 0) {

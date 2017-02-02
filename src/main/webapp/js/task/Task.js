@@ -75,10 +75,10 @@ function Task(algorithm, ctxt1, ctxt2, beginCellOfRobot, cells, linesLimit) {
                 break;
             case CommandEnum.IF_ALGORITHMS:
                 $('.canvas').first().after('<div class="buttons">' +
-                    '<button onclick="new CommandFactory(CommandEnum.JUMP_DOWN).setButtonParameters(task);">JumpDown</button><br>' +
-                    '<button onclick="new CommandFactory(CommandEnum.JUMP_UP).setButtonParameters(task);">JumpUp</button><br>' +
-                    '<button onclick="new CommandFactory(CommandEnum.JUMP_LEFT).setButtonParameters(task);">JumpLeft</button><br>' +
-                    '<button onclick="new CommandFactory(CommandEnum.JUMP_RIGHT).setButtonParameters(task);">JumpRight</button><br>' +
+                    '<button onclick="new CommandFactory(CommandEnum.JUMP_DOWN).setButtonParameters(task);" disabled>JumpDown</button><br>' +
+                    '<button onclick="new CommandFactory(CommandEnum.JUMP_UP).setButtonParameters(task);" disabled>JumpUp</button><br>' +
+                    '<button onclick="new CommandFactory(CommandEnum.JUMP_LEFT).setButtonParameters(task);" disabled>JumpLeft</button><br>' +
+                    '<button onclick="new CommandFactory(CommandEnum.JUMP_RIGHT).setButtonParameters(task);" disabled>JumpRight</button><br>' +
                     '<button onclick="new CommandFactory(CommandEnum.IF).setButtonParameters(task);">if is_wall</button>' +
                     '</div>');
                 break;
