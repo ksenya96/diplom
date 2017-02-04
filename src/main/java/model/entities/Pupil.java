@@ -16,7 +16,6 @@ public class Pupil extends User {
     private int clazz;
     private School school;
     private Set<Theme> themes = new HashSet<>();
-    private Set<Task> tasks = new HashSet<>();
     private Set<Parent> parents = new HashSet<>();
     private Set<Teacher> teachers = new HashSet<>();
 
@@ -59,18 +58,7 @@ public class Pupil extends User {
         this.themes = themes;
     }
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "pupils_and_tasks",
-            joinColumns = {@JoinColumn(name = "pupil_id", referencedColumnName = "id")},
-            inverseJoinColumns = {@JoinColumn(name = "task_id", referencedColumnName = "id")})
-    public Set<Task> getTasks() {
-        return tasks;
-    }
 
-
-    public void setTasks(Set<Task> tasks) {
-        this.tasks = tasks;
-    }
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "pupils_and_parents",

@@ -2,8 +2,7 @@ package model.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by acer on 07.09.2016.
@@ -16,7 +15,7 @@ public class Theme extends AbstractEntity implements Serializable {
     private int clazz;
     private Set<Theory> theory = new HashSet<>();
     private Set<Task> tasks = new HashSet<>();
-    private Set<Pupil> pupils = new HashSet<>();
+    private List<Pupil> pupils = new ArrayList<>();
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -72,11 +71,21 @@ public class Theme extends AbstractEntity implements Serializable {
     @JoinTable(name = "pupils_and_themes",
             joinColumns = {@JoinColumn(name = "theme_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "pupil_id", referencedColumnName = "id")})
-    public Set<Pupil> getPupils() {
+    public List<Pupil> getPupils() {
+        Collections.sort(pupils, new Comparator<Pupil>() {
+            @Override
+            public int compare(Pupil o1, Pupil o2) {
+                if (o1.getDoneTasks().size() > o2.getDoneTasks().size())
+                    return -1;
+                if (o1.getDoneTasks().size() < o2.getDoneTasks().size())
+                    return 1;
+                return 0;
+            }
+        });
         return pupils;
     }
 
-    public void setPupils(Set<Pupil> pupils) {
+    public void setPupils(List<Pupil> pupils) {
         this.pupils = pupils;
     }
 

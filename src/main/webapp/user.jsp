@@ -8,6 +8,7 @@
   Залогиненный пользователь
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" session="true" %>
+
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="css/index/star.css">

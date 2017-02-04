@@ -163,6 +163,7 @@ function Task(algorithm, ctxt1, ctxt2, beginCellOfRobot, cells, linesLimit) {
             }
             else if (task.field.isAllCellsCrossed()) {
                 $('#message').append('Молодец!');
+                taskIsDone();
             }
             task.stopTimer();
         }

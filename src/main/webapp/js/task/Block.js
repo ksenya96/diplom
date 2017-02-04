@@ -25,7 +25,7 @@ function Block(x0, y0, width, height) {
     this.removeCommand = function () {
         var length = this.commands.length;
         if (length != 0)
-            delete this.commands[length - 1];
+            this.commands.pop();
     };
 
     this.draw = function(ctxt) {

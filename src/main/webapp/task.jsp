@@ -13,7 +13,11 @@
     <link rel="stylesheet" type="text/css" href="css/index/star.css">
 </head>
 <body>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+<form method="post" action="/task">
+    <input type="submit" id="is_done" value="Нажмите, когда задание будет выполнено" disabled>
+</form>
 
 <c:if test="${task.type == 'ROBOT'}">
     <div class="canvas"><canvas height="600" width="600" id="canvas1">Обновите браузер</canvas></div>
@@ -113,10 +117,14 @@
         task.makeButtons();
 
 
-
     </script>
 </c:if>
 
+<script>
+    function taskIsDone() {
+        $('#is_done').removeAttr('disabled');
+    }
+</script>
 
 </body>
 </html>

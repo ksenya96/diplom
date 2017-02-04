@@ -25,6 +25,7 @@ public class User extends AbstractEntity implements Serializable {
     private Set<Action> actions = new HashSet<>();
     private Set<Theory> theory = new HashSet<>();
     private Set<Task> tasks = new HashSet<>();
+    private Set<Task> doneTasks = new HashSet<>();
 
     public User() {
     }
@@ -133,6 +134,19 @@ public class User extends AbstractEntity implements Serializable {
 
     public void setTasks(Set<Task> tasks) {
         this.tasks = tasks;
+    }
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "users_and_tasks",
+            joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},
+            inverseJoinColumns = {@JoinColumn(name = "task_id", referencedColumnName = "id")})
+    public Set<Task> getDoneTasks() {
+        return doneTasks;
+    }
+
+
+    public void setDoneTasks(Set<Task> doneTasks) {
+        this.doneTasks = doneTasks;
     }
 
     @Override

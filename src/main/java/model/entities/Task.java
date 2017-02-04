@@ -19,7 +19,7 @@ public class Task extends AbstractEntity implements Serializable{
     private String content;
     private Theme theme;
     private User author;
-    private Set<Pupil> pupils = new HashSet<>();
+    private Set<User> users = new HashSet<>();
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,7 +33,7 @@ public class Task extends AbstractEntity implements Serializable{
     }
 
     @Basic
-    @Column(name = "title", nullable = false, length = 45)
+    @Column(name = "title", nullable = false, length = 255)
     public String getTitle() {
         return title;
     }
@@ -54,7 +54,7 @@ public class Task extends AbstractEntity implements Serializable{
     }
 
     @Basic
-    @Column(name = "content", nullable = false, length = 45)
+    @Column(name = "content", nullable = false, length = 255)
     public String getContent() {
         return content;
     }
@@ -84,15 +84,15 @@ public class Task extends AbstractEntity implements Serializable{
     }
 
     @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "pupils_and_tasks",
+    @JoinTable(name = "users_and_tasks",
             joinColumns = {@JoinColumn(name = "task_id", referencedColumnName = "id")},
-            inverseJoinColumns = {@JoinColumn(name = "pupil_id", referencedColumnName = "id")})
-    public Set<Pupil> getPupils() {
-        return pupils;
+            inverseJoinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")})
+    public Set<User> getUsers() {
+        return users;
     }
 
-    public void setPupils(Set<Pupil> pupils) {
-        this.pupils = pupils;
+    public void setUsers(Set<User> users) {
+        this.users = users;
     }
 
     @Override

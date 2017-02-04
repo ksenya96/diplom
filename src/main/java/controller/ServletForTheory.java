@@ -36,9 +36,13 @@ public class ServletForTheory extends HttpServlet {
             if (session != null) {
                 session.setAttribute("theory", theory);
                 session.setAttribute("content", "theory");
-                if (session.getAttribute("user") != null) {
-                    List<Task> tasks = tasksDao.getTasksByTheme(themeId);
-                    session.setAttribute("tasks", tasks);
+                User user = (User)session.getAttribute("user");
+                if (user != null) {
+                    if (user.getAccess() == UserType.PUPIL && ((Pupil)user).getThemes().contains(theory.getTheme())
+                            || user.getAccess() != UserType.PUPIL) {
+                        List<Task> tasks = tasksDao.getTasksByTheme(themeId);
+                        session.setAttribute("tasks", tasks);
+                    }
                 }
             }
         }
@@ -50,6 +54,8 @@ public class ServletForTheory extends HttpServlet {
                     pupil.getThemes().add(theory.getTheme());
                     PupilsDaoImpl pupilsDao = new PupilsDaoImpl(Servlet.SESSION, Entity.PUPILS);
                     pupilsDao.update(pupil);
+                    List<Task> tasks = tasksDao.getTasksByTheme(theory.getTheme().getId());
+                    session.setAttribute("tasks", tasks);
                     break;
             }
         }

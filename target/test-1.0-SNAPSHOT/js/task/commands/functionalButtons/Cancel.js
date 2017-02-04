@@ -32,7 +32,9 @@ function Cancel(commandEnum) {
                 || commands[commands.length - 1] === CommandEnum.FOR
                 || commands[commands.length - 1] === CommandEnum.PROCEDURE) {
                 if (commands[commands.length - 1] === CommandEnum.IF) {
-                    //insert code
+                    var jumps = $('.buttons').children();
+                    for (var i = 0; i < jumps.length - 1; i++)
+                        jumps[i].setAttribute('disabled', '');
                 }
                 commands.pop();
                 programField.removeString();

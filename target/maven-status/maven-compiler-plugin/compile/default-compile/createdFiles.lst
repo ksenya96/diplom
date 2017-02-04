@@ -12,6 +12,7 @@ model\entities\Parent.class
 model\daos\Entity.class
 model\entities\Theme.class
 model\daos\ThemesDaoImpl.class
+model\entities\Theme$1.class
 model\entities\Task.class
 model\entities\AbstractEntity.class
 model\entities\Pupil.class
