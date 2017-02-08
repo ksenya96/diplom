@@ -67,7 +67,7 @@ public class Theme extends AbstractEntity implements Serializable {
     }
 
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "pupils_and_themes",
             joinColumns = {@JoinColumn(name = "theme_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "pupil_id", referencedColumnName = "id")})

@@ -45,7 +45,7 @@
                 var dom = $('<tr id="school">' +
                         '<td>Школа: <span class="star">*</span></td>' +
                         '<td>' +
-                        '<input name = "school" list = "school_list" placeholder = "Начните вводить название школы">' +
+                        '<input name = "school" onclick="this.select();" list = "school_list" placeholder = "Начните вводить название школы">' +
                         '<datalist id="school_list">' +
                         '<c:forEach items="${schools}" var="item">' +
                         '<option id="${item.id}">${item.name}</option>' +
@@ -59,7 +59,7 @@
                 var dom = $('<tr id = "teacher">' +
                         '<td>Учитель: <span class="star">*</span></td>' +
                         '<td>' +
-                        '<input name = "teacher" list="teacher_list" placeholder = "Начните вводить фамилию">' +
+                        '<input name = "teacher" onclick="this.select();" list="teacher_list" placeholder = "Начните вводить фамилию">' +
                         '<datalist id = "teacher_list">' +
                         '<c:forEach items="${teachers}" var="item">' +
                         '<option id = "${item.id }">${item.lastName} ' + '${item.firstName} ' + '${item.patronymic}' + '</option>' +
@@ -76,7 +76,7 @@
                 var dom = $('<tr id = "child">' +
                         '<td>Ребенок: <span class="star">*</span></td>' +
                         '<td>' +
-                        '<input name="child" list="child_list" placeholder = "Начните вводить фамилию">' +
+                        '<input name="child" onclick="this.select();" list="child_list" placeholder = "Начните вводить фамилию">' +
                         '<datalist id="child_list">' +
                         '<c:forEach items="${pupils}" var="item">' +
                         '<option id="${item.id}">${item.lastName} ' + '${item.firstName} ' + '</option>' +

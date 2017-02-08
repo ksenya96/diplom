@@ -29,7 +29,7 @@
             '<form class="formForEdit" action="/index?action=add_pupil" method="post">' +
             '<table><tr>' +
             '<td>Добавить ученика </td>' +
-            '<td><input name = "pupil" list="child_list" placeholder = "Начните вводить фамилию">' +
+            '<td><input onclick="this.select();" name = "pupil" list="child_list" placeholder = "Начните вводить фамилию">' +
             '<datalist id="child_list">' +
             addPupils +
             '</datalist>' +

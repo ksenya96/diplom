@@ -29,7 +29,7 @@
             '<form class="forForEdit" action="/index?action=add_child" method="post">' +
             '<table><tr>' +
             '<td>Добавить ребенка </td>' +
-            '<td><input name = "child" list="child_list" placeholder = "Начните вводить фамилию">' +
+            '<td><input name = "child" onclick="this.select();" list="child_list" placeholder = "Начните вводить фамилию">' +
             '<datalist id="child_list">' +
             addChild +
             '</datalist>' +

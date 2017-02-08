@@ -3,7 +3,9 @@ package model.entities;
 import controller.UserType;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -46,7 +48,7 @@ public class Pupil extends User {
         this.school = school;
     }
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "pupils_and_themes",
             joinColumns = {@JoinColumn(name = "pupil_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "theme_id", referencedColumnName = "id")})

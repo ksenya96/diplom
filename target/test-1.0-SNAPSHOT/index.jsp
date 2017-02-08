@@ -30,7 +30,7 @@
                     <tr>
                         <td>Логин:</td>
                         <td>
-                            <input type="text" name="login" onkeypress="checkInput(this)" onfocus="checkInput(this)"
+                            <input type="text" onclick="this.select();" name="login" onkeypress="checkInput(this)" onfocus="checkInput(this)"
                                    onkeyup="checkInput(this)" onchange="checkInput(this)">
                             <span class="symbol">&#10007;</span>
                         </td>
@@ -38,7 +38,7 @@
                     <tr>
                         <td>Пароль:</td>
                         <td>
-                            <input type="password" name="password" onkeypress="checkInput(this)"
+                            <input type="password" onclick="this.select();" name="password" onkeypress="checkInput(this)"
                                    onfocus="checkInput(this)"
                                    onkeyup="checkInput(this)" onchange="checkInput(this)">
                             <span class="symbol">&#10007;</span>
@@ -63,7 +63,7 @@
                 <table class="additional">
                     <tr>
                         <td>Фамилия: <span class="star">*</span></td>
-                        <td><input type="text" name="lastName" onkeypress="checkInput(this)" onfocus="checkInput(this)"
+                        <td><input type="text" onclick="this.select();" name="lastName" onkeypress="checkInput(this)" onfocus="checkInput(this)"
                                    onkeyup="checkInput(this)" onchange="checkInput(this)">
                             <span class="symbol">&#10007;</span>
                             <input type="hidden" value="${fieldsForCheckNull.add("lastName")}">
@@ -71,7 +71,7 @@
                     </tr>
                     <tr>
                         <td>Имя: <span class="star">*</span></td>
-                        <td><input type="text" name="firstName" onkeypress="checkInput(this)" onfocus="checkInput(this)"
+                        <td><input type="text" onclick="this.select();" name="firstName" onkeypress="checkInput(this)" onfocus="checkInput(this)"
                                    onchange="checkInput(this)" onkeyup="checkInput(this)">
                             <span class="symbol">&#10007;</span>
                             <input type="hidden" value="${fieldsForCheckNull.add("firstName")}">
@@ -79,11 +79,11 @@
                     </tr>
                     <tr>
                         <td>Отчество:</td>
-                        <td><input type="text" name="patronymic"></td>
+                        <td><input type="text" onclick="this.select();" name="patronymic"></td>
                     </tr>
                     <tr>
                         <td>Логин: <span class="star">*</span></td>
-                        <td><input type="text" name="login" title="Логин может содержать только латинские большие и малые буквы,
+                        <td><input type="text" onclick="this.select();" name="login" title="Логин может содержать только латинские большие и малые буквы,
 цифры, точки, тире и знаки подчеркивания. Логин должен начинаться
 только с буквы и не должен заканчиваться точкой. Длина логина
 должна составлять от 6 до 255 символов"
@@ -95,7 +95,7 @@
                     </tr>
                     <tr valign="top">
                         <td>Пароль: <span class="star">*</span></td>
-                        <td><input type="password" name="password" title="Длина пароля должна составлять от 4 до 255 символов"
+                        <td><input type="password" onclick="this.select();" name="password" title="Длина пароля должна составлять от 4 до 255 символов"
                                    onkeypress="checkPasswordByRegistration(this)"
                                    onfocus="checkPasswordByRegistration(this)"
                                    onchange="checkPasswordByRegistration(this)" onkeyup="checkPasswordByRegistration(this)">
@@ -105,7 +105,7 @@
                     </tr>
                     <tr>
                         <td>Повторите пароль: <span class="star">*</span></td>
-                        <td><input type="password" name="confirmPassword" onkeypress="checkPasswords(this)"
+                        <td><input type="password" onclick="this.select();" name="confirmPassword" onkeypress="checkPasswords(this)"
                                    onfocus="checkPasswords(this)"
                                    onchange="checkPasswords(this)" onkeyup="checkPasswords(this)">
                             <span class="symbol">&#10007;</span>

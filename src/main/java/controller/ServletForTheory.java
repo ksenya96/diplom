@@ -1,9 +1,6 @@
 package controller;
 
-import model.daos.Entity;
-import model.daos.PupilsDaoImpl;
-import model.daos.TasksDaoImpl;
-import model.daos.TheoryDaoImpl;
+import model.daos.*;
 import model.entities.*;
 
 import javax.servlet.ServletException;
@@ -13,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 /**
@@ -22,6 +20,7 @@ import java.util.List;
 public class ServletForTheory extends HttpServlet {
     private TheoryDaoImpl theoryDao = new TheoryDaoImpl(Servlet.SESSION, Entity.THEORY);
     private TasksDaoImpl tasksDao = new TasksDaoImpl(Servlet.SESSION, Entity.TASKS);
+    //private PupilsDaoImpl pupilsDao = new PupilsDaoImpl(Servlet.SESSION, Entity.PUPILS);
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -45,20 +44,23 @@ public class ServletForTheory extends HttpServlet {
                     }
                 }
             }
+            Servlet.redirectToIndexJSP(request, response);
         }
         else {
             switch (action) {
                 case "subscribe":
                     Pupil pupil = (Pupil)session.getAttribute("user");
                     Theory theory = (Theory)session.getAttribute("theory");
-                    pupil.getThemes().add(theory.getTheme());
+                    Theme theme = theory.getTheme();
+                    pupil.getThemes().add(theme);
                     PupilsDaoImpl pupilsDao = new PupilsDaoImpl(Servlet.SESSION, Entity.PUPILS);
                     pupilsDao.update(pupil);
                     List<Task> tasks = tasksDao.getTasksByTheme(theory.getTheme().getId());
                     session.setAttribute("tasks", tasks);
+                    theme.getPupils().add(pupil);
+                    Servlet.redirectToIndexJSP(request, response);
                     break;
             }
         }
-        Servlet.redirectToIndexJSP(request, response);
     }
 }
