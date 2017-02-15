@@ -14,12 +14,14 @@
 </head>
 <body>
 
+<h2>${task.title}</h2>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-<form method="post" action="/task">
-    <input type="submit" id="is_done" value="Нажмите, когда задание будет выполнено" disabled>
-</form>
+
 
 <c:if test="${task.type == 'ROBOT'}">
+    <form method="post" action="/task">
+        <input type="submit" id="is_done" value="Нажмите, когда задание будет выполнено" disabled>
+    </form>
     <div class="canvas"><canvas height="600" width="600" id="canvas1">Обновите браузер</canvas></div>
     <div class="canvas"><canvas height="530" width="250" id="canvas2">Обновите браузер</canvas></div>
     <script type="text/javascript" src="js/task/Field.js"></script>
@@ -119,6 +121,27 @@
 
     </script>
 </c:if>
+
+<c:if test="${task.type == 'PROGRAM'}">
+    <div>${task_content}</div>
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <form action="/task" method="post" enctype="multipart/form-data">
+                        <input name="file" type="file" accept=".pas" required>
+                        <input type="submit" value="Отправить">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>${result}</td>
+            </tr>
+        </table>
+    </div>
+
+</c:if>
+
 
 <script>
     function taskIsDone() {

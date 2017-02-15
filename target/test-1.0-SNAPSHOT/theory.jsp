@@ -19,7 +19,7 @@
                 <a href="#tab3">Результаты</a>
 
 
-                <div>
+                <div style="padding: 5px">
                         ${theory.content}
                 </div>
                 <div>
