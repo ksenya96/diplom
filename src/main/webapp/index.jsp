@@ -159,6 +159,7 @@
 
     <script type="text/javascript" src="js/index/checkInput.js"></script>
     <h1 align="center">Учебное пособие по основам алгоритмизации и программирования<br>для средней школы</h1>
+    <br>
 </header>
 
 <br><br><br>
@@ -186,9 +187,24 @@
 <script>
     $('nav').empty();
     for (var i = 1; i <= 11; i++) {
-        $('nav').append('<a class="menu_item" href="/themes?action=class&class=' + i + '">' + i + ' класс</a>');
+        $('nav').append('<a class="menu_item" href="/themes?action=class&class=' + i + '" >' + i + ' класс</a>');
     }
 </script>
+
+<c:if test="${clazz != null}">
+    <script>
+        var links = $('nav').children();
+        for (var i = 0; i < links.length; i++) {
+            if (links[i].innerHTML === '${clazz} класс') {
+                $(links[i]).addClass('active');
+            }
+            else {
+                $(links[i]).removeClass('active');
+            }
+        }
+    </script>
+</c:if>
+
 <script>
     var width = $('.menu_item').css('width');
     $('#nav').attr('width', width);

@@ -57,7 +57,8 @@ public class ServletForTheory extends HttpServlet {
                     pupilsDao.update(pupil);
                     List<Task> tasks = tasksDao.getTasksByTheme(theory.getTheme().getId());
                     session.setAttribute("tasks", tasks);
-                    theme.getPupils().add(pupil);
+                    if (!theme.getPupils().contains(pupil))
+                        theme.getPupils().add(pupil);
                     Servlet.redirectToIndexJSP(request, response);
                     break;
             }

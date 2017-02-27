@@ -137,8 +137,21 @@
             <tr>
                 <td>${result}</td>
             </tr>
+
+                <c:if test="${expected != null}">
+                    <tr>
+                        <td>Входные данные</td>
+                        <td>Ожидаемый результат</td>
+                    </tr>
+                    <tr>
+                        <td>${input}</td>
+                        <td>${expected}</td>
+                    </tr>
+                </c:if>
+
         </table>
     </div>
+    <a href="/theory?theme_id=${theory.theme.id}#tab2">Результаты</a>
 
 </c:if>
 

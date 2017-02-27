@@ -1,6 +1,8 @@
 package controller;
 
 import model.Checker;
+import model.Comment;
+import model.TestAndComment;
 import model.daos.Entity;
 import model.daos.TasksDaoImpl;
 import model.daos.UsersDaoImpl;
@@ -49,20 +51,28 @@ public class ServletForTask extends HttpServlet {
             inputDirectory = new File(elements[2].trim());
         if (task.getType() == TaskType.PROGRAM) {
             if (Checker.compile(fileName)) {
-                int code = Checker.test(fileName.replace(".pas", ".exe"), outputDirectory, inputDirectory);
-                switch (code) {
-                    case 0:
+                TestAndComment testAndComment = Checker.test(fileName.replace(".pas", ".exe"), outputDirectory, inputDirectory);
+                int test = testAndComment.getTest();
+                String input = testAndComment.getInput();
+                String expected = testAndComment.getOutput();
+                Comment comment = testAndComment.getComment();
+                switch (comment) {
+                    case OK:
                         session.setAttribute("result", "Программа прошла все тесты");
+                        user.getDoneTasks().add(task);
+                        usersDao.update(user);
                         break;
-                    case -1:
+                    case RUNTIME_ERROR:
                         session.setAttribute("result", "Ошибка времени выполнения (логическая ошибка)");
                         break;
-                    case -2:
+                    case TIME_LIMIT:
                         session.setAttribute("result", "Превышен лимит времени (программа выполнялась слишком долго)");
                         break;
                     default:
-                        session.setAttribute("result", "Неверный ответ на тесте №" + code);
+                        session.setAttribute("result", "Неверный ответ на тесте №" + test);
                 }
+                session.setAttribute("input", input);
+                session.setAttribute("expected", expected);
             }
             else {
                 session.setAttribute("result", "Ошибка компиляции (в файле содержится синтаксическая ошибка)");
@@ -70,9 +80,11 @@ public class ServletForTask extends HttpServlet {
 
 
         }
-        /*user.getDoneTasks().add(task);
-        usersDao.update(user);
-        session.setAttribute("content", "theory");*/
+        if (task.getType() == TaskType.ROBOT) {
+            user.getDoneTasks().add(task);
+            usersDao.update(user);
+            session.setAttribute("content", "theory");
+        }
         Servlet.redirectToUserJSP(request, response);
     }
 
@@ -113,6 +125,7 @@ public class ServletForTask extends HttpServlet {
         if (session != null) {
             session.setAttribute("task_content", dataInContent);
             session.setAttribute("task", task);
+            session.setAttribute("result", "");
             session.setAttribute("content", "task");
         }
 

@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt_rt" %>
 <%--
   Created by IntelliJ IDEA.
   User: acer
@@ -50,62 +51,71 @@
                 </div>
 
                 <div>
-                    <div style="display: inline-block">
-                        <table border="1px" id="results">
-                            <tr>
-                                <th>№</th>
-                                <th>ФИО</th>
-                                <th>Класс</th>
-                                <th>Школа</th>
-                                <c:forEach var="i" begin="1" end="${tasks.size()}">
-                                    <th>${i}</th>
-                                </c:forEach>
-                                <th>Кол-во решенных<br>заданий</th>
-                                <th>Отметка</th>
-                            </tr>
-
-
-                        </table>
-                    </div>
-                    <div style="display: inline-block; vertical-align: top">
-                        Результаты по:<br>
-                        <table>
-                            <tr>
-                                <td>классу</td>
-                                <td>
-                                    <select class="clazz">
-                                        <option value="">Не выбрано</option>
-                                        <c:forEach var="clazz" begin="1" end="11">
-                                            <option value="${clazz}">${clazz}</option>
-                                        </c:forEach>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>школе</td>
-                                <td>
-                                    <input name = "school" onclick="this.select();" list = "school_list" placeholder = "Начните вводить название школы">
-                                    <datalist id="school_list">
-                                        <c:forEach items="${schools}" var="item">
-                                            <option id="${item.id}">${item.name}</option>
-                                        </c:forEach>
-                                    </datalist>
-                                </td>
-                            </tr>
-                            <c:if test="${user.access == 'TEACHER'}">
-                                <tr>
-                                    <td>Показать только<br>своих учеников</td>
-                                    <td><input type="checkbox"></td>
-                                </tr>
-                            </c:if>
-                            <c:if test="${user.access == 'PARENT'}">
-                                <tr>
-                                    <td>Показать только<br>своих детей</td>
-                                    <td><input type="checkbox"></td>
-                                </tr>
-                            </c:if>
-                        </table>
-                    </div>
+                    <table>
+                        <tr>
+                            <td width="80%">
+                                <div style="display: inline-block; width: 90%">
+                                    <table id="results" class="tablesorter">
+                                        <thead>
+                                        <tr>
+                                            <th>№&emsp;</th>
+                                            <th>ФИО&emsp;</th>
+                                            <th>Класс&emsp;</th>
+                                            <th>Школа&emsp;</th>
+                                            <c:forEach var="i" begin="1" end="${tasks.size()}">
+                                                <th>${i}&emsp;</th>
+                                            </c:forEach>
+                                            <th>Кол-во решенных&emsp;<br>заданий</th>
+                                            <th>Отметка&emsp;</th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </td>
+                            <td width="20%">
+                                <div style="display: inline-block; vertical-align: top; width: 10%">
+                                    Результаты по:<br>
+                                    <table>
+                                        <tr>
+                                            <td>классу</td>
+                                            <td>
+                                                <select class="clazz">
+                                                    <option value="">Не выбрано</option>
+                                                    <c:forEach var="clazz" begin="1" end="11">
+                                                        <option value="${clazz}">${clazz}</option>
+                                                    </c:forEach>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>школе</td>
+                                            <td>
+                                                <input name="school" onclick="this.select();" list="school_list"
+                                                       placeholder="Начните вводить название школы">
+                                                <datalist id="school_list">
+                                                    <c:forEach items="${schools}" var="item">
+                                                        <option id="${item.id}">${item.name}</option>
+                                                    </c:forEach>
+                                                </datalist>
+                                            </td>
+                                        </tr>
+                                        <c:if test="${user.access == 'TEACHER'}">
+                                            <tr>
+                                                <td>Показать только<br>своих учеников</td>
+                                                <td><input type="checkbox"></td>
+                                            </tr>
+                                        </c:if>
+                                        <c:if test="${user.access == 'PARENT'}">
+                                            <tr>
+                                                <td>Показать только<br>своих детей</td>
+                                                <td><input type="checkbox"></td>
+                                            </tr>
+                                        </c:if>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
 
@@ -119,7 +129,7 @@
 
 <script>
     function insertIntoTable() {
-        var trWithData = '';
+        var trWithData = '<tbody>';
         <c:set var="n" value="1"/>
         <c:forEach var="item" items="${theory.theme.pupils}">
 
@@ -148,11 +158,13 @@
         </c:otherwise>
         </c:choose>
         </c:forEach>
+
         trWithData += '<td align="center">${done}</td>' +
-                '<td align="center">${done * 10 / tasks.size()}</td>' +
+                '<td align="center"><fmt:formatNumber value="${done * 10 / tasks.size()}" maxFractionDigits="2"/></td>' +
                 '</tr>';
         <c:set var="n" value="${n+1}"/>
         </c:forEach>
+        trWithData += '</tbody>';
 
         $('#results').append(trWithData);
     }
@@ -240,6 +252,10 @@
                     i++;
             }
         }
+    });
+
+    $(document).ready(function(){
+        $("#results").tablesorter();
     });
 </script>
 

@@ -38,7 +38,74 @@
 <p>В фигурных скобках можно писать комментарии (пояснительный текст, который облегчает понимание программы и не влияет на ее выполнение).
 Использование в программе комментариев необязательно.</p>
 
-<input type="file" accept=".pas">
+<h2 align="center">Организация ввода и вывода данных</h2>
+<p>
+    При составлении программы можно выделить следующие этапы:
+<ul>
+    <li>ввод исходных данных;</li>
+    <li>обработка данных;</li>
+    <li>вывод данных (получение результата).</li>
+</ul>
+</p>
+<p>Для организации ввода и вывода данных необходимо научиться писать программы, которые позволяют вести диалог между компьютером и человеком (пользователем).</p>
+<p>Мы уже знаем, что вывести сообщение на экран можно с помощью команды <span style="font-family: 'Courier New'">Write</span>.
+Это одна из наиболее часто используемых команд, ведь программа должна не только организовать диалог между пользователем и компьютером, но и сообщить пользователю о результатах своей работы, т.е. вывести данные на экран монитора.</p>
+<p>Итак, информацию (текст) на экран монитора можно выводить с помощью команды <span style="font-family: 'Courier New'">Write</span>. Например, так:</p>
+<p style="font-family: 'Courier New'">
+    <b>Program </b>privet_1;
+    <br><b>Begin</b>
+    <br>&emsp;Write('Привет! Я компьютер, который может все!');
+    <br><b>End.</b>
+</p>
+<p>Здесь команда (процедура) вывода <span style="font-family: 'Courier New'">Write</span> выводит на экран все, что написано между апострофами в скобках в одну строку. После выполнения этой программы на экране монитора появится сообщение:</p>
+<p style="font-family: 'Courier New'" align="center">Привет! Я компьютер, который может все!</p>
+<p>Программа <span style="font-family: 'Courier New'">privet_2</span>, в которой уже две команды вывода <span style="font-family: 'Courier New'">Write</span>, выдаст такой же результат.</p>
+<p style="font-family: 'Courier New'">
+    <b>Program </b>privet_2;&emsp;&emsp;{Заголовок программы}
+    <br><b>Begin</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; {Начало программы}
+    <br>&emsp;Write('Привет!');
+    <br>&emsp;Write('Я компьютер, который может все!');
+    <br><b>End.</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{Конец программы}
+</p>
+<p>Существует другая разновидность команды вывода &mdash; <span style="font-family: 'Courier New'">Writeln</span>, которая действует так же, как команда <span style="font-family: 'Courier New'">Write</span>, но после вывода информации переводит курсор на новую строку.</p>
+<p>Так, программа <span style="font-family: 'Courier New'">privet_3</span></p>
+<p style="font-family: 'Courier New'">
+    <b>Program </b>privet_3;
+    <br><b>Begin</b>
+    <br>&emsp;Writeln('Привет!');
+    <br>&emsp;Write('Я компьютер, который может все!');
+    <br><b>End.</b>
+</p>
+<p>выведет текст в две строки:</p>
+<p style="font-family: 'Courier New'">Привет!<br>Я компьютер, который может все!</p>
+<p>Мы рассмотрели случаи использования команд вывода <span style="font-family: 'Courier New'">Write</span> и <span style="font-family: 'Courier New'">Writeln</span>, когда на экран монитора выводится текст. Однако компьютер может не только писать текст на экране, но и выполнять арифметические операции.</p>
+<p>Познакомимся с новыми возможностями команды <span style="font-family: 'Courier New'">Write</span> на примере программы <span style="font-family: 'Courier New'">Summa</span>.</p>
+<p style="font-family: 'Courier New'">
+    <b>Program </b>summa;
+    <br><b>Begin</b>
+    <br>&emsp;Write(2+3);&emsp;&emsp;{Вычисление суммы и вывод результата на экран}
+    <br><b>End.</b>
+</p>
+<p>После выполнения программы <span style="font-family: 'Courier New'">summa</span> на экране появится число 5. Так работает команда <span style="font-family: 'Courier New'">Write</span>, если арифметическое выражение записано в скобках без апострофов. Если бы мы записали <span style="font-family: 'Courier New'">Write('2+3')</span>, то на экране монитора был бы выведен текст: <span style="font-family: 'Courier New'">2+3</span>.</p>
+<p>Вводить данные в компьютер можно с помощью команды (процедуры) ввода <span style="font-family: 'Courier New'">Read</span> (либо <span style="font-family: 'Courier New'">Readln</span>), которая записывается аналогично команде вывода, за исключением того, что в круглых скобках перечисляются имена переменных, например: <span style="font-family: 'Courier New'">Read(a, b)</span> либо <span style="font-family: 'Courier New'">Readln(a1, a2,...,aN)</span>.</p>
+<p>Эта команда заносит данные (числа) в переменные. При этом значения переменных зависят от того, какая информация набирается на клавиатуре во время выполнения программы. Вводимые с клавиатуры данные отображаются на экране монитора.</p>
+<p>Команда <span style="font-family: 'Courier New'">Readln</span> отличается от команды <span style="font-family: 'Courier New'">Read</span> тем, что после ввода необходимого количества данных осуществляется переход на следующую строку.</p>
+<p>Рассмотрим на примерах, как выполняется команда <span style="font-family: 'Courier New'">Read(a, b)</span>.</p>
+<p><b>Пример 1.</b> Написать программу вывода числа, введенного пользователем с клавиатуры по запросу.</p>
+<p>Программа может быть такой:</p>
+<p style="font-family: 'Courier New'">
+    <b>Program </b>vvod_a;
+    <br><b>Var </b>a: integer;&emsp;&emsp;{Описание переменной a целого типа}
+    <br><b>Begin</b>
+    <br>&emsp;Write('Введите любое число ');
+    <br>&emsp;Readln(a);&emsp;&emsp;{Запрос на ввод числа с клавиатуры и занесение его в переменную a}
+    <br>&emsp;Write('Ваше число - ', a);
+    <br><b>End.</b>
+</p>
+<p>Результат выполнения программы в окне вывода при <i>a</i> = 5 будет следующим:</p>
+<p style="font-family: 'Courier New'">Введите любое число 5<br>Ваше число - 5</p>
+<p>При выполнении программы команда <span style="font-family: 'Courier New'">Read</span> (либо <span style="font-family: 'Courier New'">Readln</span>) велит компьютеру останавливаться и ждать, пока пользователь не введет какое-то число для занесения его в соответствующую переменную. Если, например, ввели число 5,то именно оно становится значением переменной <i>a</i> в памяти компьютера.</p>
+<img src="http://latex.codecogs.com/gif.latex?%5Cdpi{125}&space;%5Cbg_white&space;%5Cfrac%7Bx+y%7D%7B2c%7D" title="LaTeX:\frac{x+y}{2c}" />
 <script>
     /*$.ajax({
      url: 'tasks/robot/linear1.txt',

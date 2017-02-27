@@ -56,7 +56,6 @@ function Task(algorithm, ctxt1, ctxt2, beginCellOfRobot, cells, linesLimit) {
     this.timerIsOn = false;
 
     this.draw = function () {
-
         this.field.draw(this.ctxt1);
         this.robot.draw(this.ctxt1);
         this.block.draw(this.ctxt2);
@@ -112,7 +111,7 @@ function Task(algorithm, ctxt1, ctxt2, beginCellOfRobot, cells, linesLimit) {
         if (this.algorithm === CommandEnum.PROCEDURE_ALGORITHMS)
             appendButtons += '<button onclick="new CommandFactory(CommandEnum.CANCEL_IN_PROCEDURE).setButtonParameters(task);">Отмена в Proc</button>';
         appendButtons += '<button onclick="new CommandFactory(CommandEnum.RETURN).setButtonParameters(task);">В начало</button>' +
-            '<button>Помощь</button></div>';
+            '</div>';
         appendButtons += '<div id="message"></div>';
         $('#textarea').after(appendButtons);
 

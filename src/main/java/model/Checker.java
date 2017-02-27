@@ -30,10 +30,8 @@ public class Checker {
         return result;
     }
 
-    public static int test(String exe, File outputDirectory, File inputDirectory) throws IOException {
+    public static TestAndComment test(String exe, File outputDirectory, File inputDirectory) throws IOException {
         File[] outputFiles = outputDirectory.listFiles();
-        System.out.println(outputDirectory.isDirectory());
-        System.out.println(outputDirectory.getPath());
         File outputFile;
 
         File[] inputFiles = null;
@@ -49,10 +47,14 @@ public class Checker {
             outputFile = outputFiles[i];
             processBuilder = new ProcessBuilder(exe);
             process = processBuilder.start();
+            String input = null;
+            //ожидаемый вывод
+            expected = getString(new FileInputStream(outputFile));
             if (inputFiles != null) {
                 inputFile = inputFiles[i];
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(process.getOutputStream()));
-                bufferedWriter.write(getString(new FileInputStream(inputFile)));
+                input = getString(new FileInputStream(inputFile));
+                bufferedWriter.write(input);
                 bufferedWriter.close();
             }
             //проверка на лимит времени (2 сек)
@@ -61,17 +63,17 @@ public class Checker {
             if (process.isAlive()) {
                 //превышен лимит времени
                 process.destroy();
-                return -2;
+                return new TestAndComment(i + 1, Comment.TIME_LIMIT, input, expected);
             }
             //ошибка времени выполнения
             if (process.exitValue() != 0)
-                return -1;
+                return new TestAndComment(i + 1, Comment.RUNTIME_ERROR, input, expected);
             result = getString(process.getInputStream());
-            expected = getString(new FileInputStream(outputFile));
+
             if (!expected.equals(result))
-                return i + 1;
+                return new TestAndComment(i + 1, Comment.WRONG_ANSWER, input, expected);
 
         }
-        return 0;
+        return new TestAndComment(0, Comment.OK);
     }
 }

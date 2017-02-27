@@ -9,13 +9,18 @@ function Robot(x0, y0, width, height) {
     this.x = x0;
     this.y = y0;
     this.img = new Image();
-    this.img.onload = function() {
+    /*this.img.onload = function() {
 
-    };
+    };*/
     this.img.src = "images/robot.png";
 
     this.draw = function (ctxt) {
-            ctxt.drawImage(this.img, this.x, this.y, width, height);
+        var robot = this;
+        this.img.addEventListener("load", function() {
+            // здесь выполняет drawImage функцию
+            ctxt.drawImage(robot.img, robot.x, robot.y, width, height);
+        }, false);
+        ctxt.drawImage(robot.img, robot.x, robot.y, width, height);
     };
 
     this.setInitialCoords = function () {

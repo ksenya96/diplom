@@ -266,7 +266,6 @@ public class Servlet extends HttpServlet {
         HttpSession session = request.getSession(false);
         if (session == null || session.getAttribute("user") == null) {
             session = request.getSession(true);
-            session.setAttribute("themes", themesDao.getAllEntities());
             session.setAttribute("schools", schoolsDao.getAllEntities());
             session.setAttribute("teachers", teachersDao.getAllEntities());
             session.setAttribute("pupils", pupilsDao.getAllEntities());

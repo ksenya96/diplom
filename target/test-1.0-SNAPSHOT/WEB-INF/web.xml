@@ -23,6 +23,7 @@
         <servlet-class>controller.ServletForTask</servlet-class>
     </servlet>
 
+
     <servlet-mapping>
         <servlet-name>Servlet</servlet-name>
         <url-pattern>/index</url-pattern>
@@ -49,6 +50,10 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>default</servlet-name>
+        <url-pattern>*.gif</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
         <url-pattern>*.png</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
@@ -66,5 +71,13 @@
     </session-config>
 
 
+    <filter>
+        <filter-name>StatsFilter</filter-name>
+        <filter-class>controller.StatsFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>StatsFilter</filter-name>
+        <url-pattern>/index</url-pattern>
+    </filter-mapping>
 
 </web-app>

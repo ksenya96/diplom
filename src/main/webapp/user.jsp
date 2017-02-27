@@ -14,9 +14,12 @@
     <link rel="stylesheet" type="text/css" href="css/index/star.css">
     <meta charset="utf-8">
     <title>${user.lastName} ${user.firstName} ${user.patronymic}</title>
+    <link rel="stylesheet" type="text/css" href="css/blue/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.metadata.js"></script>
+    <script type="text/javascript" src="js/jquery.tablesorter.js"></script>
 </head>
 <body>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
 <jsp:useBean id="fieldsForCheckNull" class="java.util.ArrayList" scope="session"/>
 
 <header>
@@ -28,6 +31,7 @@
 </div>
 
 <h1 align="center">Учебное пособие по основам алгоритмизации и программирования<br>для средней школы</h1>
+    <br>
 </header>
 
 <br><br><br>
@@ -136,6 +140,7 @@
 
 </script>
 <script type="text/javascript" src="js/index/dataLists.js"></script>
+<script type="text/javascript" src="js/index/checkInput.js"></script>
 <jsp:include page="includes/edit/checkEdit.jsp"/>
 <jsp:include page="includes/edit/checkAdditional.jsp"/>
 

@@ -15,7 +15,7 @@ public class Theme extends AbstractEntity implements Serializable {
     private int clazz;
     private Set<Theory> theory = new HashSet<>();
     private Set<Task> tasks = new HashSet<>();
-    private List<Pupil> pupils = new ArrayList<>();
+    private Set<Pupil> pupils = new HashSet<>();
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -71,21 +71,11 @@ public class Theme extends AbstractEntity implements Serializable {
     @JoinTable(name = "pupils_and_themes",
             joinColumns = {@JoinColumn(name = "theme_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "pupil_id", referencedColumnName = "id")})
-    public List<Pupil> getPupils() {
-        Collections.sort(pupils, new Comparator<Pupil>() {
-            @Override
-            public int compare(Pupil o1, Pupil o2) {
-                if (o1.getDoneTasks().size() > o2.getDoneTasks().size())
-                    return -1;
-                if (o1.getDoneTasks().size() < o2.getDoneTasks().size())
-                    return 1;
-                return 0;
-            }
-        });
+    public Set<Pupil> getPupils() {
         return pupils;
     }
 
-    public void setPupils(List<Pupil> pupils) {
+    public void setPupils(Set<Pupil> pupils) {
         this.pupils = pupils;
     }
 
