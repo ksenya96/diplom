@@ -14,7 +14,7 @@
     menu.empty();
     <c:forEach items="${user.pupils}" var="item">
         pupils = pupils + '<tr><td>' + (++i) + '. ${item.lastName} ${item.firstName} ${item.patronymic} ' +
-            '<a href="/index?action=delete_pupil&pupil_id=${item.id}">&#10005;</a></td></tr>';
+            '<a href="/index?action=delete_pupil&pupil_id=${item.id}" title="Удалить">&#10005;</a></td></tr>';
     </c:forEach>
     pupils += '</table>';
 

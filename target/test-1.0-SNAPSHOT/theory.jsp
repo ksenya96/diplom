@@ -24,6 +24,7 @@
                         ${theory.content}
                 </div>
                 <div>
+                    <h2>Задания по теме "${theory.theme.title}"</h2>
                     <table border="1px">
                         <tr>
                             <th>№</th>
@@ -51,11 +52,12 @@
                 </div>
 
                 <div>
+                    <h2>Результаты выполнения заданий по теме "${theory.theme.title}"</h2>
                     <table>
                         <tr>
                             <td width="80%">
                                 <div style="display: inline-block; width: 90%">
-                                    <table id="results" class="tablesorter">
+                                    <table id="results" class="tablesorter" border="1px black solid">
                                         <thead>
                                         <tr>
                                             <th>№&emsp;</th>

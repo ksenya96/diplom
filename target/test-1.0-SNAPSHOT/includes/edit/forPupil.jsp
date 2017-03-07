@@ -45,7 +45,7 @@
     var teachers = '<table>';
     <c:forEach items="${user.teachers}" var="item">
     teachers = teachers + '<tr><td>' + (++i) + '. ${item.lastName} ${item.firstName} ${item.patronymic} ' +
-            '<a href="/index?action=delete_teacher&teacher_id=${item.id}">&#10005;</a></td></tr>';
+            '<a href="/index?action=delete_teacher&teacher_id=${item.id}" title="Удалить">&#10005;</a></td></tr>';
     </c:forEach>
     teachers += '</table>';
 
