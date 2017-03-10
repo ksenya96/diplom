@@ -11,6 +11,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="css/index/star.css">
+    <link rel="stylesheet" type="text/css" href="css/dialog-polyfill.css" />
     <meta charset="utf-8">
     <title>Учимся играя</title>
 </head>
@@ -18,11 +19,10 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
 <jsp:useBean id="fieldsForCheckNull" class="java.util.ArrayList" scope="session"/>
 
+<script src="js/dialog-polyfill.js"></script>
+
 <header>
-
-
-
-        <dialog id="enter">
+        <dialog id="enter" style="display: none">
             <h2 style="display:inline-block;">Вход в систему</h2>
             <button id="exit_enter" style="display:inline-block; float: right">&#10005;</button>
             <form action="/index?action=login" method="post" id="formForEnter" onsubmit="return false;">
@@ -53,7 +53,7 @@
 
 
 
-        <dialog id="register">
+        <dialog id="register" style="display: none">
             <div>
                 <h2 style="display: inline-block;" align="left">Регистрация</h2>
                 <button id="exit_register" style="display: inline-block; float: right">&#10005;</button>
@@ -139,11 +139,13 @@
 
         </dialog>
     <div align="right">
+        <a href="/index">На главную</a>
         <button id="show_enter">Войти</button>
         <button id="show_register">Регистрация</button>
         <br>
         ${result}
     </div>
+
 
 
 
@@ -158,11 +160,15 @@
     <script type="text/javascript" src="js/index/checkPasswordByRegistration.js"></script>
 
     <script type="text/javascript" src="js/index/checkInput.js"></script>
-    <h1 align="center">Учебное пособие по основам алгоритмизации и программирования<br>для средней школы</h1>
-    <br>
+
+    <div align="center">
+        <div style="display: inline-block"><img src="/images/bell.png" width="150" height="150"></div>
+        <div style="display: inline-block; vertical-align: middle; align-content: center; float: right"><h1><i>Учебное пособие по
+            основам алгоритмизации и программирования<br>для средней школы</i></h1></div>
+    </div>
 </header>
 
-<br><br><br>
+<br><hr>
 
 
 <table width="100%">
@@ -172,6 +178,10 @@
             </nav>
         </td>
         <td valign="top" align="center">
+            <c:if test="${content == null || content == 'main'}">
+                <div style="font-size: 20pt"><i>Данное учебное пособие адресуется ученикам, учителям и родителям в помощь при изучении
+                основ алгоритмизации и программирования.</i></div>
+            </c:if>
             <c:if test="${content == 'themes'}">
                 <jsp:include page="includes/user/themes.jsp"/>
             </c:if>

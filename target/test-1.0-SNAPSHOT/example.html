@@ -1,62 +1,26 @@
-<html>
 <head>
-    <title>${task.title}</title>
-    <link rel="stylesheet" type="text/css" href="css/blue/style.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-    <script type="text/javascript" src="js/jquery.metadata.js"></script>
-    <script type="text/javascript" src="js/jquery.tablesorter.js"></script>
-
-
+    <link rel="stylesheet" type="text/css" href="css/dialog-polyfill.css" />
+    <link rel="stylesheet" type="text/css" href="css/index/star.css" />
 </head>
 <body>
-
-<table id="re" class="tablesorter">
-    <thead>
-    <tr>
-        <th>Фамилия</th>
-        <th>Имя</th>
-        <th>E-mail</th>
-        <th>Долг</th>
-        <th>Веб-сайт</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>Смит</td>
-        <td>Джон</td>
-        <td>jsmith@gmail.com</td>
-        <td>$50.00</td>
-        <td>http://www.jsmith.com</td>
-    </tr>
-    <tr>
-        <td>Бах</td>
-        <td>Франк</td>
-        <td>fbach@yahoo.com</td>
-        <td>$40.00</td>
-        <td>http://www.frank.com</td>
-    </tr>
-    <tr>
-        <td>Доу</td>
-        <td>Джейсон</td>
-        <td>jdoe@hotmail.com</td>
-        <td>$100.00</td>
-        <td>http://www.jdoe.com</td>
-    </tr>
-    <tr>
-        <td>Конвей</td>
-        <td>Тим</td>
-        <td>tconway@earthlink.net</td>
-        <td>$50.00</td>
-        <td>http://www.timconway.com</td>
-    </tr>
-    </tbody>
-</table>
+<dialog>
+    I'm a dialog!
+    <form method="dialog">
+        <input type="submit" value="Close" />
+    </form>
+</dialog>
+<ol class="rounded">
+    <li><a href="#">Элемент списка</a></li>
+    <li><a href="#">Элемент списка</a></li>
+    <li><a href="#">Элемент списка</a></li>
+    <li><a href="#">Элемент списка</a></li>
+    <li><a href="#">Элемент списка</a></li>
+</ol>
+<script src="js/dialog-polyfill.js"></script>
 <script>
-    $(document).ready(function(){
-        $("#re").tablesorter();
-    });
-
+    var dialog = document.querySelector('dialog');
+    dialogPolyfill.registerDialog(dialog);
+    // Now dialog acts like a native <dialog>.
+    dialog.showModal();
 </script>
-
 </body>
-</html>

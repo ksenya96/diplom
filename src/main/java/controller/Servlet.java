@@ -254,8 +254,10 @@ public class Servlet extends HttpServlet {
 
         else {
             HttpSession session = request.getSession(false);
-            if (session != null)
+            if (session != null) {
                 session.setAttribute("content", "main");
+                session.removeAttribute("clazz");
+            }
             redirectToIndexJSP(request, response);
         }
 

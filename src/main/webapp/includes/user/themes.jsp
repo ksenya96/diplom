@@ -7,12 +7,16 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<p align="center">${clazz} класс</p>
+<h2 align="center">${clazz} класс</h2>
 <c:if test="${themes.isEmpty()}">
     <p align="center">Тем нет</p>
 </c:if>
-<table align="center">
+
+    <ol class="rounded">
     <c:forEach var="item" items="${themes}">
-        <tr><td><a href="/theory?theme_id=${item.id}">${item.title}</a></td></tr>
+
+            <li><a href="/theory?theme_id=${item.id}">${item.title}</a></li>
+
     </c:forEach>
-</table>
+    </ol>
+

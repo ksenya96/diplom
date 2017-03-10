@@ -30,11 +30,14 @@
     </form>
 </div>
 
-<h1 align="center">Учебное пособие по основам алгоритмизации и программирования<br>для средней школы</h1>
-    <br>
+    <div align="center">
+        <div style="display: inline-block"><img src="/images/bell.png" width="150" height="150"></div>
+        <div style="display: inline-block; vertical-align: middle; align-content: center; float: right"><h1><i>Учебное пособие по
+            основам алгоритмизации и программирования<br>для средней школы</i></h1></div>
+    </div>
+    <hr>
 </header>
 
-<br><br><br>
 
 <table width="100%">
     <tr>
