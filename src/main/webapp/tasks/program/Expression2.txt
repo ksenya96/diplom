@@ -1,5 +1,5 @@
 Даны целые числа х, у, с. Напишите программу, которая находит значение выражения
-<img src="http://latex.codecogs.com/gif.latex?%5Cdpi{125}&space;%5Cbg_white&space;%5Cfrac%7Bx+y%7D%7B2c%7D" title="LaTeX:\frac{x+y}{2c}" />
+ <img src="images/formula4.png" />
 и выводит на экран монитора результат.
 
 D:\Моя папка\Мой универ\Test\src\main\webapp\tasks\program\tests\Expression2Out

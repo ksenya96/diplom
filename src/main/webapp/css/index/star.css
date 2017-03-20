@@ -7,6 +7,10 @@
     color: red;
 }
 
+a {
+    text-decoration: none;
+}
+
 #tab2, #tab3 {
     position: fixed;
 }
@@ -114,6 +118,11 @@ nav {
     display: inline-block;
 }
 
+#functional_buttons > button {
+    height: 30px;
+    margin-left: 10px;
+}
+
 dialog::backdrop {
     position: fixed;
     top: 0;
@@ -131,6 +140,7 @@ header {
 
 body {
     background: rgb(254, 242, 166);
+    font-family: Sans-Serif;
 }
 
 h1, h2 {
@@ -172,6 +182,10 @@ h1 {
     color: #8A2D0E;
 }
 
+button > a {
+    text-decoration: none;
+    color: #fff;
+}
 .rounded {
     counter-reset: li;
     list-style: none;
@@ -184,15 +198,17 @@ h1 {
     display: block;
     padding: .4em .4em .4em 2em;
     margin: .5em 0;
-    background: #DAD2CA;
+    background: #c69443;
     color: #444;
     text-decoration: none;
     border-radius: .3em;
     transition: .3s ease-out;
     width: 500px;
+    font-size: 12pt;
+    font-weight: bold;
 }
 .rounded a:hover {
-    background: #E9E4E0;
+    background: #f1f1f1;
 }
 .rounded a:hover:before {
     transform: rotate(360deg);
@@ -204,7 +220,7 @@ h1 {
     left: -1.3em;
     top: 50%;
     margin-top: -1.3em;
-    background: #8FD4C1;
+    background: #c2401b;
     height: 2em;
     width: 2em;
     line-height: 2em;
@@ -213,6 +229,24 @@ h1 {
     font-weight: bold;
     border-radius: 2em;
     transition: all .3s ease-out;
+}
+
+.decoration table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 5px;
+    background: #FFFFFF;
+    color: #656665;
+    border: 5px solid #c16228;
+}
+.decoration th {
+    font-size: 18px;
+    padding: 10px;
+}
+.decoration td {
+    background: #f9dd92;
+    padding: 10px;
 }
 
 

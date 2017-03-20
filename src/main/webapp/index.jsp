@@ -139,7 +139,7 @@
 
         </dialog>
     <div align="right">
-        <a href="/index">На главную</a>
+        <button><a href="/index">На главную</a></button>
         <button id="show_enter">Войти</button>
         <button id="show_register">Регистрация</button>
         <br>
@@ -187,6 +187,31 @@
             </c:if>
 
             <c:if test="${content == 'theory'}">
+                <table width="100%" border="1px" bgcolor="#FEFEC6" style="border: solid #c16228">
+                    <tr>
+                        <td align="left">
+                            <c:choose>
+                                <c:when test="${themes.get(0) == theory.theme}">
+                                    <a>Предыдущая тема</a>
+                                </c:when>
+                                <c:otherwise>
+                                    <a href="/theory?theme_id=${themes.get(themes.indexOf(theory.theme) - 1).id}">Предыдущая тема</a>
+                                </c:otherwise>
+                            </c:choose>
+                        </td>
+                        <td align="center"><a href="/themes?action=class&class=${theory.theme.clazz}">Список тем</a></td>
+                        <td align="right">
+                            <c:choose>
+                                <c:when test="${themes.get(themes.size() - 1) == theory.theme}">
+                                    <a>Следующая тема</a>
+                                </c:when>
+                                <c:otherwise>
+                                    <a href="/theory?theme_id=${themes.get(themes.indexOf(theory.theme) + 1).id}">Следующая тема</a>
+                                </c:otherwise>
+                            </c:choose>
+                        </td>
+                    </tr>
+                </table>
                 ${theory.content}
                 Доступ к задачам имеют только зарегистрированные пользователи
             </c:if>

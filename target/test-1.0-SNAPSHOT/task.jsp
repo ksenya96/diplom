@@ -123,10 +123,12 @@
 </c:if>
 
 <c:if test="${task.type == 'PROGRAM'}">
-    <div>${task_content}</div>
     <div>
-        <table>
+        <table class="decoration">
             <tr>
+                <td>${task_content}</td>
+            </tr>
+            <tr align="center">
                 <td>
                     <form action="/task" method="post" enctype="multipart/form-data">
                         <input name="file" type="file" accept=".pas" required>
@@ -134,7 +136,7 @@
                     </form>
                 </td>
             </tr>
-            <tr>
+            <tr align="center">
                 <td>${result}</td>
             </tr>
 

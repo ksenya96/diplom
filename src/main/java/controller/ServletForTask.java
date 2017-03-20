@@ -31,25 +31,24 @@ public class ServletForTask extends HttpServlet {
         HttpSession session = request.getSession(false);
         User user = (User)session.getAttribute("user");
         Task task = (Task)session.getAttribute("task");
-        Part filePart = request.getPart("file");
-
-
-        String fileName = "d:\\" + Paths.get(filePart.getSubmittedFileName()).getFileName().toString();
-        Files.deleteIfExists(new File(fileName).toPath());
-        Files.createFile(new File(fileName).toPath());
-        String fileContent = getStringFromFile(filePart.getInputStream());
-        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileName)));
-        writer.write(fileContent);
-        writer.close();
-
-
-        String dataInContent = getStringFromFile(new FileInputStream(task.getContent()));
-        String[] elements = dataInContent.split("\\n\\n");
-        File outputDirectory = new File(elements[1].trim());
-        File inputDirectory = null;
-        if (elements.length > 2)
-            inputDirectory = new File(elements[2].trim());
         if (task.getType() == TaskType.PROGRAM) {
+            Part filePart = request.getPart("file");
+
+            String fileName = "d:\\" + Paths.get(filePart.getSubmittedFileName()).getFileName().toString();
+            Files.deleteIfExists(new File(fileName).toPath());
+            Files.createFile(new File(fileName).toPath());
+            String fileContent = getStringFromFile(filePart.getInputStream());
+            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileName)));
+            writer.write(fileContent);
+            writer.close();
+
+
+            String dataInContent = getStringFromFile(new FileInputStream(task.getContent()));
+            String[] elements = dataInContent.split("\\n\\n");
+            File outputDirectory = new File(elements[1].trim());
+            File inputDirectory = null;
+            if (elements.length > 2)
+                inputDirectory = new File(elements[2].trim());
             if (Checker.compile(fileName)) {
                 TestAndComment testAndComment = Checker.test(fileName.replace(".pas", ".exe"), outputDirectory, inputDirectory);
                 int test = testAndComment.getTest();
@@ -73,8 +72,7 @@ public class ServletForTask extends HttpServlet {
                 }
                 session.setAttribute("input", input);
                 session.setAttribute("expected", expected);
-            }
-            else {
+            } else {
                 session.setAttribute("result", "Ошибка компиляции (в файле содержится синтаксическая ошибка)");
             }
 

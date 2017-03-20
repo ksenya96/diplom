@@ -1,5 +1,5 @@
 Даны целые числа а и b. Напишите программу, которая находит значение выражения
- <img src="http://latex.codecogs.com/gif.latex?%5Cdpi{125}&space;%5Cbg_white&space;%5Cfrac%7B%28a%5E2+b%29a%7D%7Bb%7D" title="LaTeX:\frac{(a^2+b)a}{b}" />
+ <img src="images/formula4.png" />
 и выводит на экран монитора результат.
 
 D:\Моя папка\Мой универ\Test\src\main\webapp\tasks\program\tests\Expression1Out

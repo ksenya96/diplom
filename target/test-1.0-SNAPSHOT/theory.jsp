@@ -21,11 +21,37 @@
 
 
                 <div style="padding: 5px">
+                    <table width="100%" border="1px" bgcolor="#FEFEC6" style="border: solid #c16228">
+                        <tr>
+                            <td align="left">
+                                <c:choose>
+                                    <c:when test="${themes.get(0) == theory.theme}">
+                                        <a>Предыдущая тема</a>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <a href="/theory?theme_id=${themes.get(themes.indexOf(theory.theme) - 1).id}">Предыдущая тема</a>
+                                    </c:otherwise>
+                                </c:choose>
+                            </td>
+                            <td align="center"><a href="/themes?action=class&class=${theory.theme.clazz}">Список тем</a></td>
+                            <td align="right">
+                                <c:choose>
+                                    <c:when test="${themes.get(themes.size() - 1) == theory.theme}">
+                                        <a>Следующая тема</a>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <a href="/theory?theme_id=${themes.get(themes.indexOf(theory.theme) + 1).id}">Следующая тема</a>
+                                    </c:otherwise>
+                                </c:choose>
+                            </td>
+                        </tr>
+                    </table>
+
                         ${theory.content}
                 </div>
-                <div>
+                <div class="decoration">
                     <h2>Задания по теме "${theory.theme.title}"</h2>
-                    <table border="1px">
+                    <table>
                         <tr>
                             <th>№</th>
                             <th>Задание</th>
@@ -53,11 +79,12 @@
 
                 <div>
                     <h2>Результаты выполнения заданий по теме "${theory.theme.title}"</h2>
+                    <div>
                     <table>
-                        <tr>
+                        <tr valign="top">
                             <td width="80%">
-                                <div style="display: inline-block; width: 90%">
-                                    <table id="results" class="tablesorter" border="1px black solid">
+                                <div style="display: inline-block; width: 90%" class="decoration">
+                                    <table id="results"  class="tablesorter" border="1px black solid">
                                         <thead>
                                         <tr>
                                             <th>№&emsp;</th>
@@ -74,10 +101,13 @@
                                     </table>
                                 </div>
                             </td>
-                            <td width="20%">
-                                <div style="display: inline-block; vertical-align: top; width: 10%">
-                                    Результаты по:<br>
+                            <td width="20%" valign="top">
+                                <div style="display: inline-block; width: 10%" class="decoration">
+
                                     <table>
+                                        <tr>
+                                            <td colspan="2">Результаты по:</td>
+                                        </tr>
                                         <tr>
                                             <td>классу</td>
                                             <td>
@@ -118,11 +148,37 @@
                             </td>
                         </tr>
                     </table>
+                        </div>
                 </div>
             </div>
 
         </c:when>
         <c:otherwise>
+            <table width="100%" border="1px" bgcolor="#FEFEC6" style="border: solid #c16228">
+                <tr>
+                    <td align="left">
+                        <c:choose>
+                            <c:when test="${themes.get(0) == theory.theme}">
+                                <a>Предыдущая тема</a>
+                            </c:when>
+                            <c:otherwise>
+                                <a href="/theory?theme_id=${themes.get(themes.indexOf(theory.theme) - 1).id}">Предыдущая тема</a>
+                            </c:otherwise>
+                        </c:choose>
+                    </td>
+                    <td align="center"><a href="/themes?action=class&class=${theory.theme.clazz}">Список тем</a></td>
+                    <td align="right">
+                        <c:choose>
+                            <c:when test="${themes.get(themes.size() - 1) == theory.theme}">
+                                <a>Следующая тема</a>
+                            </c:when>
+                            <c:otherwise>
+                                <a href="/theory?theme_id=${themes.get(themes.indexOf(theory.theme) + 1).id}">Следующая тема</a>
+                            </c:otherwise>
+                        </c:choose>
+                    </td>
+                </tr>
+            </table>
             ${theory.content}
             <a href="/theory?action=subscribe">Подписаться на задания</a>
         </c:otherwise>
@@ -171,21 +227,34 @@
         $('#results').append(trWithData);
     }
 
+    function markOwnPupils() {
+        var hidden = document.getElementsByClassName('contains');
+        for (var i = 0; i < hidden.length; i++) {
+            if (hidden[i].value == 'true') {
+                var tds = hidden[i].parentNode.childNodes;
+                for (var j = 0; j < tds.length; j++)
+                    tds[j].style.backgroundColor = '#d8a92a';
+            }
+        }
+    }
+
     insertIntoTable();
+    markOwnPupils();
+    $("#results").tablesorter();
 </script>
 
 <script>
     function removeRowsInResult() {
-        var rowsInResult = document.getElementsByClassName('row_in_result');
-        for (var i = 0; i < rowsInResult.length;) {
-            rowsInResult[i].remove();
-        }
+        var tbody = document.getElementsByClassName('row_in_result')[0];
+        if (tbody != null)
+            tbody.parentNode.parentNode.removeChild(tbody.parentNode);
     }
 
     $('.clazz').change(function () {
         var val = $('.clazz option:selected').attr('value').trim();
         removeRowsInResult();
         insertIntoTable();
+        markOwnPupils();
         if ($('input:checkbox').is(':checked'))
             chooseOwnPupils();
 
@@ -200,6 +269,7 @@
             else
                 i++;
         }
+        $('#results').trigger('update');
 
 
     });
@@ -208,6 +278,7 @@
         var val = this.value;
         removeRowsInResult();
         insertIntoTable();
+        markOwnPupils();
         if ($('input:checkbox').is(':checked'))
             chooseOwnPupils();
 
@@ -223,6 +294,8 @@
                 i++;
         }
 
+        $('#results').trigger('update');
+
     });
 
     function chooseOwnPupils() {
@@ -233,7 +306,9 @@
             else
                 i++;
         }
+        $('#results').trigger('update');
     }
+
 
     $('input:checkbox').on('click', function () {
         if ($(this).is(':checked')) {
@@ -242,6 +317,7 @@
         else {
             removeRowsInResult();
             insertIntoTable();
+            markOwnPupils();
             var clazz = $('.clazz option:selected').attr('value').trim();
             var school = $('input:text').val().trim();
             var tdWithSchools = document.getElementsByClassName('current_school');
@@ -254,11 +330,12 @@
                     i++;
             }
         }
+        $('#results').trigger('update');
     });
 
-    $(document).ready(function(){
+    /*$(document).ready(function(){
         $("#results").tablesorter();
-    });
+    });*/
 </script>
 
 
