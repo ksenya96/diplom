@@ -22,9 +22,6 @@ import java.util.List;
 @WebServlet("/servlet")
 public class Servlet extends HttpServlet {
     public static final Session SESSION  = HibernateSessionFactory.getSessionFactory().openSession();
-    private static ThemesDaoImpl themesDao = new ThemesDaoImpl(SESSION, Entity.THEMES);
-    private TheoryDaoImpl theoryDao = new TheoryDaoImpl(SESSION, Entity.THEORY);
-    private TasksDaoImpl tasksDao = new TasksDaoImpl(SESSION, Entity.TASKS);
     private UsersDaoImpl usersDao = new UsersDaoImpl(SESSION, Entity.USERS);
     private static SchoolsDaoImpl schoolsDao = new SchoolsDaoImpl(SESSION, Entity.SCHOOLS);
     private static TeachersDaoImpl teachersDao = new TeachersDaoImpl(SESSION, Entity.TEACHERS);
@@ -32,7 +29,7 @@ public class Servlet extends HttpServlet {
     private ParentsDaoImpl parentsDao = new ParentsDaoImpl(SESSION, Entity.PARENTS);
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setCharacterEncoding("UTF-8");
+        //request.setCharacterEncoding("UTF-8");
         String action = request.getParameter("action");
         if (action.indexOf('#') > -1)
             action = action.substring(0, action.indexOf('#'));
@@ -214,8 +211,6 @@ public class Servlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String theme = request.getParameter("theme");
-        String task = request.getParameter("task");
         String action = request.getParameter("action");
 
         if (action != null) {
@@ -256,7 +251,6 @@ public class Servlet extends HttpServlet {
             HttpSession session = request.getSession(false);
             if (session != null) {
                 session.setAttribute("content", "main");
-                session.removeAttribute("clazz");
             }
             redirectToIndexJSP(request, response);
         }

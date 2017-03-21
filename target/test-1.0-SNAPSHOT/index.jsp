@@ -10,6 +10,7 @@
 <%@page pageEncoding="UTF-8" %>
 <html>
 <head>
+    <link rel="shortcut icon" href="/images/robot.png" type="image/png" />
     <link rel="stylesheet" type="text/css" href="css/index/star.css">
     <link rel="stylesheet" type="text/css" href="css/dialog-polyfill.css" />
     <meta charset="utf-8">
@@ -161,14 +162,17 @@
 
     <script type="text/javascript" src="js/index/checkInput.js"></script>
 
+    <br><br>
     <div align="center">
-        <div style="display: inline-block"><img src="/images/bell.png" width="150" height="150"></div>
-        <div style="display: inline-block; vertical-align: middle; align-content: center; float: right"><h1><i>Учебное пособие по
-            основам алгоритмизации и программирования<br>для средней школы</i></h1></div>
+        <div style="display: inline-block; float: left"><img src="/images/bell.png" width="150" height="150"></div>
+        <div style="display: inline-block; vertical-align: middle; align-content: center;" ><h1><i>
+            Основы алгоритмизации и программирования</i></h1>
+            Учебное пособие для средней школы
+        </div>
     </div>
 </header>
 
-<br><hr>
+<hr>
 
 
 <table width="100%">
@@ -179,8 +183,11 @@
         </td>
         <td valign="top" align="center">
             <c:if test="${content == null || content == 'main'}">
-                <div style="font-size: 20pt"><i>Данное учебное пособие адресуется ученикам, учителям и родителям в помощь при изучении
-                основ алгоритмизации и программирования.</i></div>
+                <div style="font-size: 20pt" align="justify"><i>Сайт содержит теорию и практику по основам алгоритмизации
+                    и программирования. После прочтения теории вы можете приступать к выполнению заданий. Многие задания
+                    взяты со школьных учебников информатики, что облегчит их проверку.<br>Будет служить верным помощником учащимся при изучении данной темы,
+                    учителю - для организации и контроля учебного процесса, родителям - для контроля знаний своих детей.
+                    </i></div>
             </c:if>
             <c:if test="${content == 'themes'}">
                 <jsp:include page="includes/user/themes.jsp"/>

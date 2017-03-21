@@ -24,6 +24,7 @@
                     <table width="100%" border="1px" bgcolor="#FEFEC6" style="border: solid #c16228">
                         <tr>
                             <td align="left">
+
                                 <c:choose>
                                     <c:when test="${themes.get(0) == theory.theme}">
                                         <a>Предыдущая тема</a>
@@ -43,6 +44,10 @@
                                         <a href="/theory?theme_id=${themes.get(themes.indexOf(theory.theme) + 1).id}">Следующая тема</a>
                                     </c:otherwise>
                                 </c:choose>
+
+
+
+
                             </td>
                         </tr>
                     </table>

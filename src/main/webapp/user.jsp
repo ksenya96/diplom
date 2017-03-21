@@ -11,6 +11,7 @@
 
 <html>
 <head>
+    <link rel="shortcut icon" href="/images/robot.png" type="image/png" />
     <link rel="stylesheet" type="text/css" href="css/index/star.css">
     <meta charset="utf-8">
     <title>${user.lastName} ${user.firstName} ${user.patronymic}</title>
@@ -31,9 +32,11 @@
 </div>
 
     <div align="center">
-        <div style="display: inline-block"><img src="/images/bell.png" width="150" height="150"></div>
-        <div style="display: inline-block; vertical-align: middle; align-content: center; float: right"><h1><i>Учебное пособие по
-            основам алгоритмизации и программирования<br>для средней школы</i></h1></div>
+        <div style="display: inline-block; float: left"><img src="/images/bell.png" width="150" height="150"></div>
+        <div style="display: inline-block; vertical-align: middle; align-content: center;" ><h1><i>
+            Основы алгоритмизации и программирования</i></h1>
+            Учебное пособие для средней школы
+        </div>
     </div>
     <hr>
 </header>

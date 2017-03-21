@@ -137,16 +137,27 @@
                 </td>
             </tr>
             <tr align="center">
-                <td>${result}</td>
+                <c:choose>
+                    <c:when test="${result == 'Программа прошла все тесты'}">
+                        <td><font size="7" color="green">${result}</font></td>
+                    </c:when>
+                    <c:otherwise>
+                        <td><font size="7" color="red">${result}</font></td>
+                    </c:otherwise>
+                </c:choose>
             </tr>
 
                 <c:if test="${expected != null}">
                     <tr>
                         <td>Входные данные</td>
-                        <td>Ожидаемый результат</td>
                     </tr>
                     <tr>
                         <td>${input}</td>
+                    </tr>
+                    <tr>
+                        <td>Ожидаемый результат</td>
+                    </tr>
+                    <tr>
                         <td>${expected}</td>
                     </tr>
                 </c:if>
