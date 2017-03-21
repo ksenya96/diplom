@@ -125,7 +125,8 @@
             <scope>provided</scope>
         </dependency>
 
-        
+
+        <!--
         <dependency>
             <groupId>com.sparkjava</groupId>
             <artifactId>spark-core</artifactId>
@@ -142,6 +143,7 @@
             <artifactId>heroku-jdbc</artifactId>
             <version>0.1.1</version>
         </dependency>
+        -->
 
 
 
@@ -170,6 +172,7 @@
             </plugin>
 
 
+            <!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -191,6 +194,7 @@
                     </execution>
                 </executions>
             </plugin>
+            -->
 
         </plugins>
     </build>

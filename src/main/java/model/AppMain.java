@@ -15,7 +15,7 @@ public class AppMain {
 
     public static void main(String[] args) {
 
-        //Session SESSION  = HibernateSessionFactory.getSessionFactory().openSession();
+        Session SESSION  = HibernateSessionFactory.getSessionFactory().openSession();
         /*UsersDaoImpl usersDao = new UsersDaoImpl(SESSION, Entity.USERS);
         TeachersDaoImpl teachersDao = new TeachersDaoImpl(SESSION, Entity.TEACHERS);
 
@@ -46,11 +46,18 @@ public class AppMain {
         themesEntity.setTitle("c++");
         themesEntity.setClazz(6);
 
-        ThemesDaoImpl themesDao = new ThemesDaoImpl(SESSION, Entity.THEMES);
-        themesDao.delete(themesEntity);*/
+        */ThemesDaoImpl themesDao = new ThemesDaoImpl(SESSION, Entity.THEMES);
+        TheoryDaoImpl theoryDao = new TheoryDaoImpl(SESSION, Entity.THEORY);
+        Theory theory = theoryDao.getTheoryByTheme(6);
 
-        File file = new File("D:\\Моя папка\\Мой универ\\Test\\src\\main\\webapp\\tasks\\program\\tests\\RepublicDay");
-        System.out.println(file.listFiles());
+
+        List<Theme> themes = themesDao.getThemesByClass(7);
+        Theme theme = (Theme) themesDao.getEntityById(6);
+        for (Theme t: themes)
+            System.out.println(t.getId() + " " + theory.getTheme().getId());
+        themes.add(theory.getTheme());
+        System.out.println(themes.contains(theory.getTheme()));
+        System.out.println(themes.size());
 
         HibernateSessionFactory.shutdown();
     }

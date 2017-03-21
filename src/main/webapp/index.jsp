@@ -194,6 +194,8 @@
             </c:if>
 
             <c:if test="${content == 'theory'}">
+                <a href="/themes?action=class&class=${theory.theme.clazz}">Список тем</a>
+                <%--
                 <table width="100%" border="1px" bgcolor="#FEFEC6" style="border: solid #c16228">
                     <tr>
                         <td align="left">
@@ -219,6 +221,7 @@
                         </td>
                     </tr>
                 </table>
+                --%>
                 ${theory.content}
                 Доступ к задачам имеют только зарегистрированные пользователи
             </c:if>

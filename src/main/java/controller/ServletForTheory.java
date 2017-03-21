@@ -32,6 +32,7 @@ public class ServletForTheory extends HttpServlet {
         if (action == null) {
             Integer themeId = Integer.parseInt(request.getParameter("theme_id"));
             Theory theory = theoryDao.getTheoryByTheme(themeId);
+
             if (session != null) {
                 session.setAttribute("theory", theory);
                 session.setAttribute("content", "theory");
