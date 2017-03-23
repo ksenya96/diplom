@@ -4,24 +4,20 @@
     <list id="30819977-33a1-43d0-b241-46a011b74094" name="Default" comment="" />
     <list id="9674cad2-2df1-4cca-afbe-467adeafca39" name="test" comment="test" />
     <list default="true" id="0bb766b5-6d77-46b7-b054-597e62bc86cd" name="Test" comment="Test">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/ServletForTheory.class" afterPath="$PROJECT_DIR$/target/classes/controller/ServletForTheory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Servlet.class" afterPath="$PROJECT_DIR$/target/classes/controller/Servlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/AppMain.class" afterPath="$PROJECT_DIR$/target/classes/model/AppMain.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/entities/Theme.class" afterPath="$PROJECT_DIR$/target/classes/model/entities/Theme.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/entities/Theory.class" afterPath="$PROJECT_DIR$/target/classes/model/entities/Theory.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/ServletForTheory.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/ServletForTheory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/Servlet.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/Servlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/AppMain.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/AppMain.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/entities/Theme.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/entities/Theme.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/entities/Theory.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/entities/Theory.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/ServletForTheory.java" afterPath="$PROJECT_DIR$/src/main/java/controller/ServletForTheory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/Servlet.java" afterPath="$PROJECT_DIR$/src/main/java/controller/Servlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/AppMain.java" afterPath="$PROJECT_DIR$/src/main/java/model/AppMain.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/entities/Theme.java" afterPath="$PROJECT_DIR$/src/main/java/model/entities/Theme.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/entities/Theory.java" afterPath="$PROJECT_DIR$/src/main/java/model/entities/Theory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/task.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/task.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/index.jsp" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/task.jsp" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/task.jsp" />
     </list>
     <ignored path="Test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,7 +51,7 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
+            <state relative-caret-position="3791">
               <caret line="223" column="20" selection-start-line="223" selection-start-column="20" selection-end-line="223" selection-end-column="20" />
               <folding />
             </state>
@@ -75,7 +71,7 @@
       <file leaf-file-name="theory.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/theory.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
+            <state relative-caret-position="765">
               <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
               <folding>
                 <marker date="1490121431297" expanded="true" signature="10675:10687" ph="..." />
@@ -85,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Theme.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Theme.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/entities/Theme.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
+            <state relative-caret-position="459">
+              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -98,19 +94,43 @@
       <file leaf-file-name="Theory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/entities/Theory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
+            <state relative-caret-position="612">
               <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#528#529#0" expanded="false" />
+                <element signature="e#553#554#0" expanded="false" />
+                <element signature="e#586#587#0" expanded="false" />
+                <element signature="e#614#615#0" expanded="false" />
+                <element signature="e#708#709#0" expanded="false" />
+                <element signature="e#738#739#0" expanded="false" />
+                <element signature="e#784#785#0" expanded="false" />
+                <element signature="e#822#823#0" expanded="false" />
+                <element signature="e#911#912#0" expanded="false" />
+                <element signature="e#939#940#0" expanded="false" />
+                <element signature="e#981#982#0" expanded="false" />
+                <element signature="e#1015#1016#0" expanded="false" />
+                <element signature="e#1114#1115#0" expanded="false" />
+                <element signature="e#1142#1143#0" expanded="false" />
+                <element signature="e#1183#1184#0" expanded="false" />
+                <element signature="e#1217#1218#0" expanded="false" />
+                <element signature="e#1339#1340#0" expanded="false" />
+                <element signature="e#1368#1369#0" expanded="false" />
+                <element signature="e#1408#1409#0" expanded="false" />
+                <element signature="e#1442#1443#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServletForTheory.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ServletForTheory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/ServletForTheory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="170">
               <caret line="21" column="84" selection-start-line="21" selection-start-column="84" selection-end-line="21" selection-end-column="84" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -118,28 +138,30 @@
       <file leaf-file-name="AppMain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/AppMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="57" column="38" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
+            <state relative-caret-position="918">
+              <caret line="62" column="74" selection-start-line="62" selection-start-column="74" selection-end-line="62" selection-end-column="74" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Servlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/Servlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="274" column="49" selection-start-line="274" selection-start-column="49" selection-end-line="274" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="task.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/task.jsp">
+      <file leaf-file-name="ServletForTask.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/ServletForTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2414">
-              <caret line="142" column="29" selection-start-line="142" selection-start-column="29" selection-end-line="142" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/user.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+            <state relative-caret-position="1023">
+              <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -234,16 +256,16 @@
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/src/main/webapp/ex.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/task.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/Servlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/ServletForThemes.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/user.jsp" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/model/entities/Theme.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/AppMain.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/model/entities/Theory.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/theory.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/controller/ServletForTheory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/AppMain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/Servlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/entities/Theme.java" />
       </list>
     </option>
   </component>
@@ -350,6 +372,9 @@
       <pane id="Scope">
         <subPane subId="Default" />
       </pane>
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -402,6 +427,62 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tasks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tasks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="program" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -500,10 +581,6 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -527,40 +604,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane />
       </pane>
     </panes>
   </component>
@@ -1352,6 +1400,8 @@
       <workItem from="1490011578115" duration="19025000" />
       <workItem from="1490101061140" duration="14270000" />
       <workItem from="1490116804452" duration="3791000" />
+      <workItem from="1490295068914" duration="971000" />
+      <workItem from="1490296559098" duration="644000" />
     </task>
     <task id="LOCAL-00001" summary="15.08.2016 (Hibernate + Servlet + JSP титульник)">
       <created>1471276234743</created>
@@ -1462,7 +1512,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1141214000" />
+    <option name="totallyTimeSpent" value="1142829000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1605,7 +1655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1771,23 +1820,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-          <folding>
-            <element signature="e#188#194#0" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="false" />
-            <element signature="n#style#1;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#!!top" expanded="false" />
-            <element signature="n#style#1;n#div#2;n#div#0;n#div#0;n#body#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#!!top" expanded="false" />
-            <element signature="n#style#1;n#div#0;n#div#1;n#div#0;n#body#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#!!top" expanded="false" />
-            <element signature="n#style#1;n#div#1;n#div#1;n#div#0;n#body#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#!!top" expanded="false" />
-            <element signature="n#style#1;n#div#0;n#div#2;n#div#0;n#body#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#body#0;n#!!top" expanded="false" />
-            <element signature="n#style#1;n#div#0;n#div#3;n#div#0;n#body#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1823,23 +1855,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ServletForTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="38" column="20" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/Servlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="264" column="73" selection-start-line="264" selection-start-column="73" selection-end-line="264" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1854,7 +1869,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="193" column="32" selection-start-line="193" selection-start-column="32" selection-end-line="193" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1886,33 +1900,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
+        <state relative-caret-position="3791">
           <caret line="223" column="20" selection-start-line="223" selection-start-column="20" selection-end-line="223" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/entities/Theme.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/entities/Theory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
+        <state relative-caret-position="612">
           <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/AppMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="57" column="38" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#528#529#0" expanded="false" />
+            <element signature="e#553#554#0" expanded="false" />
+            <element signature="e#586#587#0" expanded="false" />
+            <element signature="e#614#615#0" expanded="false" />
+            <element signature="e#708#709#0" expanded="false" />
+            <element signature="e#738#739#0" expanded="false" />
+            <element signature="e#784#785#0" expanded="false" />
+            <element signature="e#822#823#0" expanded="false" />
+            <element signature="e#911#912#0" expanded="false" />
+            <element signature="e#939#940#0" expanded="false" />
+            <element signature="e#981#982#0" expanded="false" />
+            <element signature="e#1015#1016#0" expanded="false" />
+            <element signature="e#1114#1115#0" expanded="false" />
+            <element signature="e#1142#1143#0" expanded="false" />
+            <element signature="e#1183#1184#0" expanded="false" />
+            <element signature="e#1217#1218#0" expanded="false" />
+            <element signature="e#1339#1340#0" expanded="false" />
+            <element signature="e#1368#1369#0" expanded="false" />
+            <element signature="e#1408#1409#0" expanded="false" />
+            <element signature="e#1442#1443#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1926,7 +1946,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/theory.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
+        <state relative-caret-position="765">
           <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
           <folding>
             <marker date="1490121431297" expanded="true" signature="10675:10687" ph="..." />
@@ -1937,8 +1957,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/ServletForTheory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="170">
           <caret line="21" column="84" selection-start-line="21" selection-start-column="84" selection-end-line="21" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/AppMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="62" column="74" selection-start-line="62" selection-start-column="74" selection-end-line="62" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ServletForTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1023">
+          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/Servlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="274" column="49" selection-start-line="274" selection-start-column="49" selection-end-line="274" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/entities/Theme.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding />
         </state>
       </provider>

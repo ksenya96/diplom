@@ -1,4 +1,4 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+﻿<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: acer
@@ -139,10 +139,10 @@
             <tr align="center">
                 <c:choose>
                     <c:when test="${result == 'Программа прошла все тесты'}">
-                        <td><font size="7" color="green">${result}</font></td>
+                        <td><font size="5" color="green">${result}</font></td>
                     </c:when>
                     <c:otherwise>
-                        <td><font size="7" color="red">${result}</font></td>
+                        <td><font size="5" color="red">${result}</font></td>
                     </c:otherwise>
                 </c:choose>
             </tr>

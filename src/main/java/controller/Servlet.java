@@ -269,6 +269,11 @@ public class Servlet extends HttpServlet {
         }
         else {
             //session.setAttribute("content", "main");
+            if (!session.getAttribute("content").equals("task")) {
+                session.removeAttribute("result");
+                session.removeAttribute("input");
+                session.removeAttribute("expected");
+            }
             redirectToUserJSP(request, response);
         }
     }

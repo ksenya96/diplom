@@ -7,15 +7,15 @@ import model.utils.HibernateSessionFactory;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.hibernate.Session;
 
-import java.io.File;
+import java.io.*;
 import java.util.List;
 
 
 public class AppMain {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        Session SESSION  = HibernateSessionFactory.getSessionFactory().openSession();
+        //Session SESSION  = HibernateSessionFactory.getSessionFactory().openSession();
         /*UsersDaoImpl usersDao = new UsersDaoImpl(SESSION, Entity.USERS);
         TeachersDaoImpl teachersDao = new TeachersDaoImpl(SESSION, Entity.TEACHERS);
 
@@ -46,7 +46,7 @@ public class AppMain {
         themesEntity.setTitle("c++");
         themesEntity.setClazz(6);
 
-        */ThemesDaoImpl themesDao = new ThemesDaoImpl(SESSION, Entity.THEMES);
+        *//*ThemesDaoImpl themesDao = new ThemesDaoImpl(SESSION, Entity.THEMES);
         TheoryDaoImpl theoryDao = new TheoryDaoImpl(SESSION, Entity.THEORY);
         Theory theory = theoryDao.getTheoryByTheme(6);
 
@@ -59,7 +59,10 @@ public class AppMain {
         System.out.println(themes.contains(theory.getTheme()));
         System.out.println(themes.size());
 
-        HibernateSessionFactory.shutdown();
+        HibernateSessionFactory.shutdown();*/
+        File file = new File("src\\main\\webapp\\tasks\\robot\\linear1.txt");
+        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), "Windows-1251"));
+        System.out.print(reader.readLine());
     }
 
     public static void createUser(User user, String string) {

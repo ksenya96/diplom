@@ -86,7 +86,6 @@ public class Theme extends AbstractEntity implements Serializable {
 
         Theme theme = (Theme) o;
 
-        System.out.println(id + " " + theme.id);
         if (id != theme.id) return false;
         if (clazz != theme.clazz) return false;
         return title != null ? title.equals(theme.title) : theme.title == null;
