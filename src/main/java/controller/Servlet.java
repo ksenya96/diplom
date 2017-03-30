@@ -29,7 +29,7 @@ public class Servlet extends HttpServlet {
     private ParentsDaoImpl parentsDao = new ParentsDaoImpl(SESSION, Entity.PARENTS);
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //request.setCharacterEncoding("UTF-8");
+        request.setCharacterEncoding("UTF-8");
         String action = request.getParameter("action");
         if (action.indexOf('#') > -1)
             action = action.substring(0, action.indexOf('#'));

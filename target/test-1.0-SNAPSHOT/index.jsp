@@ -17,7 +17,7 @@
     <title>Учимся играя</title>
 </head>
 <body>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
 <jsp:useBean id="fieldsForCheckNull" class="java.util.ArrayList" scope="session"/>
 
 <script src="js/dialog-polyfill.js"></script>

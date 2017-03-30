@@ -16,7 +16,7 @@
     <meta charset="utf-8">
     <title>${user.lastName} ${user.firstName} ${user.patronymic}</title>
     <link rel="stylesheet" type="text/css" href="css/blue/style.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery.metadata.js"></script>
     <script type="text/javascript" src="js/jquery.tablesorter.js"></script>
 </head>
