@@ -4,17 +4,40 @@
     <list id="30819977-33a1-43d0-b241-46a011b74094" name="Default" comment="" />
     <list id="9674cad2-2df1-4cca-afbe-467adeafca39" name="test" comment="test" />
     <list default="true" id="0bb766b5-6d77-46b7-b054-597e62bc86cd" name="Test" comment="Test">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/service/ModificationsForTasks.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/service/ModificationsForThemes.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/service/ModificationsForTheory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/service/ModificationsForUser.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/Checker.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/Comment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/TestAndComment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/Checker.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/Comment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/TestAndComment.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Servlet$1.class" afterPath="$PROJECT_DIR$/target/classes/controller/Servlet$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Servlet.class" afterPath="$PROJECT_DIR$/target/classes/controller/Servlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/ServletForTask$1.class" afterPath="$PROJECT_DIR$/target/classes/controller/ServletForTask$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/ServletForTask.class" afterPath="$PROJECT_DIR$/target/classes/controller/ServletForTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/ServletForThemes.class" afterPath="$PROJECT_DIR$/target/classes/controller/ServletForThemes.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/ServletForTheory.class" afterPath="$PROJECT_DIR$/target/classes/controller/ServletForTheory.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/Servlet$1.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/Servlet$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/Servlet.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/Servlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/ServletForTask$1.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/ServletForTask$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/ServletForTask.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/ServletForTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/ServletForThemes.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/ServletForThemes.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/ServletForTheory.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/ServletForTheory.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/Servlet.java" afterPath="$PROJECT_DIR$/src/main/java/controller/Servlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/ServletForTask.java" afterPath="$PROJECT_DIR$/src/main/java/controller/ServletForTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/ServletForThemes.java" afterPath="$PROJECT_DIR$/src/main/java/controller/ServletForThemes.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/ServletForTheory.java" afterPath="$PROJECT_DIR$/src/main/java/controller/ServletForTheory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/user.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/user.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/index.jsp" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/user.jsp" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/user.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/model/Checker.java" afterPath="$PROJECT_DIR$/src/main/java/model/testingSystem/Checker.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/model/Comment.java" afterPath="$PROJECT_DIR$/src/main/java/model/testingSystem/Comment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/model/TestAndComment.java" afterPath="$PROJECT_DIR$/src/main/java/model/testingSystem/TestAndComment.java" />
     </list>
     <ignored path="Test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,101 +68,113 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="themes.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/includes/user/themes.jsp">
+      <file leaf-file-name="ServletForTask.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/ServletForTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="76" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="76" />
+            <state relative-caret-position="-459">
+              <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="236" column="9" selection-start-line="236" selection-start-column="9" selection-end-line="236" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkEnter.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/includes/index/checkEnter.jsp">
+      <file leaf-file-name="ModificationsForThemes.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/service/ModificationsForThemes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="204">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Checker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/testingSystem/Checker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-751">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkRegister.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/includes/index/checkRegister.jsp">
+      <file leaf-file-name="ModificationsForTasks.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/service/ModificationsForTasks.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="320">
+              <caret line="71" column="42" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="42" />
+              <folding>
+                <element signature="e#840#841#0" expanded="true" />
+                <element signature="e#896#897#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Comment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/testingSystem/Comment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userListForRegistration.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/includes/index/userListForRegistration.jsp">
+      <file leaf-file-name="TestAndComment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/testingSystem/TestAndComment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="102">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkAdditional.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/includes/edit/checkAdditional.jsp">
+      <file leaf-file-name="ServletForThemes.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/ServletForThemes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="14">
+              <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkEdit.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/includes/edit/checkEdit.jsp">
+      <file leaf-file-name="ModificationsForTheory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/service/ModificationsForTheory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="408">
+              <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+              <folding>
+                <element signature="e#633#634#0" expanded="true" />
+                <element signature="e#691#692#0" expanded="true" />
+                <element signature="e#752#753#0" expanded="true" />
+                <element signature="e#808#809#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forParent.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/includes/edit/forParent.jsp">
+      <file leaf-file-name="Servlet.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/Servlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forPupil.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/includes/edit/forPupil.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forTeacher.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/includes/edit/forTeacher.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="example.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/example.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="152">
+              <caret line="183" column="34" selection-start-line="183" selection-start-column="34" selection-end-line="183" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -154,10 +189,10 @@
         <option value="spring-beans.schema" />
         <option value="Jsp File" />
         <option value="HTML File" />
-        <option value="Class" />
         <option value="Enum" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -181,15 +216,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/tasks/program/tests/Expression2In/6.txt" />
-        <option value="$PROJECT_DIR$/src/main/webapp/tasks/program/tests/Expression2Out/6.txt" />
-        <option value="$PROJECT_DIR$/src/main/webapp/tasks/program/tests/Expression2In/7.txt" />
-        <option value="$PROJECT_DIR$/src/main/webapp/tasks/program/tests/Expression2Out/7.txt" />
-        <option value="$PROJECT_DIR$/src/main/webapp/tasks/program/tests/Expression2In/8.txt" />
-        <option value="$PROJECT_DIR$/src/main/webapp/tasks/program/tests/Expression2Out/8.txt" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/task/Robot.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/task/Task.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/task/commands/CommandEnum.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/controller/StatsFilter.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/includes/edit/forTeacher.jsp" />
@@ -201,7 +227,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/includes/user/themes.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/dialog-polyfill.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/index/dialogs.js" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/ServletForTask.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/tasks/program/tests/ReverseNumbersIn/1.txt" />
         <option value="$PROJECT_DIR$/src/main/webapp/tasks/program/tests/ReverseNumbersOut/1.txt" />
         <option value="$PROJECT_DIR$/src/main/webapp/tasks/program/tests/ReverseNumbersIn/2.txt" />
@@ -221,17 +246,27 @@
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/src/main/webapp/ex.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/task.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/ServletForThemes.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/model/entities/Theory.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/theory.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/ServletForTheory.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/AppMain.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/entities/Theme.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/Servlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/jquery.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/user.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/model/TestingSystem/Checker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/TestingSystem/Comment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/TestingSystem/TestAndComment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/testingSystem/TestAndComment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/service/ModificationsForUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/ServletForThemes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/service/ModificationsForThemes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/ServletForTheory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/service/ModificationsForTheory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/testingSystem/Comment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/service/ModificationsForTasks.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/ServletForTask.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/Servlet.java" />
       </list>
     </option>
   </component>
@@ -335,6 +370,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -536,6 +575,70 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testingSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -568,10 +671,6 @@
       <pane id="Scope">
         <subPane subId="Default" />
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -593,16 +692,6 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="model.daos" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Моя папка\Мой универ\Test\src\main\webapp\js" />
-      <recent name="D:\Моя папка\Мой универ\Test\src\main\webapp\css" />
-      <recent name="D:\Моя папка\Мой универ\Test\src\main\webapp\tasks\program\tests" />
-      <recent name="D:\Моя папка\Мой универ\Test\src\main\webapp\tasks\program\tests\RepublicDay" />
-      <recent name="D:\Моя папка\Мой универ\Test\src\main\webapp\js\task\commands\functionalButtons" />
-    </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="model.entities" />
       <recent name="dao" />
@@ -613,6 +702,17 @@
       <recent name="D:\Моя папка\Мой универ\Test\src\main\webapp\tasks\program\tests" />
       <recent name="D:\Моя папка\Мой универ\Test\src\main\webapp\tasks\program" />
       <recent name="D:\Моя папка\Мой универ\Test\src\main\webapp\tasks\program\tests\Div2Out" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="model.service" />
+      <recent name="model.daos" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Моя папка\Мой универ\Test\src\main\webapp\js" />
+      <recent name="D:\Моя папка\Мой универ\Test\src\main\webapp\css" />
+      <recent name="D:\Моя папка\Мой универ\Test\src\main\webapp\tasks\program\tests" />
+      <recent name="D:\Моя папка\Мой универ\Test\src\main\webapp\tasks\program\tests\RepublicDay" />
+      <recent name="D:\Моя папка\Мой универ\Test\src\main\webapp\js\task\commands\functionalButtons" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8">
@@ -1365,6 +1465,8 @@
       <workItem from="1490295068914" duration="971000" />
       <workItem from="1490296559098" duration="644000" />
       <workItem from="1490887262298" duration="1496000" />
+      <workItem from="1491042520350" duration="135000" />
+      <workItem from="1491042805833" duration="9514000" />
     </task>
     <task id="LOCAL-00001" summary="15.08.2016 (Hibernate + Servlet + JSP титульник)">
       <created>1471276234743</created>
@@ -1475,7 +1577,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1144325000" />
+    <option name="totallyTimeSpent" value="1153974000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1493,7 +1595,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32189542" sideWeight="0.51966715" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.115733735" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.115733735" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1573,55 +1675,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/dialog-polyfill.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/index/dialogs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/task/Task.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="92" column="20" selection-start-line="92" selection-start-column="20" selection-end-line="92" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/tasks/program/tests/ReverseNumbersIn/1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="43" selection-start-line="0" selection-start-column="43" selection-end-line="0" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/tasks/program/tests/ReverseNumbersOut/1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/tasks/program/tests/ReverseNumbersOut/2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="42" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/tasks/program/tests/ReverseNumbersIn/2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="42" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/tasks/program/tests/ReverseNumbersIn/3.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1772,53 +1825,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ServletForThemes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="37" column="75" selection-start-line="37" selection-start-column="75" selection-end-line="37" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/entities/Theory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#528#529#0" expanded="false" />
-            <element signature="e#553#554#0" expanded="false" />
-            <element signature="e#586#587#0" expanded="false" />
-            <element signature="e#614#615#0" expanded="false" />
-            <element signature="e#708#709#0" expanded="false" />
-            <element signature="e#738#739#0" expanded="false" />
-            <element signature="e#784#785#0" expanded="false" />
-            <element signature="e#822#823#0" expanded="false" />
-            <element signature="e#911#912#0" expanded="false" />
-            <element signature="e#939#940#0" expanded="false" />
-            <element signature="e#981#982#0" expanded="false" />
-            <element signature="e#1015#1016#0" expanded="false" />
-            <element signature="e#1114#1115#0" expanded="false" />
-            <element signature="e#1142#1143#0" expanded="false" />
-            <element signature="e#1183#1184#0" expanded="false" />
-            <element signature="e#1217#1218#0" expanded="false" />
-            <element signature="e#1339#1340#0" expanded="false" />
-            <element signature="e#1368#1369#0" expanded="false" />
-            <element signature="e#1408#1409#0" expanded="false" />
-            <element signature="e#1442#1443#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ServletForTheory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="21" column="84" selection-start-line="21" selection-start-column="84" selection-end-line="21" selection-end-column="84" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1826,19 +1836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
           <caret line="62" column="74" selection-start-line="62" selection-start-column="74" selection-end-line="62" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ServletForTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1846,15 +1843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="90" column="72" selection-start-line="90" selection-start-column="72" selection-end-line="90" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/Servlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1862,17 +1850,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1888,10 +1865,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1490121431297" expanded="true" signature="10675:10687" ph="..." />
-            <marker date="1490121431297" expanded="true" signature="10689:10697" ph="&amp;##10003;" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1899,7 +1872,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1967,18 +1939,128 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/includes/edit/forTeacher.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/includes/edit/forPupil.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-280">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/includes/edit/forTeacher.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ServletForTheory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="354">
+          <caret line="55" column="61" selection-start-line="55" selection-start-column="61" selection-end-line="55" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/service/ModificationsForUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="91" selection-start-line="18" selection-start-column="91" selection-end-line="18" selection-end-column="91" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/service/ModificationsForTheory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+          <folding>
+            <element signature="e#633#634#0" expanded="true" />
+            <element signature="e#691#692#0" expanded="true" />
+            <element signature="e#752#753#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/testingSystem/TestAndComment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/testingSystem/Comment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/testingSystem/Checker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-751">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/service/ModificationsForTasks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="71" column="42" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="42" />
+          <folding>
+            <element signature="e#840#841#0" expanded="true" />
+            <element signature="e#896#897#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ServletForTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-459">
+          <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/service/ModificationsForThemes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ServletForThemes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="236" column="9" selection-start-line="236" selection-start-column="9" selection-end-line="236" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/Servlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="183" column="34" selection-start-line="183" selection-start-column="34" selection-end-line="183" selection-end-column="34" />
           <folding />
         </state>
       </provider>

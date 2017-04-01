@@ -2,6 +2,8 @@ package controller;
 
 import model.daos.*;
 import model.entities.*;
+import model.service.ModificationsForTheory;
+import model.service.ModificationsForUser;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,9 +20,7 @@ import java.util.List;
  */
 @WebServlet(name = "ServletForTheory")
 public class ServletForTheory extends HttpServlet {
-    private TheoryDaoImpl theoryDao = new TheoryDaoImpl(Servlet.SESSION, Entity.THEORY);
-    private TasksDaoImpl tasksDao = new TasksDaoImpl(Servlet.SESSION, Entity.TASKS);
-    //private PupilsDaoImpl pupilsDao = new PupilsDaoImpl(Servlet.SESSION, Entity.PUPILS);
+
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -30,8 +30,8 @@ public class ServletForTheory extends HttpServlet {
         String action = request.getParameter("action");
         HttpSession session = request.getSession(false);
         if (action == null) {
-            Integer themeId = Integer.parseInt(request.getParameter("theme_id"));
-            Theory theory = theoryDao.getTheoryByTheme(themeId);
+            int themeId = Integer.parseInt(request.getParameter("theme_id"));
+            Theory theory = ModificationsForTheory.getTheoryByTheme(themeId);
 
             if (session != null) {
                 session.setAttribute("theory", theory);
@@ -40,7 +40,7 @@ public class ServletForTheory extends HttpServlet {
                 if (user != null) {
                     if (user.getAccess() == UserType.PUPIL && ((Pupil)user).getThemes().contains(theory.getTheme())
                             || user.getAccess() != UserType.PUPIL) {
-                        List<Task> tasks = tasksDao.getTasksByTheme(themeId);
+                        List<Task> tasks = ModificationsForTheory.getTasksByTheme(themeId);
                         session.setAttribute("tasks", tasks);
                     }
                 }
@@ -52,14 +52,9 @@ public class ServletForTheory extends HttpServlet {
                 case "subscribe":
                     Pupil pupil = (Pupil)session.getAttribute("user");
                     Theory theory = (Theory)session.getAttribute("theory");
-                    Theme theme = theory.getTheme();
-                    pupil.getThemes().add(theme);
-                    PupilsDaoImpl pupilsDao = new PupilsDaoImpl(Servlet.SESSION, Entity.PUPILS);
-                    pupilsDao.update(pupil);
-                    List<Task> tasks = tasksDao.getTasksByTheme(theory.getTheme().getId());
+                    ModificationsForTheory.subscribeToTheme(pupil, theory);
+                    List<Task> tasks = ModificationsForTheory.getTasksByTheme(theory.getTheme().getId());
                     session.setAttribute("tasks", tasks);
-                    if (!theme.getPupils().contains(pupil))
-                        theme.getPupils().add(pupil);
                     Servlet.redirectToIndexJSP(request, response);
                     break;
             }

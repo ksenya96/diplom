@@ -3,6 +3,7 @@ package controller;
 import model.daos.Entity;
 import model.daos.ThemesDaoImpl;
 import model.entities.Theme;
+import model.service.ModificationsForThemes;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,7 +20,6 @@ import java.util.List;
  */
 @WebServlet(name = "ServletForThemes")
 public class ServletForThemes extends HttpServlet {
-    private ThemesDaoImpl themesDao = new ThemesDaoImpl(Servlet.SESSION, Entity.THEMES);
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -35,8 +35,7 @@ public class ServletForThemes extends HttpServlet {
             switch (action) {
                 case "class":
                     int clazz = Integer.parseInt(request.getParameter("class"));
-                    List<Theme> themes = themesDao.getThemesByClass(clazz);
-
+                    List<Theme> themes = ModificationsForThemes.getThemesByClass(clazz);
                     if (session != null) {
                         session.setAttribute("themes", themes);
                         session.setAttribute("clazz", clazz);

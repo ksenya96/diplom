@@ -2,6 +2,7 @@ package controller;
 
 import model.daos.*;
 import model.entities.*;
+import model.service.ModificationsForUser;
 import model.utils.HibernateSessionFactory;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.hibernate.Session;
@@ -22,11 +23,7 @@ import java.util.List;
 @WebServlet("/servlet")
 public class Servlet extends HttpServlet {
     public static final Session SESSION  = HibernateSessionFactory.getSessionFactory().openSession();
-    private UsersDaoImpl usersDao = new UsersDaoImpl(SESSION, Entity.USERS);
-    private static SchoolsDaoImpl schoolsDao = new SchoolsDaoImpl(SESSION, Entity.SCHOOLS);
-    private static TeachersDaoImpl teachersDao = new TeachersDaoImpl(SESSION, Entity.TEACHERS);
-    private static PupilsDaoImpl pupilsDao = new PupilsDaoImpl(SESSION, Entity.PUPILS);
-    private ParentsDaoImpl parentsDao = new ParentsDaoImpl(SESSION, Entity.PARENTS);
+
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
@@ -54,7 +51,6 @@ public class Servlet extends HttpServlet {
                 break;
             case "exit":
                 request.getSession(false).invalidate();
-                //request.setAttribute("user", null);
                 redirectToIndexJSP(request, response);
                 break;
         }
@@ -63,53 +59,31 @@ public class Servlet extends HttpServlet {
     private void addChild(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         int childId = Integer.parseInt(request.getParameter("child-hidden").trim());
         Parent parent = (Parent) request.getSession(false).getAttribute("user");
-        parent.getPupils().add((Pupil) pupilsDao.getEntityById(childId));
-        parentsDao.update(parent);
-        //request.setAttribute("pupils", pupilsDao.getAllEntities());
+        ModificationsForUser.addChild(parent, childId);
         redirectToUserJSP(request, response);
     }
 
     private void addPupil(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         int pupilId = Integer.parseInt(request.getParameter("child-hidden").trim());
         Teacher teacher = (Teacher) request.getSession(false).getAttribute("user");
-        teacher.getPupils().add((Pupil) pupilsDao.getEntityById(pupilId));
-        teachersDao.update(teacher);
-        //request.setAttribute("pupils", pupilsDao.getAllEntities());
+        ModificationsForUser.addPupil(teacher, pupilId);
         redirectToUserJSP(request, response);
     }
 
     private void addTeacher(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         int teacherId = Integer.parseInt(request.getParameter("teacher-hidden").trim());
         Pupil pupil = (Pupil) request.getSession(false).getAttribute("user");
-        pupil.getTeachers().add((Teacher)teachersDao.getEntityById(teacherId));
-        pupilsDao.update(pupil);
-        //request.setAttribute("teachers", teachersDao.getAllEntities());
+        ModificationsForUser.addTeacher(pupil, teacherId);
         redirectToUserJSP(request, response);
     }
     private void edit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String lastName = request.getParameter("lastName").trim();
         String firstName = request.getParameter("firstName").trim();
         String patronymic = request.getParameter("patronymic").trim();
+        String clazz = request.getParameter("class");
+        String schoolId = request.getParameter("school-hidden");
         User user = (User)request.getSession(false).getAttribute("user");
-        user.setLastName(lastName);
-        user.setFirstName(firstName);
-        user.setPatronymic(patronymic);
-        switch (user.getAccess()) {
-            case PUPIL:
-                Pupil pupil = (Pupil)user;
-                int clazz = Integer.parseInt(request.getParameter("class").trim());
-                pupil.setClazz(clazz);
-                int schoolId = Integer.parseInt(request.getParameter("school-hidden").trim());
-                pupil.setSchool((School) schoolsDao.getEntityById(schoolId));
-                pupilsDao.update(pupil);
-                break;
-            case TEACHER:
-                teachersDao.update(user);
-                break;
-            case PARENT:
-                parentsDao.update(user);
-                break;
-        }
+        ModificationsForUser.edit(user, lastName, firstName, patronymic, clazz, schoolId);
         redirectToUserJSP(request, response);
     }
 
@@ -121,9 +95,8 @@ public class Servlet extends HttpServlet {
         String password = DigestUtils.md5Hex(request.getParameter("password")).trim();
         String accessStr = request.getParameter("access");
         UserType access = UserType.valueOf(accessStr);
-        User newUser = new User(login, password, access, firstName, lastName);
-        newUser.setPatronymic(patronymic);
-        if (usersDao.getUserByLogin(login) == null) {
+        User newUser = ModificationsForUser.register(login, password, access, firstName, lastName, patronymic);
+        if (ModificationsForUser.userIsExist(login) == null) {
             createRole(newUser, access, request, response);
             login(request, response);
         }
@@ -133,74 +106,38 @@ public class Servlet extends HttpServlet {
         }
     }
 
-    private AbstractEntity createRole(User user, UserType userType, HttpServletRequest request, HttpServletResponse response) {
+    private void createRole(User user, UserType userType, HttpServletRequest request, HttpServletResponse response) {
         switch (userType) {
             case PUPIL:
                 int clazz = Integer.parseInt(request.getParameter("clazz").trim());
                 int schoolId = Integer.parseInt(request.getParameter("school-hidden").trim());
                 int teacherId = Integer.parseInt(request.getParameter("teacher-hidden").trim());
-                Pupil pupil = new Pupil(user.getLogin(), user.getPassword(), user.getAccess(), user.getFirstName(), user.getLastName());
-                pupil.setPatronymic(user.getPatronymic());
-                pupil.setClazz(clazz);
-                pupil.setSchool((School) schoolsDao.getEntityById(schoolId));
-                pupil.getTeachers().add((Teacher)teachersDao.getEntityById(teacherId));
-                try {
-                    pupilsDao.create(pupil);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                ModificationsForUser.createRole(user, userType, clazz, schoolId, teacherId);
                 break;
             case TEACHER:
-                Teacher teacher = new Teacher(user.getLogin(), user.getPassword(), user.getAccess(), user.getFirstName(), user.getLastName());
-                teacher.setPatronymic(request.getParameter("patronymic"));
-                try {
-                    teachersDao.create(teacher);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                ModificationsForUser.createRole(user, userType);
                 break;
             case PARENT:
                 int pupilId = Integer.parseInt(request.getParameter("child-hidden"));
-                Parent parent = new Parent(user.getLogin(), user.getPassword(), user.getAccess(), user.getFirstName(), user.getLastName());
-                parent.setPatronymic(request.getParameter("patronymic"));
-                parent.getPupils().add((Pupil)pupilsDao.getEntityById(pupilId));
-                try {
-                    parentsDao.create(parent);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                ModificationsForUser.createRole(user, userType, pupilId);
                 break;
         }
-        return null;
     }
 
 
     private void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String login = request.getParameter("login").toLowerCase();
         String password = request.getParameter("password");
-        password = DigestUtils.md5Hex(password);
-        User user = usersDao.getUserByLoginAndPassword(login, password);
+        User user = ModificationsForUser.login(login, password);
 
         if (user != null) {
             request.getSession(false).invalidate();
             HttpSession newSession = request.getSession(true);
-            switch (user.getAccess()) {
-                case PUPIL:
-                    Pupil pupil = (Pupil)pupilsDao.getEntityById(user.getId());
-                    newSession.setAttribute("user", pupil);
-                    break;
-                case TEACHER:
-                    Teacher teacher = (Teacher) teachersDao.getEntityById(user.getId());
-                    newSession.setAttribute("user", teacher);
-                    break;
-                case PARENT:
-                    Parent parent = (Parent) parentsDao.getEntityById(user.getId());
-                    newSession.setAttribute("user", parent);
-                    break;
-            }
-            newSession.setAttribute("schools", schoolsDao.getAllEntities());
-            newSession.setAttribute("teachers", teachersDao.getAllEntities());
-            newSession.setAttribute("pupils", pupilsDao.getAllEntities());
+            newSession.setAttribute("user", user);
+
+            newSession.setAttribute("schools", ModificationsForUser.getEntities(Entity.SCHOOLS));
+            newSession.setAttribute("teachers", ModificationsForUser.getEntities(Entity.TEACHERS));
+            newSession.setAttribute("pupils", ModificationsForUser.getEntities(Entity.PUPILS));
             newSession.setAttribute("content", "main");
             redirectToUserJSP(request, response);
         }
@@ -220,23 +157,19 @@ public class Servlet extends HttpServlet {
                 case "delete_teacher":
                     int teacherId = Integer.parseInt(request.getParameter("teacher_id"));
                     Pupil pupil = (Pupil) request.getSession(false).getAttribute("user");
-                    pupil.getTeachers().remove(teachersDao.getEntityById(teacherId));
-                    pupilsDao.update(pupil);
+                    ModificationsForUser.deleteTeacher(pupil, teacherId);
                     redirectToUserJSP(request, response);
                     break;
                 case "delete_pupil":
                     int pupilId = Integer.parseInt(request.getParameter("pupil_id"));
-
                     Teacher teacher = (Teacher) request.getSession(false).getAttribute("user");
-                    teacher.getPupils().remove(pupilsDao.getEntityById(pupilId));
-                    teachersDao.update(teacher);
+                    ModificationsForUser.deletePupil(teacher, pupilId);
                     redirectToUserJSP(request, response);
                     break;
                 case "delete_child":
                     int childId = Integer.parseInt(request.getParameter("child_id"));
                     Parent parent = (Parent) request.getSession(false).getAttribute("user");
-                    parent.getPupils().remove(pupilsDao.getEntityById(childId));
-                    parentsDao.update(parent);
+                    ModificationsForUser.deleteChild(parent, childId);
                     redirectToUserJSP(request, response);
                     break;
                 default:
@@ -250,6 +183,7 @@ public class Servlet extends HttpServlet {
         else {
             HttpSession session = request.getSession(false);
             if (session != null) {
+                session.removeAttribute("clazz");
                 session.setAttribute("content", "main");
             }
             redirectToIndexJSP(request, response);
@@ -262,9 +196,9 @@ public class Servlet extends HttpServlet {
         HttpSession session = request.getSession(false);
         if (session == null || session.getAttribute("user") == null) {
             session = request.getSession(true);
-            session.setAttribute("schools", schoolsDao.getAllEntities());
-            session.setAttribute("teachers", teachersDao.getAllEntities());
-            session.setAttribute("pupils", pupilsDao.getAllEntities());
+            session.setAttribute("schools", ModificationsForUser.getEntities(Entity.SCHOOLS));
+            session.setAttribute("teachers", ModificationsForUser.getEntities(Entity.TEACHERS));
+            session.setAttribute("pupils", ModificationsForUser.getEntities(Entity.PUPILS));
             request.getRequestDispatcher("/index.jsp").forward(request, response);
         }
         else {
