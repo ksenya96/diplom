@@ -140,7 +140,7 @@
 
         </dialog>
     <div align="right">
-        <button><a href="/index">На главную</a></button>
+        <div id="to_main"><a href="/index">На главную</a></div>
         <button id="show_enter">Войти</button>
         <button id="show_register">Регистрация</button>
         <br>

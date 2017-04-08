@@ -249,6 +249,9 @@ button > a {
     padding: 10px;
 }
 
+#enter, #register {
+    z-index: 1;
+}
 
 
 
