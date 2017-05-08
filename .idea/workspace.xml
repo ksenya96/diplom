@@ -4,473 +4,8 @@
     <list id="30819977-33a1-43d0-b241-46a011b74094" name="Default" comment="" />
     <list id="9674cad2-2df1-4cca-afbe-467adeafca39" name="test" comment="test" />
     <list default="true" id="0bb766b5-6d77-46b7-b054-597e62bc86cd" name="Test" comment="Test">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/model/entities/Action.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Servlet$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/Servlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/ServletForTask$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/ServletForTask.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/ServletForThemes.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/ServletForTheory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/StatsFilter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/TaskType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/UserType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/UserTypeValues.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/AppMain.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/daos/ActionsDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/daos/Dao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/daos/DaoFactory$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/daos/DaoFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/daos/DaoImp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/daos/Entity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/daos/ParentsDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/daos/PupilsDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/daos/SchoolsDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/daos/TasksDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/daos/TeachersDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/daos/ThemesDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/daos/TheoryDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/daos/UsersDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/entities/AbstractEntity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/entities/Action.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/entities/Parent.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/entities/Pupil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/entities/School.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/entities/Task.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/entities/Teacher.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/entities/Theme.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/entities/Theory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/entities/User.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/service/ModificationsForTasks.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/service/ModificationsForThemes.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/service/ModificationsForTheory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/service/ModificationsForUser$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/service/ModificationsForUser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/testingSystem/Checker.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/testingSystem/Comment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/testingSystem/TestAndComment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/utils/HibernateSessionFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT.war" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/Servlet$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/Servlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/ServletForTask$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/ServletForTask.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/ServletForThemes.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/ServletForTheory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/StatsFilter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/TaskType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/UserType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/controller/UserTypeValues.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/hibernate.cfg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/AppMain.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/daos/ActionsDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/daos/Dao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/daos/DaoFactory$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/daos/DaoFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/daos/DaoImp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/daos/Entity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/daos/ParentsDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/daos/PupilsDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/daos/SchoolsDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/daos/TasksDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/daos/TeachersDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/daos/ThemesDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/daos/TheoryDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/daos/UsersDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/entities/AbstractEntity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/entities/Action.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/entities/Parent.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/entities/Pupil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/entities/School.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/entities/Task.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/entities/Teacher.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/entities/Theme.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/entities/Theory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/entities/User.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/service/ModificationsForTasks.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/service/ModificationsForThemes.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/service/ModificationsForTheory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/service/ModificationsForUser$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/service/ModificationsForUser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/testingSystem/Checker.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/testingSystem/Comment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/testingSystem/TestAndComment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/model/utils/HibernateSessionFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/antlr-2.7.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/c3p0-0.9.2.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/cdi-api-1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/classmate-1.3.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/commons-codec-1.9.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/dom4j-1.6.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/ehcache-2.10.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/el-api-2.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/geronimo-jta_1.1_spec-1.1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/hibernate-c3p0-5.2.2.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/hibernate-commons-annotations-5.0.1.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/hibernate-core-5.2.2.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/hibernate-ehcache-5.2.2.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/hibernate-entitymanager-5.2.2.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/hibernate-envers-5.2.2.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/hibernate-infinispan-5.2.2.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/hibernate-osgi-5.2.2.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/hibernate-proxool-5.2.2.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/infinispan-commons-8.2.3.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/infinispan-core-8.2.3.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/jandex-2.0.0.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/javassist-3.20.0-GA.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/javax.inject-1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/javax.servlet-api-3.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/jboss-interceptors-api_1.1_spec-1.0.0.Beta1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/jboss-logging-3.3.0.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/jboss-marshalling-osgi-1.4.10.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/jboss-transaction-api_1.1_spec-1.0.1.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/jgroups-3.6.7.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/jsp-api-2.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/jsr250-api-1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/jstl-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/mchange-commons-java-0.2.3.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/mysql-connector-java-5.1.35.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/org.osgi.compendium-4.3.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/org.osgi.core-4.3.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/proxool-0.8.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/slf4j-api-1.7.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/standard.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/css/blue/asc.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/css/blue/bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/css/blue/blue.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/css/blue/desc.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/css/blue/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/css/dialog-polyfill.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/css/index/star.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/ex.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/example.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/example.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/images/GoDown.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/images/GoLeft.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/images/GoRight.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/images/GoUp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/images/background.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/images/bell.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/images/bell.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/images/for_block.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/images/for_prog.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/images/formula1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/images/formula2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/images/formula3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/images/formula4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/images/if.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/images/if_block.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/images/if_prog.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/images/image9_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/images/image9_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/images/linear_block.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/images/linear_prog.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/images/proc_block.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/images/proc_prog.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/images/robot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/includes/edit/checkAdditional.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/includes/edit/checkEdit.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/includes/edit/forParent.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/includes/edit/forPupil.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/includes/edit/forTeacher.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/includes/index/checkEnter.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/includes/index/checkRegister.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/includes/index/userListForRegistration.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/includes/user/themes.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/dialog-polyfill.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/index/checkInput.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/index/checkLoginByRegistration.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/index/checkPasswordByRegistration.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/index/checkPasswords.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/index/dataLists.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/index/dialogs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/jquery-latest.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/jquery.metadata.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/jquery.tablesorter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/modernizr-custom.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/Block.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/DrawLibrary.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/Field.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/Point.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/ProgramField.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/Robot.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/Task.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/commands/CommandEnum.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/commands/CommandFactory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/commands/functionalButtons/Cancel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/commands/functionalButtons/CancelInProcedure.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/commands/functionalButtons/Return.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/commands/functionalButtons/Start.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/commands/go/Go.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/commands/go/GoDown.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/commands/go/GoLeft.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/commands/go/GoRight.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/commands/go/GoUp.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/commands/jump/Jump.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/commands/jump/JumpDown.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/commands/jump/JumpLeft.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/commands/jump/JumpRight.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/commands/jump/JumpUp.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/commands/operators/For.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/commands/operators/If.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/js/task/commands/operators/Procedure.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/task.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/+10.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/5X.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/Div2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/Expression1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/Expression2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/Half.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/Mul2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/MyBelarus.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/RepublicDay.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/ReverseNumbers.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/Round.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/SqrDiv5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/SqrMod10.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/Sum3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/TruncDiv2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/+10In/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/+10In/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/+10In/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/+10In/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/+10In/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/+10In/6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/+10Out/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/+10Out/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/+10Out/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/+10Out/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/+10Out/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/+10Out/6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/5XIn/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/5XIn/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/5XIn/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/5XIn/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/5XIn/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/5XIn/6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/5XOut/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/5XOut/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/5XOut/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/5XOut/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/5XOut/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/5XOut/6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Div2In/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Div2In/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Div2In/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Div2In/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Div2In/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Div2In/6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Div2In/7.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Div2In/8.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Div2Out/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Div2Out/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Div2Out/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Div2Out/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Div2Out/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Div2Out/6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Div2Out/7.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Div2Out/8.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression1In/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression1In/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression1In/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression1In/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression1In/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression1In/6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression1In/7.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression1In/8.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression1Out/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression1Out/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression1Out/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression1Out/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression1Out/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression1Out/6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression1Out/7.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression1Out/8.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression2In/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression2In/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression2In/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression2In/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression2In/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression2In/6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression2In/7.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression2In/8.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression2Out/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression2Out/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression2Out/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression2Out/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression2Out/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression2Out/6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression2Out/7.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Expression2Out/8.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/HalfIn/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/HalfIn/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/HalfIn/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/HalfIn/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/HalfIn/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/HalfIn/6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/HalfIn/7.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/HalfIn/8.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/HalfOut/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/HalfOut/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/HalfOut/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/HalfOut/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/HalfOut/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/HalfOut/6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/HalfOut/7.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/HalfOut/8.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Mul2In/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Mul2In/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Mul2In/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Mul2In/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Mul2In/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Mul2In/6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Mul2Out/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Mul2Out/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Mul2Out/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Mul2Out/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Mul2Out/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Mul2Out/6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/MyBelarusOut/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/RepublicDayOut/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/ReverseNumbersIn/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/ReverseNumbersIn/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/ReverseNumbersIn/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/ReverseNumbersIn/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/ReverseNumbersIn/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/ReverseNumbersOut/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/ReverseNumbersOut/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/ReverseNumbersOut/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/ReverseNumbersOut/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/ReverseNumbersOut/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/RoundIn/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/RoundIn/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/RoundIn/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/RoundIn/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/RoundIn/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/RoundIn/6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/RoundIn/7.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/RoundIn/8.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/RoundOut/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/RoundOut/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/RoundOut/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/RoundOut/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/RoundOut/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/RoundOut/6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/RoundOut/7.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/RoundOut/8.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrDiv5In/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrDiv5In/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrDiv5In/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrDiv5In/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrDiv5In/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrDiv5In/6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrDiv5In/7.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrDiv5In/8.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrDiv5Out/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrDiv5Out/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrDiv5Out/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrDiv5Out/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrDiv5Out/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrDiv5Out/6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrDiv5Out/7.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrDiv5Out/8.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrMod10In/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrMod10In/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrMod10In/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrMod10In/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrMod10In/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrMod10In/6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrMod10In/7.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrMod10In/8.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrMod10Out/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrMod10Out/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrMod10Out/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrMod10Out/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrMod10Out/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrMod10Out/6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrMod10Out/7.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/SqrMod10Out/8.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Sum3In/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Sum3In/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Sum3In/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Sum3In/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Sum3In/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Sum3In/6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Sum3Out/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Sum3Out/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Sum3Out/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Sum3Out/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Sum3Out/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/Sum3Out/6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/TruncDiv2In/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/TruncDiv2In/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/TruncDiv2In/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/TruncDiv2In/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/TruncDiv2In/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/TruncDiv2In/6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/TruncDiv2In/7.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/TruncDiv2In/8.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/TruncDiv2Out/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/TruncDiv2Out/2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/TruncDiv2Out/3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/TruncDiv2Out/4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/TruncDiv2Out/5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/TruncDiv2Out/6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/TruncDiv2Out/7.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/program/tests/TruncDiv2Out/8.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/robot/for1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/robot/for2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/robot/for3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/robot/for4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/robot/if1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/robot/if2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/robot/if3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/robot/if4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/robot/linear1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/robot/linear2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/robot/linear3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/robot/linear4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/robot/procedure1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/robot/procedure2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/robot/procedure3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/tasks/robot/procedure4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/theory.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/user.jsp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/programming_tutorial.mwb.bak" afterPath="$PROJECT_DIR$/programming_tutorial.mwb.bak" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/programming_tutorial.mwb" afterPath="$PROJECT_DIR$/programming_tutorial.mwb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/ServletForThemes.java" afterPath="$PROJECT_DIR$/src/main/java/controller/ServletForThemes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/daos/ActionsDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/model/daos/ActionsDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/daos/DaoFactory.java" afterPath="$PROJECT_DIR$/src/main/java/model/daos/DaoFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/daos/Entity.java" afterPath="$PROJECT_DIR$/src/main/java/model/daos/Entity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/daos/ParentsDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/model/daos/ParentsDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/daos/PupilsDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/model/daos/PupilsDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/daos/SchoolsDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/model/daos/SchoolsDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/daos/TasksDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/model/daos/TasksDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/daos/TeachersDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/model/daos/TeachersDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/daos/ThemesDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/model/daos/ThemesDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/daos/TheoryDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/model/daos/TheoryDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/daos/UsersDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/model/daos/UsersDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/entities/Parent.java" afterPath="$PROJECT_DIR$/src/main/java/model/entities/Parent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/entities/Pupil.java" afterPath="$PROJECT_DIR$/src/main/java/model/entities/Pupil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/entities/School.java" afterPath="$PROJECT_DIR$/src/main/java/model/entities/School.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/entities/Task.java" afterPath="$PROJECT_DIR$/src/main/java/model/entities/Task.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/entities/Teacher.java" afterPath="$PROJECT_DIR$/src/main/java/model/entities/Teacher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/entities/Theme.java" afterPath="$PROJECT_DIR$/src/main/java/model/entities/Theme.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/entities/Theory.java" afterPath="$PROJECT_DIR$/src/main/java/model/entities/Theory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/entities/User.java" afterPath="$PROJECT_DIR$/src/main/java/model/entities/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/testingSystem/Checker.java" afterPath="$PROJECT_DIR$/src/main/java/model/testingSystem/Checker.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/model/daos/DaoImp.java" afterPath="$PROJECT_DIR$/src/main/java/model/daos/DaoImpl.java" />
     </list>
     <ignored path="Test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -548,17 +83,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hibernate.cfg.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="hibernate.cfg.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/entities/User.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
@@ -571,6 +106,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="checkEnter.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/includes/index/checkEnter.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ServletForThemes.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/ServletForThemes.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -578,20 +123,6 @@
               <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModificationsForTasks.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/service/ModificationsForTasks.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="71" column="42" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#840#841#0" expanded="false" />
-                <element signature="e#896#897#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -702,8 +233,8 @@
         <option value="$PROJECT_DIR$/src/main/java/model/utils/HibernateSessionFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/ServletForThemes.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/main/java/model/entities/User.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
       </list>
     </option>
   </component>
@@ -888,6 +419,62 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="index" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1833,7 +1420,7 @@
       <workItem from="1493724202347" duration="1553000" />
       <workItem from="1493987719436" duration="9004000" />
       <workItem from="1494063597709" duration="9184000" />
-      <workItem from="1494238290288" duration="3707000" />
+      <workItem from="1494238290288" duration="4463000" />
     </task>
     <task id="LOCAL-00001" summary="15.08.2016 (Hibernate + Servlet + JSP титульник)">
       <created>1471276234743</created>
@@ -1944,7 +1531,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1182873000" />
+    <option name="totallyTimeSpent" value="1183629000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -2074,13 +1661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="76" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/includes/index/checkEnter.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -2560,14 +2140,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/entities/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -2576,6 +2148,22 @@
             <element signature="e#2184#2185#0" expanded="true" />
             <element signature="e#2226#2227#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/includes/index/checkEnter.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>
