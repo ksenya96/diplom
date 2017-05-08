@@ -1,5 +1,0 @@
-Составьте программу, в которой осуществляется ввод трех целых чисел с клавиатуры и вывод на экран монитора значения их суммы.
-
-D:\Моя папка\Мой универ\Test\src\main\webapp\tasks\program\tests\Sum3Out
-
-D:\Моя папка\Мой универ\Test\src\main\webapp\tasks\program\tests\Sum3In

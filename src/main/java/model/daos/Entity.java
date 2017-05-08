@@ -12,11 +12,7 @@ public enum Entity {
     PUPILS("Pupil"),
     SCHOOLS("School"),
     USERS("User"),
-    TEACHERS("Teacher"),
-    PUPILS_AND_PARENTS("PupilsAndParentsEntity"),
-    PUPILS_AND_TEACHERS("PupilsAndTeachersEntity"),
-    PUPILS_AND_THEMES("PupilsAndThemesEntity"),
-    PUPILS_AND_TASKS("PupilsAndTasksEntity");
+    TEACHERS("Teacher");
 
     private String tableName;
 

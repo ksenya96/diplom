@@ -22,7 +22,6 @@ public class User extends AbstractEntity implements Serializable {
     private String firstName;
     private String lastName;
     private String patronymic;
-    private Set<Action> actions = new HashSet<>();
     private Set<Theory> theory = new HashSet<>();
     private Set<Task> tasks = new HashSet<>();
     private Set<Task> doneTasks = new HashSet<>();
@@ -109,16 +108,8 @@ public class User extends AbstractEntity implements Serializable {
         this.patronymic = patronymic;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
-    public Set<Action> getActions() {
-        return actions;
-    }
 
-    public void setActions(Set<Action> actions) {
-        this.actions = actions;
-    }
-
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "author")
+    @OneToMany(mappedBy = "author")
     public Set<Theory> getTheory() {
         return theory;
     }
@@ -127,7 +118,7 @@ public class User extends AbstractEntity implements Serializable {
         this.theory = theory;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "author")
+    @OneToMany(mappedBy = "author")
     public Set<Task> getTasks() {
         return tasks;
     }
@@ -136,7 +127,7 @@ public class User extends AbstractEntity implements Serializable {
         this.tasks = tasks;
     }
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany()
     @JoinTable(name = "users_and_tasks",
             joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "task_id", referencedColumnName = "id")})
@@ -163,7 +154,6 @@ public class User extends AbstractEntity implements Serializable {
         if (firstName != null ? !firstName.equals(user.firstName) : user.firstName != null) return false;
         if (lastName != null ? !lastName.equals(user.lastName) : user.lastName != null) return false;
         if (patronymic != null ? !patronymic.equals(user.patronymic) : user.patronymic != null) return false;
-        if (actions != null ? !actions.equals(user.actions) : user.actions != null) return false;
         if (theory != null ? !theory.equals(user.theory) : user.theory != null) return false;
         return tasks != null ? tasks.equals(user.tasks) : user.tasks == null;
 
@@ -178,7 +168,6 @@ public class User extends AbstractEntity implements Serializable {
         result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
         result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
         result = 31 * result + (patronymic != null ? patronymic.hashCode() : 0);
-        result = 31 * result + (actions != null ? actions.hashCode() : 0);
         result = 31 * result + (theory != null ? theory.hashCode() : 0);
         result = 31 * result + (tasks != null ? tasks.hashCode() : 0);
         return result;

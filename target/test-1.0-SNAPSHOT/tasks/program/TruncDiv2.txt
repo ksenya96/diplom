@@ -1,5 +1,0 @@
-Дано вещественное число х. Напишите программу, которая уменьшает в 2 раза целую часть числа х и выводит на экран монитора результат.
-
-D:\Моя папка\Мой универ\Test\src\main\webapp\tasks\program\tests\TruncDiv2Out
-
-D:\Моя папка\Мой универ\Test\src\main\webapp\tasks\program\tests\TruncDiv2In

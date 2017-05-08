@@ -48,7 +48,7 @@ public class Theme extends AbstractEntity implements Serializable {
         this.clazz = clazz;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "theme")
+    @OneToMany(mappedBy = "theme")
     public Set<Theory> getTheory() {
         return theory;
     }
@@ -57,7 +57,7 @@ public class Theme extends AbstractEntity implements Serializable {
         this.theory = theory;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "theme")
+    @OneToMany(mappedBy = "theme")
     public Set<Task> getTasks() {
         return tasks;
     }
@@ -67,7 +67,7 @@ public class Theme extends AbstractEntity implements Serializable {
     }
 
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany()
     @JoinTable(name = "pupils_and_themes",
             joinColumns = {@JoinColumn(name = "theme_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "pupil_id", referencedColumnName = "id")})

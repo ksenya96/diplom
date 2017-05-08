@@ -1,3 +1,0 @@
-Напишите программу, которая выводит на экран фразу "Моя Родина - Беларусь".
-
-D:\Моя папка\Мой универ\Test\src\main\webapp\tasks\program\tests\MyBelarusOut

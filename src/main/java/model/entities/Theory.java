@@ -57,7 +57,7 @@ public class Theory extends AbstractEntity implements Serializable {
         this.theme = theme;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     @JoinColumn(name = "user_id", nullable = false)
     public User getAuthor() {
         return author;

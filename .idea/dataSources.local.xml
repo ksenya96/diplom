@@ -5,7 +5,7 @@
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
       <introspection-scope>programming_tutorial:</introspection-scope>
-      <resolve-scope>programming_tutorial:</resolve-scope>
+      <resolve-scope>programming_tutorial:*</resolve-scope>
     </data-source>
   </component>
 </project>

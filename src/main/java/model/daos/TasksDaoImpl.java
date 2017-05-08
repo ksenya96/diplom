@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by acer on 23.08.2016.
  */
-public class TasksDaoImpl extends DaoImp {
+public class TasksDaoImpl extends DaoImpl {
     public TasksDaoImpl(Session session, Entity entity) {
         super(session, entity);
     }

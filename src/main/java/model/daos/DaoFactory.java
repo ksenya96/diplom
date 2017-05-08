@@ -6,7 +6,7 @@ import org.hibernate.Session;
  * Created by acer on 07.10.2016.
  */
 public class DaoFactory {
-    public static DaoImp getDao(Session session, Entity entity) {
+    public static DaoImpl getDao(Session session, Entity entity) {
         switch (entity) {
             case THEMES:
                 return new ThemesDaoImpl(session, entity);

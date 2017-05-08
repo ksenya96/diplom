@@ -55,7 +55,12 @@ public class Checker {
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(process.getOutputStream()));
                 input = getString(new FileInputStream(inputFile));
                 bufferedWriter.write(input);
-                bufferedWriter.close();
+                try {
+                    bufferedWriter.close();
+                }
+                catch (IOException e) {
+                    System.out.println("Broken pipe");
+                }
             }
             //проверка на лимит времени (2 сек)
             Date currentDate = new Date();

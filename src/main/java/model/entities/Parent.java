@@ -21,7 +21,7 @@ public class Parent extends User {
         super(login, password, access, firstName, lastName);
     }
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany()
     @JoinTable(name = "pupils_and_parents",
             joinColumns = {@JoinColumn(name = "parent_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "pupil_id", referencedColumnName = "id")})

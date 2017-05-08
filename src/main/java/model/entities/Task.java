@@ -63,7 +63,7 @@ public class Task extends AbstractEntity implements Serializable{
         this.content = content;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     @JoinColumn(name = "theme_id", nullable = false)
     public Theme getTheme() {
         return theme;
@@ -73,7 +73,7 @@ public class Task extends AbstractEntity implements Serializable{
         this.theme = theme;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     @JoinColumn(name = "user_id", nullable = false)
     public User getAuthor() {
         return author;
@@ -83,7 +83,7 @@ public class Task extends AbstractEntity implements Serializable{
         this.author = user;
     }
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany()
     @JoinTable(name = "users_and_tasks",
             joinColumns = {@JoinColumn(name = "task_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")})

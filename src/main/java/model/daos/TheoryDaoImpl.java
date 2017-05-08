@@ -4,13 +4,11 @@ import model.entities.Theory;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
-import java.util.List;
-
 
 /**
  * Created by acer on 20.08.2016.
  */
-public class TheoryDaoImpl extends DaoImp {
+public class TheoryDaoImpl extends DaoImpl {
 
     public TheoryDaoImpl(Session session, Entity entity) {
         super(session, entity);

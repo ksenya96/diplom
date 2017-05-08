@@ -1,7 +1,0 @@
-Даны целые числа а и b. Напишите программу, которая находит значение выражения
- <img src="images/formula4.png" />
-и выводит на экран монитора результат.
-
-D:\Моя папка\Мой универ\Test\src\main\webapp\tasks\program\tests\Expression1Out
-
-D:\Моя папка\Мой универ\Test\src\main\webapp\tasks\program\tests\Expression1In

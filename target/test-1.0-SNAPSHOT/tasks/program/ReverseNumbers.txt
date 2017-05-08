@@ -1,5 +1,0 @@
-Составьте программу для ввода с клавиатуры в массив 7 целых чисел и вывода этих чисел в обратном порядке.
-
-D:\Моя папка\Мой универ\Test\src\main\webapp\tasks\program\tests\ReverseNumbersOut
-
-D:\Моя папка\Мой универ\Test\src\main\webapp\tasks\program\tests\ReverseNumbersIn

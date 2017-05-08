@@ -43,7 +43,7 @@ public class School extends AbstractEntity implements Serializable {
         this.name = name;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "school")
+    @OneToMany(mappedBy = "school")
     public Set<Pupil> getPupils() {
         return pupils;
     }

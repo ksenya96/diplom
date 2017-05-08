@@ -48,7 +48,7 @@ public class Pupil extends User {
         this.school = school;
     }
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany()
     @JoinTable(name = "pupils_and_themes",
             joinColumns = {@JoinColumn(name = "pupil_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "theme_id", referencedColumnName = "id")})
@@ -62,7 +62,7 @@ public class Pupil extends User {
 
 
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany()
     @JoinTable(name = "pupils_and_parents",
             joinColumns = {@JoinColumn(name = "pupil_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "parent_id", referencedColumnName = "id")})
@@ -74,7 +74,7 @@ public class Pupil extends User {
         this.parents = parents;
     }
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany()
     @JoinTable(name = "pupils_and_teachers",
             joinColumns = {@JoinColumn(name = "pupil_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "teacher_id", referencedColumnName = "id")})
